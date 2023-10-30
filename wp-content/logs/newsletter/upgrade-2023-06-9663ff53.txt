@@ -1,0 +1,30 @@
+29-06-2023 16:41:20 - INFO  - 7.8.8 - 110.2 MB/128 MB - admin > Start upgrade from 7.0.0
+29-06-2023 16:41:20 - INFO  - 7.8.8 - 110.2 MB/128 MB - admin > Array
+(
+    [`bkXjGOQ_newsletter_emails`] => Created table `bkXjGOQ_newsletter_emails`
+)
+
+29-06-2023 16:41:20 - INFO  - 7.8.8 - 110.2 MB/128 MB - admin > Array
+(
+    [`bkXjGOQ_newsletter_sent`] => Created table `bkXjGOQ_newsletter_sent`
+)
+
+29-06-2023 16:41:20 - INFO  - 7.8.8 - 110.2 MB/128 MB - admin > Array
+(
+    [`bkXjGOQ_newsletter`] => Created table `bkXjGOQ_newsletter`
+    [bkXjGOQ_newsletter.source] => Added column bkXjGOQ_newsletter.source
+)
+
+29-06-2023 16:41:20 - INFO  - 7.8.8 - 110.2 MB/128 MB - admin > Array
+(
+    [`bkXjGOQ_newsletter_user_logs`] => Created table `bkXjGOQ_newsletter_user_logs`
+)
+
+29-06-2023 16:41:20 - INFO  - 7.8.8 - 110.2 MB/128 MB - admin > Array
+(
+    [`bkXjGOQ_newsletter_stats`] => Created table `bkXjGOQ_newsletter_stats`
+)
+
+29-06-2023 16:41:20 - INFO  - 7.8.8 - 110.2 MB/128 MB - admin > Backing up options of 7.0.0
+29-06-2023 16:41:20 - INFO  - 7.8.8 - 110.4 MB/128 MB - admin > Migration to 7.8.0
+29-06-2023 16:41:20 - INFO  - 7.8.8 - 110.4 MB/128 MB - admin > End

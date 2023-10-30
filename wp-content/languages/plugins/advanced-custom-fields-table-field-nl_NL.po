@@ -1,0 +1,71 @@
+# Translation of Plugins - Advanced Custom Fields: Table Field - Stable (latest release) in Dutch
+# This file is distributed under the same license as the Plugins - Advanced Custom Fields: Table Field - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-07-17 17:23:36+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.0-alpha.4\n"
+"Language: nl\n"
+"Project-Id-Version: Plugins - Advanced Custom Fields: Table Field - Stable (latest release)\n"
+
+#: class-jh-acf-field-table.php:216
+msgid "table caption"
+msgstr "tabel bijschrift"
+
+#: class-jh-acf-field-table.php:142
+msgid "Presetting the usage of table caption"
+msgstr "Het gebruik van het tabel bijschrift vooraf instellen"
+
+#: class-jh-acf-field-table.php:141
+msgid "Table Caption"
+msgstr "Tabel bijschrift"
+
+#: class-jh-acf-field-table.php:128
+msgid "Presetting the usage of table header"
+msgstr "Het gebruik van de tabel header vooraf instellen"
+
+#: class-jh-acf-field-table.php:132
+msgid "Optional"
+msgstr "Optioneel"
+
+#: class-jh-acf-field-table.php:127
+msgid "Table Header"
+msgstr "Tabel header"
+
+#: class-jh-acf-field-table.php:133 class-jh-acf-field-table.php:146
+#: class-jh-acf-field-table.php:204
+msgid "Yes"
+msgstr "Ja"
+
+#: class-jh-acf-field-table.php:134 class-jh-acf-field-table.php:147
+#: class-jh-acf-field-table.php:203
+msgid "No"
+msgstr "Nee"
+
+#: class-jh-acf-field-table.php:201
+msgid "use table header"
+msgstr "gebruik tabel header"
+
+#: class-jh-acf-field-table.php:38
+msgid "Table"
+msgstr "Tabel"
+
+#. Author of the plugin
+msgid "Johann Heyne"
+msgstr "Johann Heyne"
+
+#. Description of the plugin
+msgid "This free Add-on adds a table field type for the Advanced Custom Fields plugin."
+msgstr "Deze gratis add-on voegt een tabel veldtype toe aan de Advanced Custom Fields plugin."
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "http://www.johannheyne.de/"
+msgstr "http://www.johannheyne.de/"
+
+#. Plugin Name of the plugin
+msgid "Advanced Custom Fields: Table Field"
+msgstr "Advanced Custom Fields: Table Field"
