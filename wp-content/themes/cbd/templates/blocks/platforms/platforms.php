@@ -3,38 +3,38 @@
  * Block Name: Platforms
  */
 ?>
-<?php //$icon = get_field('icon'); ?>
-<?php //$title = get_field('title'); ?>
-<?php //$brokers = get_field('brokers'); ?>
-<?php //$image = get_field('image'); ?>
-<?php //$image_2 = get_field('image_2'); ?>
-<?php //$img_day = get_field('img_day'); ?>
-<?php //$img_night = get_field('img_night'); ?>
+<?php $icon = get_field('icon'); ?>
+<?php $title = get_field('title'); ?>
+<?php $brokers = get_field('brokers'); ?>
+<?php $image = get_field('image'); ?>
+<?php $image_2 = get_field('image_2'); ?>
+<?php $img_day = get_field('img_day'); ?>
+<?php $img_night = get_field('img_night'); ?>
 
 <?php
-$acf_data = '<!-- wp:acf/platforms {"name":"acf/platforms","data":{"icon":651,"_icon":"field_6428026f59e4b","title":"Royal Trading Platforms","_title":"field_6428027b59e4c","brokers_0_image":1819,"_brokers_0_image":"field_649ff2e84870d","brokers_0_links_0_image":671,"_brokers_0_links_0_image":"field_649ff3514870f","brokers_0_links_0_url":"https://portal.thinkmarkets.com/account/individual","_brokers_0_links_0_url":"field_649ff4d48f903","brokers_0_links_1_image":673,"_brokers_0_links_1_image":"field_649ff3514870f","brokers_0_links_1_url":"https://portal.thinkmarkets.com/account/individual","_brokers_0_links_1_url":"field_649ff4d48f903","brokers_0_links_2_image":672,"_brokers_0_links_2_image":"field_649ff3514870f","brokers_0_links_2_url":"https://portal.thinkmarkets.com/account/individual","_brokers_0_links_2_url":"field_649ff4d48f903","brokers_0_links_3_image":670,"_brokers_0_links_3_image":"field_649ff3514870f","brokers_0_links_3_url":"https://portal.thinkmarkets.com/account/individual","_brokers_0_links_3_url":"field_649ff4d48f903","brokers_0_links":4,"_brokers_0_links":"field_649ff3134870e","brokers_1_image":653,"_brokers_1_image":"field_649ff2e84870d","brokers_1_links_0_image":671,"_brokers_1_links_0_image":"field_649ff3514870f","brokers_1_links_0_url":"https://join.eightcap.com/visit/?bta=39063\u0026brand=eightcap","_brokers_1_links_0_url":"field_649ff4d48f903","brokers_1_links_1_image":673,"_brokers_1_links_1_image":"field_649ff3514870f","brokers_1_links_1_url":"https://join.eightcap.com/visit/?bta=39063\u0026brand=eightcap","_brokers_1_links_1_url":"field_649ff4d48f903","brokers_1_links_2_image":672,"_brokers_1_links_2_image":"field_649ff3514870f","brokers_1_links_2_url":"https://join.eightcap.com/visit/?bta=39063\u0026brand=eightcap","_brokers_1_links_2_url":"field_649ff4d48f903","brokers_1_links_3_image":670,"_brokers_1_links_3_image":"field_649ff3514870f","brokers_1_links_3_url":"https://join.eightcap.com/visit/?bta=39063\u0026brand=eightcap","_brokers_1_links_3_url":"field_649ff4d48f903","brokers_1_links":4,"_brokers_1_links":"field_649ff3134870e","brokers_2_image":1534,"_brokers_2_image":"field_649ff2e84870d","brokers_2_links_0_image":671,"_brokers_2_links_0_image":"field_649ff3514870f","brokers_2_links_0_url":"#","_brokers_2_links_0_url":"field_649ff4d48f903","brokers_2_links_1_image":673,"_brokers_2_links_1_image":"field_649ff3514870f","brokers_2_links_1_url":"#","_brokers_2_links_1_url":"field_649ff4d48f903","brokers_2_links_2_image":672,"_brokers_2_links_2_image":"field_649ff3514870f","brokers_2_links_2_url":"#","_brokers_2_links_2_url":"field_649ff4d48f903","brokers_2_links_3_image":670,"_brokers_2_links_3_image":"field_649ff3514870f","brokers_2_links_3_url":"#","_brokers_2_links_3_url":"field_649ff4d48f903","brokers_2_links":4,"_brokers_2_links":"field_649ff3134870e","brokers":3,"_brokers":"field_6428037c4785d","image":1516,"_image":"field_6428030f59e53","image_2":1522,"_image_2":"field_6428031f59e54","img_day":661,"_img_day":"field_642802db59e51","img_night":657,"_img_night":"field_642802f659e52"},"mode":"edit"} /-->';
+// $acf_data = '<!-- wp:acf/platforms {"name":"acf/platforms","data":{"icon":651,"_icon":"field_6428026f59e4b","title":"Royal Trading Platforms","_title":"field_6428027b59e4c","brokers_0_image":1819,"_brokers_0_image":"field_649ff2e84870d","brokers_0_links_0_image":671,"_brokers_0_links_0_image":"field_649ff3514870f","brokers_0_links_0_url":"https://portal.thinkmarkets.com/account/individual","_brokers_0_links_0_url":"field_649ff4d48f903","brokers_0_links_1_image":673,"_brokers_0_links_1_image":"field_649ff3514870f","brokers_0_links_1_url":"https://portal.thinkmarkets.com/account/individual","_brokers_0_links_1_url":"field_649ff4d48f903","brokers_0_links_2_image":672,"_brokers_0_links_2_image":"field_649ff3514870f","brokers_0_links_2_url":"https://portal.thinkmarkets.com/account/individual","_brokers_0_links_2_url":"field_649ff4d48f903","brokers_0_links_3_image":670,"_brokers_0_links_3_image":"field_649ff3514870f","brokers_0_links_3_url":"https://portal.thinkmarkets.com/account/individual","_brokers_0_links_3_url":"field_649ff4d48f903","brokers_0_links":4,"_brokers_0_links":"field_649ff3134870e","brokers_1_image":653,"_brokers_1_image":"field_649ff2e84870d","brokers_1_links_0_image":671,"_brokers_1_links_0_image":"field_649ff3514870f","brokers_1_links_0_url":"https://join.eightcap.com/visit/?bta=39063\u0026brand=eightcap","_brokers_1_links_0_url":"field_649ff4d48f903","brokers_1_links_1_image":673,"_brokers_1_links_1_image":"field_649ff3514870f","brokers_1_links_1_url":"https://join.eightcap.com/visit/?bta=39063\u0026brand=eightcap","_brokers_1_links_1_url":"field_649ff4d48f903","brokers_1_links_2_image":672,"_brokers_1_links_2_image":"field_649ff3514870f","brokers_1_links_2_url":"https://join.eightcap.com/visit/?bta=39063\u0026brand=eightcap","_brokers_1_links_2_url":"field_649ff4d48f903","brokers_1_links_3_image":670,"_brokers_1_links_3_image":"field_649ff3514870f","brokers_1_links_3_url":"https://join.eightcap.com/visit/?bta=39063\u0026brand=eightcap","_brokers_1_links_3_url":"field_649ff4d48f903","brokers_1_links":4,"_brokers_1_links":"field_649ff3134870e","brokers_2_image":1534,"_brokers_2_image":"field_649ff2e84870d","brokers_2_links_0_image":671,"_brokers_2_links_0_image":"field_649ff3514870f","brokers_2_links_0_url":"#","_brokers_2_links_0_url":"field_649ff4d48f903","brokers_2_links_1_image":673,"_brokers_2_links_1_image":"field_649ff3514870f","brokers_2_links_1_url":"#","_brokers_2_links_1_url":"field_649ff4d48f903","brokers_2_links_2_image":672,"_brokers_2_links_2_image":"field_649ff3514870f","brokers_2_links_2_url":"#","_brokers_2_links_2_url":"field_649ff4d48f903","brokers_2_links_3_image":670,"_brokers_2_links_3_image":"field_649ff3514870f","brokers_2_links_3_url":"#","_brokers_2_links_3_url":"field_649ff4d48f903","brokers_2_links":4,"_brokers_2_links":"field_649ff3134870e","brokers":3,"_brokers":"field_6428037c4785d","image":1516,"_image":"field_6428030f59e53","image_2":1522,"_image_2":"field_6428031f59e54","img_day":661,"_img_day":"field_642802db59e51","img_night":657,"_img_night":"field_642802f659e52"},"mode":"edit"} /-->';
 
-preg_match('/"icon":(\d+),/', $acf_data, $icon);
-preg_match('/"title":"(.*?)",/', $acf_data, $title);
-preg_match('/"brokers_0_image":(\d+),/', $acf_data, $brokers_0_image);
-preg_match('/"brokers_1_image":(\d+),/', $acf_data, $brokers_1_image);
-preg_match('/"brokers_2_image":(\d+),/', $acf_data, $brokers_2_image);
-preg_match('/"image":(\d+),/', $acf_data, $image);
-preg_match('/"image_2":(\d+),/', $acf_data, $image_2);
-preg_match('/"img_day":(\d+),/', $acf_data, $img_day);
-preg_match('/"img_night":(\d+),/', $acf_data, $img_night);
-// Add more regular expressions to extract other fields as needed
+// preg_match('/"icon":(\d+),/', $acf_data, $icon);
+// preg_match('/"title":"(.*?)",/', $acf_data, $title);
+// preg_match('/"brokers_0_image":(\d+),/', $acf_data, $brokers_0_image);
+// preg_match('/"brokers_1_image":(\d+),/', $acf_data, $brokers_1_image);
+// preg_match('/"brokers_2_image":(\d+),/', $acf_data, $brokers_2_image);
+// preg_match('/"image":(\d+),/', $acf_data, $image);
+// preg_match('/"image_2":(\d+),/', $acf_data, $image_2);
+// preg_match('/"img_day":(\d+),/', $acf_data, $img_day);
+// preg_match('/"img_night":(\d+),/', $acf_data, $img_night);
+// // Add more regular expressions to extract other fields as needed
 
-// Define default values in case the ACF fields are not present
-$icon = isset($icon[1]) ? $icon[1] : '';
-$title = isset($title[1]) ? $title[1] : '';
-$brokers_0_image = isset($brokers_0_image[1]) ? $brokers_0_image[1] : '';
-$brokers_1_image = isset($brokers_1_image[1]) ? $brokers_1_image[1] : '';
-$brokers_2_image = isset($brokers_2_image[1]) ? $brokers_2_image[1] : '';
-$image = isset($image[1]) ? $image[1] : '';
-$image_2 = isset($image_2[1]) ? $image_2[1] : '';
-$img_day = isset($img_day[1]) ? $img_day[1] : '';
-$img_night = isset($img_night[1]) ? $img_night[1] : '';
+// // Define default values in case the ACF fields are not present
+// $icon = isset($icon[1]) ? $icon[1] : '';
+// $title = isset($title[1]) ? $title[1] : '';
+// $brokers_0_image = isset($brokers_0_image[1]) ? $brokers_0_image[1] : '';
+// $brokers_1_image = isset($brokers_1_image[1]) ? $brokers_1_image[1] : '';
+// $brokers_2_image = isset($brokers_2_image[1]) ? $brokers_2_image[1] : '';
+// $image = isset($image[1]) ? $image[1] : '';
+// $image_2 = isset($image_2[1]) ? $image_2[1] : '';
+// $img_day = isset($img_day[1]) ? $img_day[1] : '';
+// $img_night = isset($img_night[1]) ? $img_night[1] : '';
 // Define default values for other fields as well
 
 ?>

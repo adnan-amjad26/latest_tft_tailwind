@@ -3,37 +3,37 @@
  * Block Name: Discord
  */
 ?>
-<?php //$icon = get_field('icon'); ?>
-<?php //$title = get_field('title'); ?>
-<?php //$logo = get_field('logo'); ?>
-<?php //$link = get_field('link'); ?>
-<?php //$image = get_field('image'); ?>
-<?php //$lottie = get_field('lottie'); ?>
-<?php //$background = get_field('background'); ?>
+<?php $icon = get_field('icon'); ?>
+<?php $title = get_field('title'); ?>
+<?php $logo = get_field('logo'); ?>
+<?php $link = get_field('link'); ?>
+<?php $image = get_field('image'); ?>
+<?php $lottie = get_field('lottie'); ?>
+<?php $background = get_field('background'); ?>
 
 <?php
 // Your ACF block data
-$acf_data = '<!-- wp:acf/discord {"name":"acf/discord","data":{"icon":147,"_icon":"field_64271ff579ace","title":"Join Our Discord","_title":"field_64271cf9ebc3e","logo":556,"_logo":"field_642720f37c426","link":{"title":"Join Our Discord","url":"https://discord.com/invite/R5CX3rsPFD","target":"_blank"},"_link":"field_64271cffebc3f","image":1608,"_image":"field_64271e7a45fe9","background":549,"_background":"field_64271f67c07f4","lottie":545,"_lottie":"field_64271ece6f0b8"},"mode":"edit"} /-->';
-// Use regular expressions to extract ACF field values
-preg_match('/"icon":(\d+),/', $acf_data, $icon);
-preg_match('/"title":"(.*?)",/', $acf_data, $title);
-preg_match('/"logo":(\d+),/', $acf_data, $logo);
-preg_match('/"link":{"title":"(.*?)","url":"(.*?)","target":"(.*?)"},/', $acf_data, $link);
-preg_match('/"image":(\d+),/', $acf_data, $image);
-preg_match('/"lottie":(\d+),/', $acf_data, $lottie);
-preg_match('/"background":(\d+),/', $acf_data, $background);
-// Add more regular expressions to extract other fields as needed
+// $acf_data = '<!-- wp:acf/discord {"name":"acf/discord","data":{"icon":147,"_icon":"field_64271ff579ace","title":"Join Our Discord","_title":"field_64271cf9ebc3e","logo":556,"_logo":"field_642720f37c426","link":{"title":"Join Our Discord","url":"https://discord.com/invite/R5CX3rsPFD","target":"_blank"},"_link":"field_64271cffebc3f","image":1608,"_image":"field_64271e7a45fe9","background":549,"_background":"field_64271f67c07f4","lottie":545,"_lottie":"field_64271ece6f0b8"},"mode":"edit"} /-->';
+// // Use regular expressions to extract ACF field values
+// preg_match('/"icon":(\d+),/', $acf_data, $icon);
+// preg_match('/"title":"(.*?)",/', $acf_data, $title);
+// preg_match('/"logo":(\d+),/', $acf_data, $logo);
+// preg_match('/"link":{"title":"(.*?)","url":"(.*?)","target":"(.*?)"},/', $acf_data, $link);
+// preg_match('/"image":(\d+),/', $acf_data, $image);
+// preg_match('/"lottie":(\d+),/', $acf_data, $lottie);
+// preg_match('/"background":(\d+),/', $acf_data, $background);
+// // Add more regular expressions to extract other fields as needed
 
-// Define default values in case the ACF fields are not present
-$icon = isset($icon[1]) ? $icon[1] : '';
-$title = isset($title[1]) ? $title[1] : '';
-$logo = isset($logo[1]) ? $logo[1] : '';
-$link_title = isset($link[1]) ? $link[1] : '';
-$link_url = isset($link[2]) ? $link[2] : '';
-$link_target = isset($link[3]) ? $link[3] : '';
-$image = isset($image[1]) ? $image[1] : '';
-$lottie = isset($lottie[1]) ? $lottie[1] : '';
-$background = isset($background[1]) ? $background[1] : '';
+// // Define default values in case the ACF fields are not present
+// $icon = isset($icon[1]) ? $icon[1] : '';
+// $title = isset($title[1]) ? $title[1] : '';
+// $logo = isset($logo[1]) ? $logo[1] : '';
+// $link_title = isset($link[1]) ? $link[1] : '';
+// $link_url = isset($link[2]) ? $link[2] : '';
+// $link_target = isset($link[3]) ? $link[3] : '';
+// $image = isset($image[1]) ? $image[1] : '';
+// $lottie = isset($lottie[1]) ? $lottie[1] : '';
+// $background = isset($background[1]) ? $background[1] : '';
 // Define default values for other fields as well
 ?>
 <section class="discord s-padding text-center bg-lilac" data-scroll-section>

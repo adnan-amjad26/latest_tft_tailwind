@@ -3,33 +3,33 @@
  * Block Name: Media
  */
 ?>
-<?php //$title = get_field('title'); ?>
-<?php //$media = get_field('media'); ?>
-<?php //$img_day = get_field('img_day'); ?>
-<?php //$img_night = get_field('img_night'); ?>
+<?php $title = get_field('title'); ?>
+<?php $media = get_field('media'); ?>
+<?php $img_day = get_field('img_day'); ?>
+<?php $img_night = get_field('img_night'); ?>
 <?php
 
-$acf_data = '<!-- wp:acf/media {"name":"acf/media","data":{"title":"The Funding Kingdom Awaits You","_title":"field_64280d28fe32f","media_0_icon":698,"_media_0_icon":"field_64280d52fe332","media_0_title":"Payout System","_media_0_title":"field_64280d68fe333","media_0_video":"https://www.youtube.com/watch?v=OqQ4eIaWiho","_media_0_video":"field_64280d70fe334","media_0_poster":"","_media_0_poster":"field_64280d80fe335","media_0_text":"Receive your payouts through Deel or Crypto. Once you click submit withdrawal on the Trade Hub, our goal is to make the payout process smooth and efficient.","_media_0_text":"field_64280d97fe336","media_1_icon":699,"_media_1_icon":"field_64280d52fe332","media_1_title":"Trade Hub","_media_1_title":"field_64280d68fe333","media_1_video":"https://www.youtube.com/watch?v=UP-MPtCcA7I","_media_1_video":"field_64280d70fe334","media_1_poster":"","_media_1_poster":"field_64280d80fe335","media_1_text":"Experience our unified, fast, and secure system which all traders get access to. Inside you will be able to start challenges, monitor your dashboard and participate in one of our many free competitions!","_media_1_text":"field_64280d97fe336","media_2_icon":699,"_media_2_icon":"field_64280d52fe332","media_2_title":"Scaling Plan","_media_2_title":"field_64280d68fe333","media_2_video":"https://www.youtube.com/watch?v=N3r9q3UsFTs","_media_2_video":"field_64280d70fe334","media_2_poster":"","_media_2_poster":"field_64280d80fe335","media_2_text":"Once you prove your skills, you will be rewarded with more capital. If you successfully perform on your funded account you will qualify for one of our two scaling plans that are available. The maximum amount of capital you can manage is $1.5 million usd.","_media_2_text":"field_64280d97fe336","media":3,"_media":"field_64280d2ffe330","img_day":692,"_img_day":"field_64280dcafe339","img_night":691,"_img_night":"field_64280de6fe33a"},"mode":"edit"} /-->';
-// Use regular expressions to extract ACF field values
-preg_match('/"title":"(.*?)",/', $acf_data, $title);
-preg_match('/"media_0_icon":(\d+),/', $acf_data, $media_0_icon);
-preg_match('/"media_0_title":"(.*?)",/', $acf_data, $media_0_title);
-preg_match('/"media_0_video":"(.*?)",/', $acf_data, $media_0_video);
-preg_match('/"media_0_poster":"(.*?)",/', $acf_data, $media_0_poster);
-preg_match('/"media_0_text":"(.*?)",/', $acf_data, $media_0_text);
-preg_match('/"img_day":(\d+),/', $acf_data, $img_day);
-preg_match('/"img_night":(\d+),/', $acf_data, $img_night);
-// Add more regular expressions to extract other fields as needed
+// $acf_data = '<!-- wp:acf/media {"name":"acf/media","data":{"title":"The Funding Kingdom Awaits You","_title":"field_64280d28fe32f","media_0_icon":698,"_media_0_icon":"field_64280d52fe332","media_0_title":"Payout System","_media_0_title":"field_64280d68fe333","media_0_video":"https://www.youtube.com/watch?v=OqQ4eIaWiho","_media_0_video":"field_64280d70fe334","media_0_poster":"","_media_0_poster":"field_64280d80fe335","media_0_text":"Receive your payouts through Deel or Crypto. Once you click submit withdrawal on the Trade Hub, our goal is to make the payout process smooth and efficient.","_media_0_text":"field_64280d97fe336","media_1_icon":699,"_media_1_icon":"field_64280d52fe332","media_1_title":"Trade Hub","_media_1_title":"field_64280d68fe333","media_1_video":"https://www.youtube.com/watch?v=UP-MPtCcA7I","_media_1_video":"field_64280d70fe334","media_1_poster":"","_media_1_poster":"field_64280d80fe335","media_1_text":"Experience our unified, fast, and secure system which all traders get access to. Inside you will be able to start challenges, monitor your dashboard and participate in one of our many free competitions!","_media_1_text":"field_64280d97fe336","media_2_icon":699,"_media_2_icon":"field_64280d52fe332","media_2_title":"Scaling Plan","_media_2_title":"field_64280d68fe333","media_2_video":"https://www.youtube.com/watch?v=N3r9q3UsFTs","_media_2_video":"field_64280d70fe334","media_2_poster":"","_media_2_poster":"field_64280d80fe335","media_2_text":"Once you prove your skills, you will be rewarded with more capital. If you successfully perform on your funded account you will qualify for one of our two scaling plans that are available. The maximum amount of capital you can manage is $1.5 million usd.","_media_2_text":"field_64280d97fe336","media":3,"_media":"field_64280d2ffe330","img_day":692,"_img_day":"field_64280dcafe339","img_night":691,"_img_night":"field_64280de6fe33a"},"mode":"edit"} /-->';
+// // Use regular expressions to extract ACF field values
+// preg_match('/"title":"(.*?)",/', $acf_data, $title);
+// preg_match('/"media_0_icon":(\d+),/', $acf_data, $media_0_icon);
+// preg_match('/"media_0_title":"(.*?)",/', $acf_data, $media_0_title);
+// preg_match('/"media_0_video":"(.*?)",/', $acf_data, $media_0_video);
+// preg_match('/"media_0_poster":"(.*?)",/', $acf_data, $media_0_poster);
+// preg_match('/"media_0_text":"(.*?)",/', $acf_data, $media_0_text);
+// preg_match('/"img_day":(\d+),/', $acf_data, $img_day);
+// preg_match('/"img_night":(\d+),/', $acf_data, $img_night);
+// // Add more regular expressions to extract other fields as needed
 
-// Define default values in case the ACF fields are not present
-$title = isset($title[1]) ? $title[1] : '';
-$media_0_icon = isset($media_0_icon[1]) ? $media_0_icon[1] : '';
-$media_0_title = isset($media_0_title[1]) ? $media_0_title[1] : '';
-$media_0_video = isset($media_0_video[1]) ? $media_0_video[1] : '';
-$media_0_poster = isset($media_0_poster[1]) ? $media_0_poster[1] : '';
-$media_0_text = isset($media_0_text[1]) ? $media_0_text[1] : '';
-$img_day = isset($img_day[1]) ? $img_day[1] : '';
-$img_night = isset($img_night[1]) ? $img_night[1] : '';
+// // Define default values in case the ACF fields are not present
+// $title = isset($title[1]) ? $title[1] : '';
+// $media_0_icon = isset($media_0_icon[1]) ? $media_0_icon[1] : '';
+// $media_0_title = isset($media_0_title[1]) ? $media_0_title[1] : '';
+// $media_0_video = isset($media_0_video[1]) ? $media_0_video[1] : '';
+// $media_0_poster = isset($media_0_poster[1]) ? $media_0_poster[1] : '';
+// $media_0_text = isset($media_0_text[1]) ? $media_0_text[1] : '';
+// $img_day = isset($img_day[1]) ? $img_day[1] : '';
+// $img_night = isset($img_night[1]) ? $img_night[1] : '';
 ?>
 <section class="media-boxes s-padding text-center bg-blue-dark" data-scroll-section>
     <div class="container relative z-10">

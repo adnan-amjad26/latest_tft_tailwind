@@ -119,7 +119,7 @@ function register_acf_block_types() {
     acf_register_block_type(array(
         'name'              => 'hero-home',
         'title'             => __('Hero Home'),
-        'render_template'   => 'templates/blocks/hero/hero-homee.php',
+        'render_template'   => 'templates/blocks/hero/hero-home.php',
         'category'          => 'custom-blocks',
         'icon'              => '<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="image" class="svg-inline--fa fa-image fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 336H54a6 6 0 0 1-6-6V118a6 6 0 0 1 6-6h404a6 6 0 0 1 6 6v276a6 6 0 0 1-6 6zM128 152c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zM96 352h320v-80l-87.515-87.515c-4.686-4.686-12.284-4.686-16.971 0L192 304l-39.515-39.515c-4.686-4.686-12.284-4.686-16.971 0L96 304v48z"></path></svg>',
         'mode'              => 'edit',
@@ -229,7 +229,7 @@ function register_acf_block_types() {
     acf_register_block_type(array(
         'name'              => 'video-text',
         'title'             => __('Video & Text'),
-        'render_template'   => 'templates/blocks/content/video-text.php',
+        'render_template'   => 'templates/blocks/content/video-textt.php',
         'category'          => 'custom-blocks',
         'icon'              => '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M3 18h8V6H3v12zM14 7.5V9h7V7.5h-7zm0 5.3h7v-1.5h-7v1.5zm0 3.7h7V15h-7v1.5z"></path></svg>',
         'mode'              => 'edit',
