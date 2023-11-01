@@ -144,7 +144,7 @@ add_action( 'widgets_init', 'tft_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tft_scripts() {
-	wp_enqueue_style( 'tft-style', get_stylesheet_uri(), array(), TFT_VERSION );
+//	wp_enqueue_style( 'tft-style', get_stylesheet_uri(), array(), TFT_VERSION );
 	wp_enqueue_script( 'tft-script', get_template_directory_uri() . '/js/script.min.js', array(), TFT_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -213,3 +213,4 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+require  'cbd_functions.php';

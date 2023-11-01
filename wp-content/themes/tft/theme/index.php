@@ -1,53 +1,26 @@
 <?php
 /**
  * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no `home.php` file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package tft
  */
-
-get_header();
-?>
-
-	<section id="primary">
-		<main id="main">
-
-		<?php
-		if ( have_posts() ) {
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header class="entry-header">
-					<h1 class="entry-title"><?php single_post_title(); ?></h1>
-				</header><!-- .entry-header -->
-				<?php
-			endif;
-
-			// Load posts loop.
-			while ( have_posts() ) {
-				the_post();
-				get_template_part( 'template-parts/content/content' );
-			}
-
-			// Previous/next page navigation.
-			tft_the_posts_navigation();
-
-		} else {
-
-			// If no content, include the "No posts found" template.
-			get_template_part( 'template-parts/content/content', 'none' );
-
-		}
-		?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php
-get_footer();
+get_header(); ?>
+<?php get_template_part('templates/blocks/posts/hero-posts'); ?>
+<?php get_template_part('templates/blocks/posts/featured-post'); ?>
+	<section class="article-grid s-padding z-10" data-scroll-section>
+		<div class="container">
+			<?php if(have_posts()): ?>
+				<?php get_template_part('templates/blocks/posts/filter-posts'); ?>
+				<div class="row justify-around mt-12 lg:mt-24">
+					<?php while(have_posts()):the_post(); ?>
+						<?php get_template_part('templates/blocks/posts/post'); ?>
+					<?php endwhile; ?>
+				</div>
+				<?php get_template_part('templates/blocks/posts/pagination'); ?>
+			<?php else: ?>
+				<div class="title text-center mb-12 lg:mb-24 2xl:mb-32">
+					<h5><?php _e('Posts not found', 'cbd'); ?></h5>
+				</div>
+			<?php endif; ?>
+		</div>
+	</section>
+<?php get_template_part('templates/blocks/contact/contact'); ?>
+<?php get_footer();

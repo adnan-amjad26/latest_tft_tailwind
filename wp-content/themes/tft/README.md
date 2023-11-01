@@ -1,7 +1,7 @@
 tft
 ===
 
-A custom theme based on \_tw
+New Redesigning for TFT Website
 
 ## Quickstart
 
