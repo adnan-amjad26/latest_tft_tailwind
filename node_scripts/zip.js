@@ -56,13 +56,6 @@ if (slug) {
 		}
 	});
 
-	// This event is fired when the data source is drained no matter what was the data source.
-	// It is not part of this library but rather from the NodeJS Stream API.
-	// @see: https://nodejs.org/api/stream.html#stream_event_end
-	output.on('end', function () {
-		console.log('Data has been drained');
-	});
-
 	// Catch warnings.
 	archive.on('warning', function (err) {
 		if (err.code === 'ENOENT') {

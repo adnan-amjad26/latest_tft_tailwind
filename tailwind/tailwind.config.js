@@ -41,10 +41,5 @@ module.exports = {
 
 		// Add Tailwind Typography.
 		require('@tailwindcss/typography'),
-
-		// Uncomment below to add additional first-party Tailwind plugins.
-		// require('@tailwindcss/forms'),
-		// require('@tailwindcss/aspect-ratio'),
-		// require('@tailwindcss/container-queries'),
 	],
 };
