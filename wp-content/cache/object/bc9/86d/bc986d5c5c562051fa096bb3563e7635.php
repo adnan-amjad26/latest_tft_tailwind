@@ -1,1 +1,0 @@
-J‰;e<?php exit; ?>a:1:{s:7:"content";s:172:"a:1:{s:26:"taxonomy-term-help-notices";a:2:{s:15:"pa_account-size";s:32:"e347b4902dd3f6c9e492fae32fd57b20";s:15:"pa_account_type";s:32:"83f9f58f68b195ba6ce352e9cc248f2d";}}";}
