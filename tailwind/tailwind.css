@@ -83,6 +83,17 @@ body {
 		rgb(15 0 34) 92.19%
 	);
 }
+.contact-bg-day {
+	background: linear-gradient(
+		180deg,
+		rgba(15, 0, 34, 0) 0%,
+		rgba(0, 0, 50, 0) 0.01%,
+		#000032 17.01%,
+		#000032 51.39%,
+		#000032 86.46%,
+		#000032 92.19%
+	);
+}
 input.checkout-input[type="radio"]:checked + label.check-text {
 	color: #f7971e;
 }
@@ -315,32 +326,39 @@ p#order_comments_field {
 	display: none;
 }
 span.payment-label:before {
-    display: block;
-    content: '';
-    width: 14px;
-    height: 14px;
-    border-radius: 25px;
-    border: 1px solid #667EFD;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    margin-top: -7px;
+	display: block;
+	content: "";
+	width: 14px;
+	height: 14px;
+	border-radius: 25px;
+	border: 1px solid #667efd;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -7px;
 }
 span.payment-label:after {
-    content: '';
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-radius: 20px;
-    background: #667EFD;
-    position: absolute;
-    top: 50%;
-    margin-top: -5px;
-    left: 2px;
-    display: none;
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 20px;
+	background: #667efd;
+	position: absolute;
+	top: 50%;
+	margin-top: -5px;
+	left: 2px;
+	display: none;
 }
-.woocommerce .woocommerce-checkout #payment ul.payment_methods > li > input.input-radio:checked + label span.payment-label:after {
-    display: block;
+.woocommerce
+	.woocommerce-checkout
+	#payment
+	ul.payment_methods
+	> li
+	> input.input-radio:checked
+	+ label
+	span.payment-label:after {
+	display: block;
 }
 .woocommerce .woocommerce-checkout #payment ul.payment_methods > li > label {
 	font-family: "Wadik";
@@ -421,7 +439,8 @@ span.payment-label:after {
 	letter-spacing: 0px;
 	padding: 10px 26px;
 	font-size: 14px;
-	line-height: 1.2;
+	line-height: 1;
+	width: 282px;
 }
 .woocommerce-checkout #payment button#place_order:before {
 	content: "";
@@ -450,8 +469,340 @@ span.payment-icon {
 span.payment-label {
 	display: block;
 	position: relative;
-    padding-left: 25px;
+	padding-left: 25px;
 }
+/*====== Contact Page =====*/
+.torch .glow-light {
+	box-shadow: 0 0 4rem 3.5rem #ff4202;
+	-webkit-animation: flicker 9s infinite linear;
+	animation: flicker 9s infinite linear;
+}
+@-webkit-keyframes flicker {
+	from {
+		opacity: 0.5;
+	}
+
+	4% {
+		opacity: 0.5;
+	}
+
+	6% {
+		opacity: 0.45;
+	}
+
+	8% {
+		opacity: 0.55;
+	}
+
+	10% {
+		opacity: 0.45;
+	}
+
+	11% {
+		opacity: 0.5;
+	}
+
+	12% {
+		opacity: 0.65;
+	}
+
+	14% {
+		opacity: 0.55;
+	}
+
+	16% {
+		opacity: 0.7;
+	}
+
+	17% {
+		opacity: 0.55;
+	}
+
+	19% {
+		opacity: 0.5;
+	}
+
+	20% {
+		opacity: 0.5;
+	}
+
+	24% {
+		opacity: 0.5;
+	}
+
+	26% {
+		opacity: 0.69;
+	}
+
+	28% {
+		opacity: 0.5;
+	}
+
+	38% {
+		opacity: 0.45;
+	}
+
+	40% {
+		opacity: 0.5;
+	}
+
+	42% {
+		opacity: 0.6;
+	}
+
+	44% {
+		opacity: 0.5;
+	}
+
+	46% {
+		opacity: 0.5;
+	}
+
+	56% {
+		opacity: 0.5;
+	}
+
+	58% {
+		opacity: 0.75;
+	}
+
+	60% {
+		opacity: 0.5;
+	}
+
+	68% {
+		opacity: 0.5;
+	}
+
+	70% {
+		opacity: 0.6;
+	}
+
+	72% {
+		opacity: 0.5;
+	}
+
+	93% {
+		opacity: 0.5;
+	}
+
+	95% {
+		opacity: 0.6;
+	}
+
+	97% {
+		opacity: 0.5;
+	}
+
+	to {
+		opacity: 0.5;
+	}
+}
+
+@keyframes flicker {
+	from {
+		opacity: 0.5;
+	}
+
+	4% {
+		opacity: 0.5;
+	}
+
+	6% {
+		opacity: 0.45;
+	}
+
+	8% {
+		opacity: 0.55;
+	}
+
+	10% {
+		opacity: 0.45;
+	}
+
+	11% {
+		opacity: 0.5;
+	}
+
+	12% {
+		opacity: 0.65;
+	}
+
+	14% {
+		opacity: 0.55;
+	}
+
+	16% {
+		opacity: 0.7;
+	}
+
+	17% {
+		opacity: 0.55;
+	}
+
+	19% {
+		opacity: 0.5;
+	}
+
+	20% {
+		opacity: 0.5;
+	}
+
+	24% {
+		opacity: 0.5;
+	}
+
+	26% {
+		opacity: 0.69;
+	}
+
+	28% {
+		opacity: 0.5;
+	}
+
+	38% {
+		opacity: 0.45;
+	}
+
+	40% {
+		opacity: 0.5;
+	}
+
+	42% {
+		opacity: 0.6;
+	}
+
+	44% {
+		opacity: 0.5;
+	}
+
+	46% {
+		opacity: 0.5;
+	}
+
+	56% {
+		opacity: 0.5;
+	}
+
+	58% {
+		opacity: 0.75;
+	}
+
+	60% {
+		opacity: 0.5;
+	}
+
+	68% {
+		opacity: 0.5;
+	}
+
+	70% {
+		opacity: 0.6;
+	}
+
+	72% {
+		opacity: 0.5;
+	}
+
+	93% {
+		opacity: 0.5;
+	}
+
+	95% {
+		opacity: 0.6;
+	}
+
+	97% {
+		opacity: 0.5;
+	}
+
+	to {
+		opacity: 0.5;
+	}
+}
+.single-step .glow-light {
+	box-shadow: 0 0 7rem 6rem #f7971e;
+}
+.contact-form .gravity-theme .gform_heading {
+	display: none;
+}
+.contact-form .gravity-theme .gform-body .gfield input,
+.contact-form .gravity-theme .gform-body .gfield textarea.textarea {
+	background: #2e2e2e;
+	height: 52px;
+	font-size: 16px;
+	line-height: 1.2em;
+	padding: 15px 25px;
+}
+.contact-form .gravity-theme .gform-body .gfield input:focus,
+.contact-form .gravity-theme .gform-body .gfield textarea.textarea:focus {
+	outline: 0;
+}
+.contact-form .gravity-theme .gform-body .gfield input::-ms-input-placeholder,
+.contact-form
+	.gravity-theme
+	.gform-body
+	.gfield
+	textarea.textarea::-ms-input-placeholder {
+	/* Edge 12-18 */
+	color: #515151;
+}
+.contact-form .gravity-theme .gform-body .gfield input::placeholder,
+.contact-form
+	.gravity-theme
+	.gform-body
+	.gfield
+	textarea.textarea::placeholder {
+	color: #515151;
+}
+.contact-form .gravity-theme .gform-body .gform_fields {
+	grid-row-gap: 60px;
+}
+.contact-form .gravity-theme .gform-body .gfield textarea.textarea {
+	display: block;
+	height: 258px;
+}
+#page .contact-form .gravity-theme .gform_footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 24px;
+	position: relative;
+}
+.contact-form .gravity-theme .gform_footer input.button {
+	margin-bottom: 0px;
+	font-family: "Wadik";
+	background: #493830;
+	font-size: 14px;
+	line-height: 1.2em;
+	width: 242px;
+	height: 54px;
+	cursor: pointer;
+	transition: all 0.3s ease-in;
+	border-radius: 15px;
+	position: relative;
+	z-index: 1;
+}
+.contact-form .gravity-theme .gform_footer input.button:hover {
+	background: #8d4314;
+}
+.contact-form .gravity-theme .gform_footer:before {
+	content: "";
+	display: block;
+	width: 310px;
+	height: 85px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url(img/button-frame.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	z-index: 20;
+	pointer-events: none;
+	margin-top: -3px;
+}
+
 /*===== Responsive Mobile view =====*/
 @media only screen and (max-width: 768px) {
 	.checkout-toggles > label:nth-child(2n + 2) {
@@ -509,7 +860,6 @@ span.payment-label {
 	}
 	.woocommerce-checkout #payment button#place_order {
 		display: block;
-		width: auto;
 		margin: 0 auto;
 		float: none;
 	}
@@ -531,14 +881,26 @@ span.payment-label {
 			rgb(15 0 34) 92.19%
 		);
 	}
-	woocommerce .woocommerce-checkout #payment ul.payment_methods > li > label img {
+	woocommerce
+		.woocommerce-checkout
+		#payment
+		ul.payment_methods
+		> li
+		> label
+		img {
 		margin-left: 0px;
 		margin-right: 10px;
 	}
 	span.payment-icon {
 		margin-top: 10px;
 	}
-	.woocommerce .woocommerce-checkout #payment ul.payment_methods > li.payment_method_nmi > label img {
+	.woocommerce
+		.woocommerce-checkout
+		#payment
+		ul.payment_methods
+		> li.payment_method_nmi
+		> label
+		img {
 		margin-left: 0px !important;
 	}
 }
