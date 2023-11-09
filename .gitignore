@@ -7,9 +7,9 @@
 /wp-content/**
 !/wp-content/themes/
 /wp-content/themes/**
-!/wp-content/themes/tft
+!/wp-content/themes/tft-theme**
 !/wp-content/plugins/
-!/wp-content/plugins/**
+/wp-content/plugins/**
 !/wp-content/plugins/coinbase-commerce**
 !/wp-content/plugins/playlist-videos**
 !/wp-content/plugins/order-status-script**
