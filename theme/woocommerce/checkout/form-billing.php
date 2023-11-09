@@ -35,11 +35,11 @@ defined( 'ABSPATH' ) || exit;
 		<?php $fields = $checkout->get_checkout_fields( 'billing' ); ?>
 		<?php foreach ( $fields as $key => $field ): ?>
 			<?php if($key == 'challenge_type' || $key == 'account_size' || $key == 'account_type' || $key == 'broker' || $key == 'platform'): ?>
-				<div class="checkout-toggles-wrap w-full mb-10 sm:mb-[25px]">
+				<div class="checkout-toggles-wrap w-full mb-5 sm:mb-[25px]">
 					<h4 class="font-wadik text-base mb-[25px] sm:text-center"><?php echo $field['label']; ?></h4>
 					<div class="checkout-toggles flex justify-start sm:justify-center flex-wrap sm:text-center">
 						<?php foreach($field['options'] as $key => $option): ?>
-							<label <?php echo $field['name'].'="'.$key.'"'; ?> class="relative font-bold cursor-pointer uppercase pt-[7px] sm:mb-[25px] <?php if($option !== "Purple Trading") : ?>w-[120px] h-[42px]<?php else : ?>w-[176px] h-[42px]<?php endif; ?> flex items-center justify-center text-sm/[1.2] mr-[25px]">
+							<label <?php echo $field['name'].'="'.$key.'"'; ?> class="relative font-bold cursor-pointer uppercase pt-[7px] mb-5 sm:mb-[25px] <?php if($option !== "Purple Trading") : ?>w-[120px] h-[42px]<?php else : ?>w-[176px] h-[42px]<?php endif; ?> flex items-center justify-center text-sm/[1.2] mr-[25px]">
 								<input type="<?php echo $field['type']; ?>" class="checkout-input hidden" value="<?php echo $key; ?>" name="<?php echo $field['name']; ?>">
 								<span class="check-text z-20"><?php echo $option; ?></span>
                                 <?php if($option !== "Purple Trading") : ?>

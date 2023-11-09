@@ -17,7 +17,7 @@ get_header(); ?>
 		<main id="main">
 			<section class="contact-us-page pt-64 sm:pt-56 pb-40 bg-[#000032]">
 
-				<figure class="bg absolute top-0 left-0 w-full h-full z-0">
+				<figure class="bg absolute top-0 left-0 w-full h-full z-0 block">
 					<div class="imgs-day hidden relative z-10 sm:h-screen">
 						<img class="sm:object-cover sm:h-screen sm:object-center sm:w-full" src="<?php echo get_template_directory_uri(); ?>/img/contact-bg-light.png" alt="Contact background day">
 					</div>
@@ -29,7 +29,7 @@ get_header(); ?>
 
 				<section class="page-title-area relative z-10 mb-[343px]">
 					<div class="container max-w-full pl-4 pr-4 m-auto">
-						<div class="title-wrapper w-full sm:text-center">
+						<div class="title-wrapper text w-full sm:text-center">
 							<h1 class="font-wadik 2xl:text-[64px]/[1.2] xl:text-[64px]/[1.2] md:text-[54px]/[1.2] lg:text-[54px]/[1.2] sm:text-[48px]/[1.1] text-white"><?php the_title(); ?></h1>
 						</div>
 					</div>
