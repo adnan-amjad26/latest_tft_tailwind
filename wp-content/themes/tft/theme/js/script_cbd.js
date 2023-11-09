@@ -47,6 +47,8 @@ jQuery(document).ready(function ($) {
 	makeAjaxRequest()
 		.then(function (response) {
 			$(".toggles li[account_size]").click(function () {
+				$(".toggles li[account_size]").removeClass('active');
+				$(this).addClass('active');
 				var account_size = $(this).attr("account_size");
 				var challange_type = $(this).attr("challange_type");
 				var account_type = $(this).attr("account_type");
@@ -65,7 +67,44 @@ jQuery(document).ready(function ($) {
 						$('.table__body .row:eq(' + rowIndex + ') .col-xxs-3:eq(' + cellIndex + ')').html(cell.c);
 					});
 				});
-				console.log(filteredResults[0]);
+				// Update mobile table header
+				$('.product-table-mobile .table__head .row div:eq(0)').html(tableData.table.header[0].c);
+				// Update mobile table body
+				tableData.table.body.forEach(function (row, rowIndex) {
+					// var mainRowIndex = rowIndex * 2;
+					// var expandedRowIndex = mainRowIndex + 1;
+					if (rowIndex % 2 == 0) {
+						$('.product-table-mobile .table__body .row:eq(' + rowIndex + ') > div').html(row[0].c);
+					} else {
+						$('.product-table-mobile .table__expand:eq(' + rowIndex + ') > div').html(row[1].c);
+					}
+
+				});
+				//
+				// // Update mobile swiper table header
+				tableData.table.header.forEach(function (cell, index) {
+					// console.log(cell);
+					if (index !== 0) {
+						$('.product-table-mobile .swiper-slide .table__head .row div:eq(' + parseInt(index - 1) + ')').html(cell.c);
+					}
+				});
+
+				// Update mobile swiper table body
+				let i = 0;
+				tableData.table.body.forEach(function (row, rowIndex) {
+					if (rowIndex % 2 === 0) {
+						row.forEach(function (cell, cellIndex) {
+							if (cellIndex > 0) {
+								console.log(cellIndex-1,i*2);
+								$('.product-table-mobile .swiper-slide:eq(' + parseInt(cellIndex-1) + ') .table__body .row:eq(' + rowIndex + ') div').html(cell.c);
+							}
+							i++;
+
+						});
+					}
+
+				});
+				// console.log(filteredResults[0]);
 			});
 		})
 		.catch(function (error) {
