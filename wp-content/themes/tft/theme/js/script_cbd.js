@@ -44,16 +44,32 @@ jQuery(document).ready(function ($) {
 		});
 	}
 
+	let buttonCombinations = [];
+
 	makeAjaxRequest()
 		.then(function (response) {
-			$(".toggles li[account_size]").click(function () {
+			response.forEach(function (element) {
+				var challenge_type = element.challange_type.slug;
+				var account_type = element.account_type.slug;
+				var account_size = parseInt(element.account_size.slug); // Convert to integer
+
+				// Add the transformed data to the result array
+				buttonCombinations.push({
+					"challenge_type": challenge_type,
+					"account_type": account_type,
+					"account_size": account_size
+				});
+			});
+
+
+			$(".toggles li.account_size[account_size]").click(function () {
 				$(".toggles li[account_size]").removeClass('active');
 				$(this).addClass('active');
 				var account_size = $(this).attr("account_size");
-				var challange_type = $(this).attr("challange_type");
+				var challenge_type = $(this).attr("challenge_type");
 				var account_type = $(this).attr("account_type");
 
-				var filteredResults = filterData(response, challange_type, account_type, account_size);
+				var filteredResults = filterData(response, challenge_type, account_type, account_size);
 				var tableData = filteredResults[0];
 				tableData.table.header.forEach(function (cell, index) {
 					// Update the header cell based on the index
@@ -95,8 +111,7 @@ jQuery(document).ready(function ($) {
 					if (rowIndex % 2 === 0) {
 						row.forEach(function (cell, cellIndex) {
 							if (cellIndex > 0) {
-								console.log(cellIndex-1,i*2);
-								$('.product-table-mobile .swiper-slide:eq(' + parseInt(cellIndex-1) + ') .table__body .row:eq(' + rowIndex + ') div').html(cell.c);
+								$('.product-table-mobile .swiper-slide:eq(' + parseInt(cellIndex - 1) + ') .table__body .row:eq(' + rowIndex + ') div').html(cell.c);
 							}
 							i++;
 
@@ -110,6 +125,7 @@ jQuery(document).ready(function ($) {
 		.catch(function (error) {
 			console.error(error);
 		});
+
 
 	function filterData(tables, challengeSlug, accountTypeSlug, accountSizeSlug) {
 		// Initialize an empty array to store filtered results
@@ -282,219 +298,19 @@ jQuery(document).ready(function ($) {
 		}
 	);
 
-	var data = [
-		{
-			"challenge_type": "standard-challenge",
-			"account_type": "swing",
-			"account_size": 10000
-		},
-		{
-			"challenge_type": "standard-challenge",
-			"account_type": "swing",
-			"account_size": 25000
-		},
-		{
-			"challenge_type": "standard-challenge",
-			"account_type": "swing",
-			"account_size": 50000
-		},
-		{
-			"challenge_type": "standard-challenge",
-			"account_type": "swing",
-			"account_size": 100000
-		},
-		{
-			"challenge_type": "standard-challenge",
-			"account_type": "swing",
-			"account_size": 200000
-		},
-		{
-			"challenge_type": "standard-challenge",
-			"account_type": "swing",
-			"account_size": 300000
-		},
-		{
-			"challenge_type": "standard-challenge",
-			"account_type": "swing",
-			"account_size": 400000
-		},
-		{
-			"challenge_type": "standard-challenge",
-			"account_type": "regular",
-			"account_size": 10000
-		},
-		{
-			"challenge_type": "standard-challenge",
-			"account_type": "regular",
-			"account_size": 25000
-		},
-		{
-			"challenge_type": "standard-challenge",
-			"account_type": "regular",
-			"account_size": 50000
-		},
-		{
-			"challenge_type": "standard-challenge",
-			"account_type": "regular",
-			"account_size": 100000
-		},
-		{
-			"challenge_type": "standard-challenge",
-			"account_type": "regular",
-			"account_size": 200000
-		},
-		{
-			"challenge_type": "standard-challenge",
-			"account_type": "regular",
-			"account_size": 300000
-		},
-		{
-			"challenge_type": "standard-challenge",
-			"account_type": "regular",
-			"account_size": 400000
-		},
-		{
-			"challenge_type": "rapid-challenge",
-			"account_type": "swing",
-			"account_size": 10000
-		},
-		{
-			"challenge_type": "rapid-challenge",
-			"account_type": "swing",
-			"account_size": 25000
-		},
-		{
-			"challenge_type": "rapid-challenge",
-			"account_type": "swing",
-			"account_size": 50000
-		},
-		{
-			"challenge_type": "rapid-challenge",
-			"account_type": "swing",
-			"account_size": 100000
-		},
-		{
-			"challenge_type": "rapid-challenge",
-			"account_type": "swing",
-			"account_size": 200000
-		},
-		{
-			"challenge_type": "rapid-challenge",
-			"account_type": "regular",
-			"account_size": 10000
-		},
-		{
-			"challenge_type": "rapid-challenge",
-			"account_type": "regular",
-			"account_size": 25000
-		},
-		{
-			"challenge_type": "rapid-challenge",
-			"account_type": "regular",
-			"account_size": 50000
-		},
-		{
-			"challenge_type": "rapid-challenge",
-			"account_type": "regular",
-			"account_size": 100000
-		},
-		{
-			"challenge_type": "rapid-challenge",
-			"account_type": "regular",
-			"account_size": 200000
-		},
-		{
-			"challenge_type": "royal-challenge",
-			"account_type": "regular",
-			"account_size": 50000
-		},
-		{
-			"challenge_type": "royal-challenge",
-			"account_type": "regular",
-			"account_size": 100000
-		},
-		{
-			"challenge_type": "royal-challenge",
-			"account_type": "regular",
-			"account_size": 200000
-		},
-		{
-			"challenge_type": "royal-challenge",
-			"account_type": "regular",
-			"account_size": 300000
-		},
-		{
-			"challenge_type": "royal-challenge",
-			"account_type": "regular",
-			"account_size": 400000
-		},
-		{
-			"challenge_type": "knights-challenge",
-			"account_type": "regular",
-			"account_size": 25000
-		},
-		{
-			"challenge_type": "knights-challenge",
-			"account_type": "regular",
-			"account_size": 50000
-		},
-		{
-			"challenge_type": "knights-challenge",
-			"account_type": "regular",
-			"account_size": 100000
-		},
-		{
-			"challenge_type": "knights-challenge",
-			"account_type": "regular",
-			"account_size": 200000
-		}
-	];
-
-
-	function toggleButtons() {
-		// Hide all buttons
-		$(".your-buttons").hide();
-
-		// Iterate through the data and show matching buttons
-		data.forEach(function (item) {
-			var challenge_type = item.challenge_type;
-			var account_type = item.account_type;
-			var account_size = item.account_size;
-
-			// Select and show the matching button
-			$(".your-buttons[data-challenge-type='" + challenge_type + "'][data-account-type='" + account_type + "'][data-account-size='" + account_size + "']")
-				.show();
-		});
-	}
-
-// Initially, toggle the buttons based on the provided data
-	toggleButtons();
-
-
 	// Challenge Type | Account Type | Account Size on Load
 	$(window).on("load", function () {
 		// Challenge Type
 		var challenge_type = $(".toggles li[challenge_type].active").attr(
 			"challenge_type"
 		);
-		var account_typee = $(".toggles li[account_type].active").attr(
-			"account_type"
-		);
+		var account_type = $(".toggles li[account_type]:visible")
+			.first()
+			.addClass("active")
+			.attr("account_type");
 
-		var filteredData = data.filter(function (item) {
-			return item.challenge_type === challenge_type;
-		});
-		var filteredSizeData = data.filter(function (item) {
-			return (item.challenge_type === challenge_type && item.account_type === account_type);
-		});
-
-		// Create a set of unique account_type values
-		var accountTypes = new Set();
-		var accountSizes = new Set();
-		filteredSizeData.forEach(function (item) {
-			accountSizes.add(item.account_size);
-		});
-
+		$(".toggles li[account_type]").attr('challenge_type', challenge_type);
+		$(".toggles li[account_size]").attr('challenge_type', challenge_type).attr('account_type', account_type);
 		$(".toggles li[account_type]").each(function () {
 			// $(this).hide();
 			var account_type = $(this).attr("account_type");
@@ -547,168 +363,105 @@ jQuery(document).ready(function ($) {
 		).addClass("active");
 	});
 
-	// Challenge Type
-	// $(".toggles li[challenge_type]").click(function () {
-	// 	$(this).addClass("active").siblings().removeClass("active");
-	// 	var challenge_type = $(this).attr("challenge_type");
-	// 	// Account Type
-	// 	$(".toggles li[account_type]").each(function () {
-	// 		var account_type = $(this).attr("account_type");
-	// 		$(
-	// 			".product-table[challenge_type=" +
-	// 			challenge_type +
-	// 			"][account_type=" +
-	// 			account_type +
-	// 			"]"
-	// 		).length
-	// 			? $(this).show()
-	// 			: $(this).hide();
-	// 	});
-	// 	$(".toggles li[account_type]").removeClass("active");
-	// 	var account_type = $(".toggles li[account_type]:visible")
-	// 		.first()
-	// 		.addClass("active")
-	// 		.attr("account_type");
-	// 	// Account Size
-	// 	$(".toggles li[account_size]").each(function () {
-	// 		var account_size = $(this).attr("account_size");
-	// 		$(
-	// 			".product-table[challenge_type=" +
-	// 			challenge_type +
-	// 			"][account_type=" +
-	// 			account_type +
-	// 			"][account_size=" +
-	// 			account_size +
-	// 			"]"
-	// 		).length
-	// 			? $(this).show()
-	// 			: $(this).hide();
-	// 	});
-	// 	$(".toggles li[account_size]").removeClass("active");
-	// 	var account_size = $(".toggles li[account_size]:visible")
-	// 		.first()
-	// 		.addClass("active")
-	// 		.attr("account_size");
-	// 	// Product Table
-	// 	$(
-	// 		".product-table[challenge_type=" +
-	// 		challenge_type +
-	// 		"][account_type=" +
-	// 		account_type +
-	// 		"][account_size=" +
-	// 		account_size +
-	// 		"]"
-	// 	)
-	// 		.addClass("active")
-	// 		.siblings()
-	// 		.removeClass("active");
-	// 	// Disable Quick Comparison
-	// 	$(".table__tab[quick_comparison]").removeClass("active");
-	// 	$(".comparison-table").hide();
-	// 	$(".product-table.active .table:not(.comparison-table)").show();
-	// 	if ($(window).width() < 992) {
-	// 		for (let i = 0; i < productTableMobileSwiper.length; i++)
-	// 			productTableMobileSwiper[i].slideTo(0);
-	// 		for (let i = 0; i < comparisonTableMobileSwiper.length; i++)
-	// 			comparisonTableMobileSwiper[i].slideTo(0);
-	// 	}
-	// });
-	//
-	// // Account Type
-	// $(".toggles li[account_type]").click(function () {
-	// 	// Challenge Type
-	// 	var challenge_type = $(".toggles li[challenge_type].active").attr(
-	// 		"challenge_type"
-	// 	);
-	// 	// Account Type
-	// 	$(this).addClass("active").siblings().removeClass("active");
-	// 	var account_type = $(".toggles li[account_type].active").attr(
-	// 		"account_type"
-	// 	);
-	// 	// Account Size
-	// 	$(".toggles li[account_size]").each(function () {
-	// 		var account_size = $(this).attr("account_size");
-	// 		$(
-	// 			".product-table[challenge_type=" +
-	// 			challenge_type +
-	// 			"][account_type=" +
-	// 			account_type +
-	// 			"][account_size=" +
-	// 			account_size +
-	// 			"]"
-	// 		).length
-	// 			? $(this).show()
-	// 			: $(this).hide();
-	// 	});
-	// 	$(".toggles li[account_size]").removeClass("active");
-	// 	var account_size = $(".toggles li[account_size]:visible")
-	// 		.first()
-	// 		.addClass("active")
-	// 		.attr("account_size");
-	// 	// Product Table
-	// 	$(
-	// 		".product-table[challenge_type=" +
-	// 		challenge_type +
-	// 		"][account_type=" +
-	// 		account_type +
-	// 		"][account_size=" +
-	// 		account_size +
-	// 		"]"
-	// 	)
-	// 		.addClass("active")
-	// 		.siblings()
-	// 		.removeClass("active");
-	// 	// Disable Quick Comparison
-	// 	$(".table__tab[quick_comparison]").removeClass("active");
-	// 	$(".comparison-table").hide();
-	// 	$(".product-table.active .table:not(.comparison-table)").show();
-	// 	if ($(window).width() < 992) {
-	// 		for (let i = 0; i < productTableMobileSwiper.length; i++)
-	// 			productTableMobileSwiper[i].slideTo(0);
-	// 		for (let i = 0; i < comparisonTableMobileSwiper.length; i++)
-	// 			comparisonTableMobileSwiper[i].slideTo(0);
-	// 	}
-	// });
+	$(".toggles li.challenge_type[challenge_type]").click(function () {
+		$(this).addClass("active").siblings().removeClass("active");
+		var challenge_type = $(this).attr("challenge_type");
+		$(".toggles li.account_type[account_type]").attr('challenge_type', challenge_type);
+		var account_typee = $(".toggles li.account_type[account_type].active").attr(
+			"account_type"
+		);
+		$(".toggles li.account_size[account_size]").attr('challenge_type', challenge_type).attr('account_type', account_typee);
 
-	// Account Size
-	// $(".toggles li[account_size]").click(function () {
-	// 	// Challenge Type
-	// 	var challenge_type = $(".toggles li[challenge_type].active").attr(
-	// 		"challenge_type"
-	// 	);
-	// 	// Account Type
-	// 	var account_type = $(".toggles li[account_type].active").attr(
-	// 		"account_type"
-	// 	);
-	// 	// Account Size
-	// 	$(this).addClass("active").siblings().removeClass("active");
-	// 	var account_size = $(".toggles li[account_size].active").attr(
-	// 		"account_size"
-	// 	);
-	// 	// Product Table
-	// 	$(
-	// 		".product-table[challenge_type=" +
-	// 		challenge_type +
-	// 		"][account_type=" +
-	// 		account_type +
-	// 		"][account_size=" +
-	// 		account_size +
-	// 		"]"
-	// 	)
-	// 		.addClass("active")
-	// 		.siblings()
-	// 		.removeClass("active");
-	// 	// Disable Quick Comparison
-	// 	$(".table__tab[quick_comparison]").removeClass("active");
-	// 	$(".comparison-table").hide();
-	// 	$(".product-table.active .table:not(.comparison-table)").show();
-	// 	if ($(window).width() < 992) {
-	// 		for (let i = 0; i < productTableMobileSwiper.length; i++)
-	// 			productTableMobileSwiper[i].slideTo(0);
-	// 		for (let i = 0; i < comparisonTableMobileSwiper.length; i++)
-	// 			comparisonTableMobileSwiper[i].slideTo(0);
-	// 	}
-	// });
+		var filteredData = buttonCombinations.filter(function (item) {
+			return item.challenge_type === challenge_type;
+		});
+
+
+		$(".toggles li.account_type[account_type]").each(function () {
+			// Check if the combination is not present in the data
+			var currentListItem = $(this);
+			var isCombinationPresent = filteredData.some(function (item) {
+				return item.challenge_type === currentListItem.attr('challenge_type') && item.account_type === currentListItem.attr('account_type');
+			});
+			// If not present, hide the list item
+			if (!isCombinationPresent) {
+				$(this).hide();
+			} else {
+				$(this).show();
+			}
+		});
+		$(".toggles li.account_type[account_type]:visible").first().addClass('active').siblings().removeClass("active");
+
+		let account_type = $(".toggles li.account_type[account_type].active").attr(
+			"account_type"
+		);
+
+		$(".toggles li.account_size[account_size]").attr('challenge_type', challenge_type).attr('account_type', account_type);
+
+		var filteredSizeData = buttonCombinations.filter(function (item) {
+			return (item.challenge_type === challenge_type && item.account_type === account_type);
+		});
+
+		$(".toggles li.account_size[account_size]").each(function () {
+			// Check if the combination is not present in the data
+			var currentListItem = $(this);
+			var isCombinationPresent = filteredSizeData.some(function (item) {
+
+				return item.challenge_type === currentListItem.attr('challenge_type')
+					&& item.account_type === currentListItem.attr('account_type')
+					&& item.account_size === parseInt(currentListItem.attr('account_size'));
+			});
+			// If not present, hide the list item
+			if (!isCombinationPresent) {
+				$(this).hide();
+			} else {
+				$(this).show();
+			}
+		});
+
+		$(".toggles li.account_size[account_size]:visible").first().addClass('active').siblings().removeClass("active");
+		//
+		$(".toggles li.account_size[account_size]:visible")
+			.first().click();
+
+
+	});
+
+	//handling of the account type click
+	$(".toggles li.account_type[account_type]").click(function () {
+		$(this).addClass("active").siblings().removeClass("active");
+		var challenge_type = $(this).attr("challenge_type");
+		var account_type = $(this).attr("account_type");
+		$(".toggles li[account_size]").attr('challenge_type', challenge_type).attr('account_type', account_type);
+
+		$(".toggles li[account_size]:visible")
+			.first().click();
+
+		var filteredSizeData = buttonCombinations.filter(function (item) {
+			return (item.challenge_type === challenge_type && item.account_type === account_type);
+		});
+		$(".toggles li.account_size[account_size]").each(function () {
+			// Check if the combination is not present in the data
+			var currentListItem = $(this);
+			var isCombinationPresent = filteredSizeData.some(function (item) {
+
+				return item.challenge_type === currentListItem.attr('challenge_type')
+					&& item.account_type === currentListItem.attr('account_type')
+					&& item.account_size === parseInt(currentListItem.attr('account_size'));
+			});
+			// If not present, hide the list item
+			if (!isCombinationPresent) {
+				$(this).hide();
+			} else {
+				$(this).show();
+			}
+		});
+
+		$(".toggles li.account_size[account_size]:visible").first().addClass('active').siblings().removeClass("active");
+		//
+		$(".toggles li.account_size[account_size]:visible")
+			.first().click();
+	});
 
 	// Checkout Update Product Variation
 	$(window).on("load", function () {
