@@ -13,7 +13,10 @@ module.exports = {
 	],
 	theme: {
 		// Extend the default Tailwind theme.
-		//extend: {},
+		fontFamily: {
+			'body': ['"Montserrat"', 'sans-serif'],
+			'wadik': ['"Wadik"','"Open Sans"'],
+		},
 		screens: {
 			'sm': {'min': '320px', 'max': '767px'},
 			// => @media (min-width: 640px and max-width: 767px) { ... }
