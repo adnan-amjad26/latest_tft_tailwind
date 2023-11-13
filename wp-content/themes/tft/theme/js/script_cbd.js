@@ -21,6 +21,78 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
+	// Function to generate the challenge URL based on parameters
+	function generateChallengeURL(challengeType, accountType, accountSize) {
+		var planId;
+		// Convert accountSize to the appropriate format
+		accountSize = accountSize.endsWith("000") ? parseInt(accountSize) / 1000 : parseInt(accountSize);
+		// Determine the planId based on challengeType and accountSize
+		if (challengeType === "standard") {
+			if (accountType === "swing") {
+				planId = {
+					5: 1189,
+					10: 1190,
+					25: 1191,
+					50: 1192,
+					100: 1193,
+					200: 1194,
+					300: 1195,
+					400: 1196
+				}[accountSize];
+			} else if (accountType === "regular") {
+				planId = {
+					5: 1157,
+					10: 1158,
+					25: 1159,
+					50: 1160,
+					100: 1161,
+					200: 1162,
+					300: 1163,
+					400: 1164
+				}[accountSize];
+			}
+		} else if (challengeType === "rapid") {
+			if (accountType === "swing") {
+				planId = {
+					5: 594,
+					10: 2072,
+					25: 2073,
+					50: 2074,
+					100: 2075,
+					200: 2076
+				}[accountSize];
+			} else if (accountType === "regular") {
+				planId = {
+					5: 592,
+					10: 2042,
+					25: 2043,
+					50: 2044,
+					100: 2045,
+					200: 2046
+				}[accountSize];
+			}
+		} else if (challengeType === "royal") {
+			planId = {
+				50: 2012,
+				100: 2013,
+				200: 2014,
+				300: 2015,
+				400: 2016
+			}[accountSize];
+		} else if (challengeType === "knight") {
+			planId = {
+				25: 1999,
+				50: 2000,
+				100: 2001,
+				200: 2002
+			}[accountSize];
+		}
+		// console.log(planId);
+		// Return the generated URL
+		return 'https://' + 'dashboard.thefundedtraderprogram.com' + '/purchasechallenge-n/?planid=' + planId;
+	}
+
+
 	// function to have send the ajax request
 	let product_id = $('h1#product_id').text();
 	var tables = [];
@@ -68,6 +140,14 @@ jQuery(document).ready(function ($) {
 				var account_size = $(this).attr("account_size");
 				var challenge_type = $(this).attr("challenge_type");
 				var account_type = $(this).attr("account_type");
+				let challengeType = '';
+				// update the checkout button link with planId
+				if (challenge_type.toLowerCase().includes('-challenge')) {
+					// If challenge_type includes '-challenge', remove it
+					challengeType = challenge_type.replace('-challenge', '');
+				}
+				var challengeURL = generateChallengeURL(challengeType, account_type, account_size);
+				$('a#buyChallenge').attr('href', challengeURL);
 
 				var filteredResults = filterData(response, challenge_type, account_type, account_size);
 				var tableData = filteredResults[0];

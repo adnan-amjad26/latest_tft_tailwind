@@ -248,7 +248,6 @@ function tables_data_callback()
 		'tables' => $tables,
 	);
 	wp_send_json($response_data);
-	echo "<h1>33 Tables</h1>";
 	wp_die();
 
 }

@@ -122,7 +122,7 @@
 	<?php endif; ?>
 	<div class="animations absolute top-0 left-0 w-full h-full z-10">
 		<?php if ($img_day_2 || $img_night_2) : ?>
-			<!-- <div class="moon absolute w-44" data-scroll>
+			 <div class="moon absolute w-44" data-scroll>
                 <?php if ($img_day_2) : ?>
                     <img class="imgs-day" src="<?php echo $img_day_2['url']; ?>"
                          alt="<?php echo 'img day 2'; ?>">
@@ -131,7 +131,7 @@
                     <img class="imgs-night" src="<?php echo $img_night_2['url']; ?>"
                          alt="<?php echo 'img night 2'; ?>">
                 <?php endif; ?>
-            </div> -->
+            </div>
 		<?php endif; ?>
 		<?php if ($lottie_day) : ?>
 			<div id="lottie1" data-src="<?php echo $lottie_day; ?>">
