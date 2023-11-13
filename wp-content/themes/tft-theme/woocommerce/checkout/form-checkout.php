@@ -88,6 +88,4 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
     </div>
     <!--- Checkout Form --->
-	<figure class="imgs-day absolute bottom-0 left-0 w-full h-third z-0 bg-gradient-to-b from-lilac-dark to-purple-darker">
-	</figure>
 </section>
