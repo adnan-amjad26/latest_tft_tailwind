@@ -14,7 +14,7 @@
 get_header(); ?>
 
 	<section id="primary">
-		<main id="main">
+		<main id="main" class="overflow-hidden">
 			<?php
 
 			/* Start the Loop */

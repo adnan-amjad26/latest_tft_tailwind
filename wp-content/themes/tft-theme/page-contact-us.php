@@ -14,7 +14,7 @@
 get_header(); ?>
 
 	<section id="primary">
-		<main id="main">
+		<main id="main" class="overflow-hidden text-2xl">
 			<section class="contact-us-page pt-64 sm:pt-56 pb-40 bg-[#000032]">
 
 				<figure class="bg absolute top-0 left-0 w-full h-full z-0 block">
@@ -30,7 +30,7 @@ get_header(); ?>
 				<section class="page-title-area relative z-10 mb-[343px]">
 					<div class="container max-w-full pl-4 pr-4 m-auto">
 						<div class="title-wrapper text w-full sm:text-center">
-							<h1 class="font-wadik 2xl:text-[64px]/[1.2] xl:text-[64px]/[1.2] md:text-[54px]/[1.2] lg:text-[54px]/[1.2] sm:text-[48px]/[1.1] text-white"><?php the_title(); ?></h1>
+							<h1 class="font-wadik 2xl:text-[64px]/[1.2] xl:text-[64px]/[1.2] md:text-[44px]/[1.2] lg:text-[54px]/[1.2] sm:text-[48px]/[1.1] text-white"><?php the_title(); ?></h1>
 						</div>
 					</div>
 				</section>
