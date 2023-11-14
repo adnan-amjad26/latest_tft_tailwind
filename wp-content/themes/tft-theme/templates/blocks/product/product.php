@@ -206,7 +206,7 @@ $broker = wp_get_post_terms($product, 'pa_broker');
 							<?php if ($variation_id): ?>
 								<?php $_product = wc_get_product($variation_id); ?>
 								<div class="button mt-12 lg:mt-16 text-center" >
-									<a href="<?php echo $_product->add_to_cart_url(); ?>" class="btn btn-gold" id="buyChallenge">
+									<a href="<?php echo 'https://dashboard.thefundedtraderprogram.com/purchasechallenge-n/?planid=1190'; ?>" class="btn btn-gold" id="buyChallenge">
 										<span><?php _e('Buy Challenge', 'cbd'); ?></span>
 									</a>
 								</div>
