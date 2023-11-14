@@ -841,10 +841,12 @@ jQuery(document).ready(function ($) {
 	// Quick Comparison
 	$(".table__tab[quick_comparison]").click(function () {
 		$(this).toggleClass("active");
+		var challange_type = $(".toggles li.account_size.active").attr("challenge_type");
 		var table = $(".product-table.active");
 		var comparison_table = $(
-			'.comparison-table[challenge_type="' + table.attr("challenge_type") + '"]'
+			'.comparison-table[challenge_type="' + challange_type + '"]'
 		);
+		$('.table.comparison-table').hide();
 		comparison_table.toggle();
 		table
 			.find(".table:not(.comparison-table)")

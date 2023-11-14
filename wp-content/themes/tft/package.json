@@ -24,7 +24,7 @@
 		"tailwindcss": "^3.3.3"
 	},
 	"scripts": {
-		"development:tailwind:frontend": "npx tailwindcss --postcss -i ./tailwind/tailwind.css -c ./tailwind/tailwind.config.js -o ./theme/style_tft.css",
+		"development:tailwind:frontend": "npx tailwindcss --postcss -i ./tailwind/tailwind.css -c ./tailwind/tailwind.config.js -o ./theme/style.css",
 		"development:tailwind:editor": "cross-env _TW_TARGET=editor npx tailwindcss --postcss -i ./tailwind/tailwind.css -c ./tailwind/tailwind.config.js -o ./theme/style-editor.css",
 		"development:esbuild": "npx esbuild ./javascript/script.js ./javascript/block-editor.js ./javascript/tailwind-typography-classes.js --target=esnext --bundle --outdir=./theme/js --out-extension:.js=.min.js",
 		"development": "run-p development:**",

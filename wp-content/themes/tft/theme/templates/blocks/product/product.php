@@ -10,78 +10,8 @@ session_start();
 global $woocommerce;
 //	$time_start = microtime(true);
 $product = get_field('product');
-if (isset($_SESSION['dataTables'])) {
-	$tables = $_SESSION['dataTables'];
-} else {
-	$tables = get_field('product_tables', $product);
-	$tables = array_slice($tables, 0, 1);
-	$_SESSION['dataTables'] = $tables;
-}
-
-
-$dataArray = $tables;
-
-$slugs = array();
-
-foreach ($dataArray as $record) {
-	$challenge_type_slug = $record['challange_type']->slug;
-	$account_type_slug = $record['account_type']->slug;
-	$account_size_slug = $record['account_size']->slug;
-	$slugs[] = array(
-		'challenge_type' => $challenge_type_slug,
-		'account_type' => $account_type_slug,
-		'account_size' => $account_size_slug
-	);
-}
-
-
-$targetChallangeTypeSlug = 'standard-challenge';
-$targetAccountTypeSlug = 'swing';
-$targetAccountSizeSlug = '10000';
-
-foreach ($dataArray as $record) {
-	$challangeType = $record['challange_type'];
-	$accountType = $record['account_type'];
-	$accountSize = $record['account_size'];
-
-	if ($challangeType->slug === $targetChallangeTypeSlug &&
-		$accountType->slug === $targetAccountTypeSlug &&
-		$accountSize->slug === $targetAccountSizeSlug) {
-//		print_r($record);
-		break; // Exit the loop once a matching record is found
-	}
-}
-
-$challenge_type = sanitize_text_field($_POST['challenge_type']);
-$account_type = sanitize_text_field($_POST['account_type']);
-$account_size = sanitize_text_field($_POST['account_size']);
-
-// Create a function to generate and return the tables (you can use your existing code)
-function generate_tables($challenge_type, $account_type, $account_size)
-{
-	ob_start();
-	?>
-	<table>
-		<thead>
-		<th>New1</th>
-		<th>new 2</th>
-		<th>heading 3</th>
-		<th>heading 4</th>
-		</thead>
-		<tbody>
-		<tr>
-			<td>new cell</td>
-		</tr>
-		<tr>
-			<td>new cell</td>
-		</tr>
-		</tbody>
-	</table>
-	<?php
-	$output = ob_get_clean();
-	echo $output;
-}
-
+$tables = get_field('product_tables', $product);
+$tables = array_slice($tables, 0, 1);
 
 $quick_comparison = get_field('quick_comparison', $product);
 $challenge_type = wp_get_post_terms($product, 'pa_challenge_type');
