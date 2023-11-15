@@ -7,6 +7,6 @@
 /wp-content/**
 !/wp-content/themes/
 /wp-content/themes/**
-!/wp-content/themes/tft**
+!/wp-content/themes/tft-theme**
 /wp-content/plugins
 
