@@ -19,6 +19,9 @@
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 	<script>
 		(function (w, d, s, r, n) {
@@ -92,18 +95,6 @@ if (is_singular('post')) $bg = 'bg-lilac-dark'; ?>
 										<div class="toggle-switch-figureAlt"></div>
 									</div>
 								</div>
-								<script>
-									/* Controls the day/night mode appearance on page load */
-									if (!localStorage.getItem('dnmode')) {
-										var DNMode = 'night', TimeNow = new Date().getHours();
-										DNMode = (TimeNow < 18) ? 'day' : 'night';
-										localStorage.setItem('dnmode', DNMode);
-									}
-									if (localStorage.getItem('dnmode') == 'night') {
-										jQuery('.mode .toggle-input').trigger('click');
-										jQuery('body').addClass('theme-dark').removeAttr('data-day');
-									}
-								</script>
 							</div>
 							<div class='lang-switcher'>
 								<?php /* Outputs the WPML language switcher in the header */ ?>

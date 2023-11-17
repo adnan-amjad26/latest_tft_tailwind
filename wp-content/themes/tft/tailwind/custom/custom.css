@@ -277,6 +277,12 @@ span.payment-icon {
 span.payment-label {
 	@apply block relative pl-[25px];
 }
+body.woocommerce-checkout.theme-dark section.contact-details .contact-details-overly {
+    @apply bg-gradient-to-b from-[#0F0022] to-[rgba(15,0,34,0)];
+}
+body.woocommerce-checkout.theme-light section.contact-details .contact-details-overly {
+    @apply bg-gradient-to-b from-[#441F57] to-[rgba(15,0,34,0)];
+}
 /*====== Contact Page =====*/
 .contact-form .gravity-theme .gform_heading {
 	@apply hidden;

@@ -36,36 +36,54 @@ add_filter( 'comment_form_defaults', 'tft_comment_form_defaults' );
  * Filters the default archive titles.
  */
 function tft_get_the_archive_title() {
-	if ( is_category() ) {
-		$title = __( 'Category Archives: ', 'tft' ) . '<span>' . single_term_title( '', false ) . '</span>';
-	} elseif ( is_tag() ) {
-		$title = __( 'Tag Archives: ', 'tft' ) . '<span>' . single_term_title( '', false ) . '</span>';
-	} elseif ( is_author() ) {
-		$title = __( 'Author Archives: ', 'tft' ) . '<span>' . get_the_author_meta( 'display_name' ) . '</span>';
-	} elseif ( is_year() ) {
-		$title = __( 'Yearly Archives: ', 'tft' ) . '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'tft' ) ) . '</span>';
-	} elseif ( is_month() ) {
-		$title = __( 'Monthly Archives: ', 'tft' ) . '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'tft' ) ) . '</span>';
-	} elseif ( is_day() ) {
-		$title = __( 'Daily Archives: ', 'tft' ) . '<span>' . get_the_date() . '</span>';
-	} elseif ( is_post_type_archive() ) {
-		$cpt   = get_post_type_object( get_queried_object()->name );
-		$title = sprintf(
-			/* translators: %s: Post type singular name */
-			esc_html__( '%s Archives', 'tft' ),
-			$cpt->labels->singular_name
-		);
-	} elseif ( is_tax() ) {
-		$tax   = get_taxonomy( get_queried_object()->taxonomy );
-		$title = sprintf(
-			/* translators: %s: Taxonomy singular name */
-			esc_html__( '%s Archives', 'tft' ),
-			$tax->labels->singular_name
-		);
-	} else {
-		$title = __( 'Archives:', 'tft' );
+	switch (is_archive()) {
+		case is_category() :
+			$title = __( 'Category Archives: ', 'tft' ) . '<span>' . single_term_title( '', false ) . '</span>';
+			return $title;
+			break;
+		case is_tag() :
+			$title = __( 'Tag Archives: ', 'tft' ) . '<span>' . single_term_title( '', false ) . '</span>';
+			return $title;
+			break;
+		case is_author() :
+			$title = __( 'Author Archives: ', 'tft' ) . '<span>' . get_the_author_meta( 'display_name' ) . '</span>';
+			return $title;
+			break;
+		case is_year() : 
+			$title = __( 'Yearly Archives: ', 'tft' ) . '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'tft' ) ) . '</span>';
+			return $title;
+			break;
+		case is_month() :
+			$title = __( 'Monthly Archives: ', 'tft' ) . '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'tft' ) ) . '</span>';
+			return $title;
+			break;
+		case is_day() :
+			$title = __( 'Daily Archives: ', 'tft' ) . '<span>' . get_the_date() . '</span>';
+			return $title;
+			break;
+		case is_post_type_archive() :
+			$cpt   = get_post_type_object( get_queried_object()->name );
+			$title = sprintf(
+				/* translators: %s: Post type singular name */
+				esc_html__( '%s Archives', 'tft' ),
+				$cpt->labels->singular_name
+			);
+			return $title;
+			break;
+		case is_tax() :
+			$tax   = get_taxonomy( get_queried_object()->taxonomy );
+			$title = sprintf(
+				/* translators: %s: Taxonomy singular name */
+				esc_html__( '%s Archives', 'tft' ),
+				$tax->labels->singular_name
+			);
+			return $title;
+			break;
+		default:
+			$title = __( 'Archives:', 'tft' );
+			return $title;
+			break;
 	}
-	return $title;
 }
 add_filter( 'get_the_archive_title', 'tft_get_the_archive_title' );
 

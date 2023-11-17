@@ -21,11 +21,11 @@ defined( 'ABSPATH' ) || exit;
 <div class="woocommerce-billing-fields">
 	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
 
-		<h3><?php esc_html_e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h3>
+		<h3 class="font-wadik text-[32px]/[1.2] sm:text-[24px]/[1.2] sm:text-center mb-9"><?php esc_html_e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h3>
 
 	<?php else : ?>
 
-		<h3><?php esc_html_e( 'Billing details', 'woocommerce' ); ?></h3>
+		<h3 class="font-wadik text-[32px]/[1.2] sm:text-[24px]/[1.2] sm:text-center mb-9"><?php esc_html_e( 'Billing details', 'woocommerce' ); ?></h3>
 
 	<?php endif; ?>
 
@@ -35,14 +35,18 @@ defined( 'ABSPATH' ) || exit;
 		<?php $fields = $checkout->get_checkout_fields( 'billing' ); ?>
 		<?php foreach ( $fields as $key => $field ): ?>
 			<?php if($key == 'challenge_type' || $key == 'account_size' || $key == 'account_type' || $key == 'broker' || $key == 'platform'): ?>
-				<div class="checkout-toggles-wrap w-full">
-					<h4><?php echo $field['label']; ?></h4>
-					<div class="checkout-toggles">
+				<div class="checkout-toggles-wrap w-full mb-5 sm:mb-[25px]">
+					<h4 class="font-wadik text-[16px]/[1.2em] mb-[25px] sm:text-center"><?php echo $field['label']; ?></h4>
+					<div class="checkout-toggles flex justify-start sm:justify-center flex-wrap sm:text-center">
 						<?php foreach($field['options'] as $key => $option): ?>
-							<label <?php echo $field['name'].'="'.$key.'"'; ?>>
-								<input type="<?php echo $field['type']; ?>" value="<?php echo $key; ?>" name="<?php echo $field['name']; ?>">
-								<span><?php echo $option; ?></span>
-								<img src="<?php echo get_template_directory_uri(); ?>/img/btn-simple.svg" alt="btn-simple">
+							<label <?php echo $field['name'].'="'.$key.'"'; ?> class="relative font-bold cursor-pointer uppercase pt-[5px] pb-[3px] mb-5 sm:mb-[25px] <?php if($option !== "Purple Trading") : ?>w-[120px] h-[42px]<?php else : ?>w-[176px] h-[42px]<?php endif; ?> flex items-center justify-center text-[14px]/[1.2] mr-[25px]">
+								<input type="<?php echo $field['type']; ?>" class="checkout-input hidden" value="<?php echo $key; ?>" name="<?php echo $field['name']; ?>">
+								<span class="check-text z-20"><?php echo $option; ?></span>
+                                <?php if($option !== "Purple Trading") : ?>
+								<img class="absolute z-0 top-0 left-0 w-full h-auto" src="<?php echo get_template_directory_uri(); ?>/img/btn-simple.svg" alt="btn-simple">
+								<?php else : ?>
+                                <img class="absolute z-0 top-0 left-0 w-full h-auto" src="<?php echo get_template_directory_uri(); ?>/img/btn-simple2.svg" alt="btn-simple">
+                                <?php endif; ?>
 							</label>
 						<?php endforeach; ?>
 					</div>

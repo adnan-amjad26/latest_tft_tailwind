@@ -15,8 +15,9 @@
 <?php $image_2 = $contact['image_2']; ?>
 <?php $lottie = $contact['lottie']; ?>
 <?php $social = get_field('social', 'option'); ?>
-<section class="contact-details large s-padding text-center<?php if(is_front_page()) echo ' bg-blue-dark'; ?>" data-scroll-section>
-    <div class="container relative z-10">
+<section class="contact-details relative large s-padding text-center<?php if(is_front_page()) echo ' bg-blue-dark'; ?>" data-scroll-section>
+    <div class="contact-details-overly absolute top-0 left-0 w-full h-[120px] z-10"></div>
+    <div class="container relative z-50">
         <div class="row">
             <div class="w-full">
                 <div class="icon mb-12 w-28 mx-auto">

@@ -1396,5 +1396,7 @@ button.swiper-pagination-bullet {
 	overflow: hidden
 }
 
-
+.overflow-visible {
+	overflow: visible;
+}
 

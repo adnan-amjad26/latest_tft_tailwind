@@ -1,6 +1,6 @@
 <?php
 /**
- * Block Name: Hero Banner
+ * Block Name: Our Team
  */
 ?>
 <?php
@@ -14,6 +14,7 @@
 ?>
 <!-- Our Team Section -->
 <section class="reverseSection">
+<!--	<h1>Hello this is from team</h1>-->
 	<?php if($title || $text): ?>
 		<div class="reverseTextDiv">
 			<?php if($title): ?>

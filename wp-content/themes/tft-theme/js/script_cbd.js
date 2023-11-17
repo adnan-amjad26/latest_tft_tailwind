@@ -1,3 +1,13 @@
+/* Controls the day/night mode appearance on page load */
+if (!localStorage.getItem('dnmode')) {
+	var DNMode = 'night', TimeNow = new Date().getHours();
+	DNMode = (TimeNow < 18) ? 'day' : 'night';
+	localStorage.setItem('dnmode', DNMode);
+}
+if (localStorage.getItem('dnmode') == 'night') {
+	jQuery('.mode .toggle-input').trigger('click');
+	jQuery('body').addClass('theme-dark').removeAttr('data-day');
+}
 jQuery(document).ready(function ($) {
 	// Main Menu
 	$(".btn-menu").click(function () {
@@ -299,11 +309,15 @@ jQuery(document).ready(function ($) {
 			$(this).prependTo(titleSlot);
 		});
 	}
-
 	// Day / Night Switcher
 	$(".mode .toggle-input").click(function () {
 		// Change Body Class "theme-dark"
-		$("body").toggleClass("theme-dark");
+		if($('body').hasClass("theme-dark")) {
+			$("body").addClass("theme-light").removeClass("theme-dark");
+		} else {
+			$("body").addClass("theme-dark").removeClass("theme-light");
+		}
+		
 		// Change Body Attr "data-day"
 		let day = $("body").attr("data-day");
 		typeof day !== "undefined" && day !== false

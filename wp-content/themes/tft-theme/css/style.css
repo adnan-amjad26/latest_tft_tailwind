@@ -489,34 +489,6 @@ figure img,figure video {
     display: inline-block
 }
 
-table {
-    border-collapse: collapse
-}
-
-table td,table th {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: .75rem;
-    padding-bottom: .75rem
-}
-
-@media (min-width: 1025px) {
-    table td,table th {
-        padding-left:2rem;
-        padding-right: 2rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem
-    }
-}
-
-table td,table th {
-    border: 1px solid #ae9264
-}
-
-table td[colspan="3"],table th[colspan="3"] {
-    text-align: center
-}
-
 table thead {
     font-family: Wadik,sans-serif;
     font-size: 1.4rem
@@ -1173,9 +1145,6 @@ body {
     margin: 0;
     width: 100%;
     overflow: hidden;
-    font-family: Montserrat,sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
     background: #a49686;
@@ -1532,17 +1501,6 @@ section {
 
     .s-margin-mobile {
         margin: max(6rem,8vw) 0
-    }
-}
-
-.container {
-    width: calc(100% - 1.5rem);
-    max-width: none
-}
-
-@media (min-width: 768px) {
-    .container {
-        width:84.375%
     }
 }
 
@@ -4831,9 +4789,6 @@ footer .bottom a:hover {
 .form .gform_wrapper.gravity-theme .gform_footer {
     padding-bottom: 0;
 }
-.form .gform_wrapper.gravity-theme .gform_footer .btn {
-    margin: 0 auto;
-}
 .form .gform_wrapper .gform_validation_errors {
     margin: 0 0 2rem;
     padding: 0;
@@ -4871,10 +4826,6 @@ footer .bottom a:hover {
 .woocommerce-checkout-wrap {
     padding-top: 20rem;
 }
-.woocommerce-checkout h3 {
-    font-size: 2rem;
-    margin-bottom: 3rem;
-}
 .woocommerce-billing-fields {
     margin-bottom: 4rem;
 }
@@ -4889,9 +4840,6 @@ footer .bottom a:hover {
     --tw-text-opacity: 1;
     color: rgb(247 151 30 / var(--tw-text-opacity));
 }
-.woocommerce-checkout p {
-    margin-bottom: 1rem;
-}
 .woocommerce-form-coupon-toggle {
     margin-bottom: 1rem;
 }
@@ -4901,12 +4849,6 @@ footer .bottom a:hover {
 .form-row .required {
     text-decoration: none;
     color: #e2401c;
-}
-.form-row label {
-    display: block;
-    margin-bottom: 1rem;
-    font-family: Wadik;
-    font-size: 1.2rem;
 }
 .woocommerce-checkout .remove {
     position: relative;
@@ -5031,51 +4973,10 @@ footer .bottom a:hover {
     transform: translateX(58%);
     background-image: url(../img/btn-gold-right.svg);
 }
-.checkout-toggles {
-    width: 100%;
-    margin-bottom: 1rem;
-}
-.checkout-toggles-wrap h4 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-}
-.checkout-toggles {
-    display: flex;
-    flex-wrap: wrap;
-}
-.checkout-toggles label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    font-family: Montserrat;
-    font-weight: bold;
-    font-size: 1.1rem;
-    position: relative;
-    cursor: pointer;
-    width: 11.5rem;
-    height: 4rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    transition: .3s all;
-}
 .checkout-toggles label:hover {
     transform: translate3d(0,-0.3rem,0);
     --tw-text-opacity: 1;
     color: rgb(247 151 30 / var(--tw-text-opacity));
-}
-.checkout-toggles label span {
-    padding-top: 0.6rem;
-}
-.checkout-toggles label img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    position: absolute;
-    z-index: -1;
-}
-.checkout-toggles input[type=radio] {
-    display: none;
 }
 .checkout-toggles label input[type=radio]:checked + span {
     --tw-text-opacity: 1;
@@ -5097,38 +4998,6 @@ p#privacy_policy_field {
 }
 .woocommerce-terms-and-conditions-wrapper {
     margin-bottom: 4rem;
-}
-.shop_table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 3rem;
-    font-family: Wadik;
-}
-.shop_table thead th, .shop_table tfoot th {
-    text-align: left;
-    font-size: 1.4rem;
-}
-.shop_table th, .shop_table td {
-    vertical-align: top;
-    padding: 1rem 1rem 1rem 0;
-    border: none;
-}
-.shop_table .product-name span {
-    font-size: 1.2rem;
-}
-.shop_table .woocommerce-Price-amount {
-    font-size: 1.4rem;
-}
-.shop_table .variation {
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-}
-.shop_table .variation dd,
-.shop_table .variation dt {
-    width: 50%;
-    padding-right: 1rem;
-    font-size: 1rem;
 }
 @media (max-width: 767px) {
     .shop_table .variation dd,
