@@ -6,7 +6,7 @@ if (!localStorage.getItem('dnmode')) {
 }
 if (localStorage.getItem('dnmode') == 'night') {
 	jQuery('.mode .toggle-input').trigger('click');
-	jQuery('body').addClass('theme-dark').removeAttr('data-day');
+	jQuery('body').addClass('theme-dark dark').removeAttr('data-day');
 }
 jQuery(document).ready(function ($) {
 	// Main Menu
@@ -313,11 +313,11 @@ jQuery(document).ready(function ($) {
 	$(".mode .toggle-input").click(function () {
 		// Change Body Class "theme-dark"
 		if($('body').hasClass("theme-dark")) {
-			$("body").addClass("theme-light").removeClass("theme-dark");
+			$("body").addClass("theme-light").removeClass("theme-dark").removeClass("dark");
 		} else {
-			$("body").addClass("theme-dark").removeClass("theme-light");
+			$("body").addClass("theme-dark dark").removeClass("theme-light");
 		}
-		
+
 		// Change Body Attr "data-day"
 		let day = $("body").attr("data-day");
 		typeof day !== "undefined" && day !== false

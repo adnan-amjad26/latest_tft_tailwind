@@ -8,3 +8,15 @@
  * For esbuild documentation, please see:
  * https://esbuild.github.io/
  */
+
+import {initTabs} from "./Tabs";
+import {initAccordions} from "./Accordion";
+import {initSymbolsSearch} from "./SymbolsSearch";
+import {initSymbolsTable} from "./SymbolsTable";
+
+document.addEventListener("DOMContentLoaded", function () {
+	initTabs();
+	initAccordions();
+	initSymbolsSearch();
+	initSymbolsTable();
+});

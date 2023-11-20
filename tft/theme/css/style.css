@@ -209,16 +209,6 @@
 	line-height: 1.625
 }
 
-.text-black {
-	--tw-text-opacity: 1;
-	color: rgb(0 0 0 / var(--tw-text-opacity))
-}
-
-.text-white {
-	--tw-text-opacity: 1;
-	color: rgb(255 255 255 / var(--tw-text-opacity))
-}
-
 .opacity-70 {
 	opacity: .7
 }
