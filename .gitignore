@@ -17,6 +17,7 @@
 ehthumbs.db
 Thumbs.db
 .idea
+.DS_Store
 
 # ignore map & log files, and databases
 *.log
