@@ -61,9 +61,6 @@ module.exports = {
 				'button-standard': "url('img/btn-standard.svg')",
 				'button-gold': "url('img/btn-gold.svg')",
 			},
-			screens: {
-				'3xl': '1920px',
-			}
 		},
 		fontFamily: {
 			'body': ['"Montserrat"', 'sans-serif'],

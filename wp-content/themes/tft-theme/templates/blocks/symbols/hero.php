@@ -9,13 +9,13 @@ $fields = get_fields();
 <section
 		class="symbols-hero h-screen max-h-[640px] relative  overflow-hidden md:h-[913px] md:max-h-none ">
 	<div class="hidden dark:block absolute left-0 top-[249px] w-full h-[1160px] z-10 bg-[linear-gradient(180deg,_rgba(0,0,50,0.00)_0%,_#000032_42.01%)] md:dark:hidden"></div>
-	<img class="hidden dark:block absolute w-[1920px] max-w-none h-auto top-0 left-2/4 -translate-x-1/2 md:top-auto 3xl:w-full"
+	<img class="hidden dark:block absolute min-w-[1920px] w-full max-w-none h-auto top-0 left-2/4 -translate-x-1/2 md:top-auto"
 		 src="<?= get_template_directory_uri(); ?>/img/symbols-bg-dark.svg"
 		 alt="background with moon"
 	/>
 
 	<div class="dark:hidden absolute left-0 top-[249px] w-full h-[900px] z-10 bg-[linear-gradient(180deg,_rgba(129,131,20,0.00)_0%,_rgba(0,0,50,0.00)_0.01%,_#818314_42.01%)] md:hidden"></div>
-	<img class="dark:hidden absolute w-[1920px] max-w-none h-auto top-0 left-2/4 -translate-x-1/2 md:top-auto 3xl:w-full"
+	<img class="dark:hidden absolute min-w-[1920px] w-full max-w-none h-auto top-0 left-2/4 -translate-x-1/2 md:top-auto"
 		 src="<?= get_template_directory_uri(); ?>/img/symbols-bg-light.svg"
 		 alt="background with castle"
 	/>

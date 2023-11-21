@@ -8,12 +8,12 @@ $fields = get_fields();
 
 <section
 		class="overflow-hidden  text-center text-white relative px-[15px] py-[75px] min-h-[640px] flex items-center before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-black before:opacity-50 before:z-10 md:px-[30px] lg:px-[50px] xl:px-[110px] xl:min-h-[854px]">
-	<img class="hidden dark:block absolute w-[1920px] max-w-none h-auto top-0 left-2/4 -translate-x-1/2 md:top-auto 3xl:w-full"
+	<img class="hidden dark:block absolute min-w-[1920px] w-full max-w-none h-auto top-0 left-2/4 -translate-x-1/2 md:top-auto"
 		 src="<?= get_template_directory_uri(); ?>/img/symbols-footer-dark.svg"
 		 alt="background with moon"
 	/>
 
-	<img class="block dark:hidden absolute w-[1920px] max-w-none h-auto top-0 left-2/4 -translate-x-1/2 md:top-auto 3xl:w-full"
+	<img class="block dark:hidden absolute min-w-[1920px] w-full max-w-none h-auto top-0 left-2/4 -translate-x-1/2 md:top-auto"
 		 src="<?= get_template_directory_uri(); ?>/img/symbols-footer-light.svg"
 		 alt="background with moon"
 	/>
