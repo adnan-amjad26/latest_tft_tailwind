@@ -1,21 +1,16 @@
 const WebSocket = require('ws');
 const http = require('http');
 
-// Utility function to add timestamp to console logs
 function logWithTimestamp(message) {
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] ${message}`);
 }
 
 function errorWithTimestamp(message) {
   const timestamp = new Date().toISOString();
-  console.error(`[${timestamp}] ${message}`);
 }
 
-// Object to store the last received values for each symbol
 const lastReceivedValues = {};
 
-// Function to connect to the external WebSocket server
 function connectToExternalServer() {
   const externalWs = new WebSocket('wss://fxstream.quum.us/data');
 
@@ -24,7 +19,7 @@ function connectToExternalServer() {
 
     externalWs.on('message', (data) => {
       const stringData = data.toString('utf-8').trim();
-      const lines = stringData.split('\n');  // Split by lines
+      const lines = stringData.split('\n');
 
       for (const line of lines) {
         const [symbol, value1, value2] = line.split(',');
@@ -74,7 +69,6 @@ wss.on('connection', (ws) => {
   });
 });
 
-// Stream the last received values for all symbols to all connected clients every 1 second
 setInterval(() => {
   for (const [symbol, values] of Object.entries(lastReceivedValues)) {
     const csvDataToStream = `${symbol},${values.value1},${values.value2}`;

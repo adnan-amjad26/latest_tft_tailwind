@@ -43,14 +43,10 @@ class SymbolsSearch {
 	search(value) {
 		const string = value.toLowerCase();
 
-		for (let i = 0; i < this._cards.length; i++) {
-			const id = this._cards[i].id.toLowerCase();
-			if (id.includes(string)) {
-				this._cards[i].classList.remove('hidden');
-			} else {
-				this._cards[i].classList.add('hidden');
-			}
-		}
+		this._cards.forEach(card => {
+			const id = card.id.toLowerCase();
+			card.classList.toggle('hidden', !id.includes(string));
+		});
 
 		this.hideTabs();
 		this.setVisibleTab();
@@ -73,13 +69,11 @@ class SymbolsSearch {
 
 		const activeTabs = [];
 
-		for (let i = 0; i < this._tabs.length; i++) {
-			if (this._tabs[i].getAttribute('style')) {
-				continue;
+		this._tabs.forEach(tab => {
+			if (!tab.getAttribute('style')) {
+				activeTabs.push(tab);
 			}
-
-			activeTabs.push(this._tabs[i]);
-		}
+		});
 
 		this._activeTabs = activeTabs;
 	}
@@ -87,12 +81,11 @@ class SymbolsSearch {
 	setVisibleTab() {
 		let isVisibleTab = false;
 
-		for (let i = 0; i < this._activeTabs.length; i++) {
-			if (this._activeTabs[i].getAttribute('aria-selected') === 'true') {
+		this._activeTabs.forEach(tab => {
+			if (tab.getAttribute('aria-selected') === 'true') {
 				isVisibleTab = true;
-				break;
 			}
-		}
+		});
 
 		if (!isVisibleTab && this._activeTabs.length > 0) {
 			this._activeTabs[0].click();
@@ -119,9 +112,5 @@ class SymbolsSearch {
 export const initSymbolsSearch = () => {
 	const form = document.getElementById('symbols-spec-search');
 
-	if (!form) {
-		return;
-	}
-
-	new SymbolsSearch(form, 'symbols-specs-tab-content');
+	form ? new SymbolsSearch(form, 'symbols-specs-tab-content') : null;
 }

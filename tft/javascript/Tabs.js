@@ -1,5 +1,3 @@
-// https://github.com/themesberg/flowbite/blob/main/src/components/tabs/index.ts
-
 const Default = {
 	defaultTabId: null,
 	onShow: () => {
@@ -29,9 +27,7 @@ class Tabs {
 	init() {
 		if (this._items.length && !this._initialized) {
 			// set the first tab as active if not set by explicitly
-			if (!this._activeTab) {
-				this.setActiveTab(this._items[0]);
-			}
+			!this._activeTab ? this.setActiveTab(this._items[0]) : null;
 
 			// force show the first default tab
 			this.show(this._activeTab.id, true);
@@ -64,9 +60,7 @@ class Tabs {
 	}
 
 	destroy() {
-		if (this._initialized) {
-			this._initialized = false;
-		}
+		this._initialized ? this._initialized = false : null;
 	}
 
 	removeInstance() {
@@ -93,12 +87,11 @@ class Tabs {
 	getVisibleItems() {
 		const visibleItems = [];
 
-		for (let i = 0; i < this._items.length; i++) {
-			if (this._items[i].triggerEl.getAttribute('style')) {
-				continue;
+		this._items.forEach(item => {
+			if (!item.triggerEl.getAttribute('style')) {
+				visibleItems.push(item);
 			}
-			visibleItems.push(this._items[i]);
-		}
+		});
 
 		return visibleItems;
 	}

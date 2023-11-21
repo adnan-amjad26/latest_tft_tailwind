@@ -1,5 +1,3 @@
-// https://github.com/themesberg/flowbite/blob/main/src/components/accordion/index.ts
-
 const Default = {
 	alwaysOpen: false,
 	activeClasses: 'active',
@@ -124,12 +122,7 @@ class Accordion {
 
 	toggle(id) {
 		const item = this.getItem(id);
-
-		if (item.active) {
-			this.close(id);
-		} else {
-			this.open(id);
-		}
+		item.active ? this.close(id) : this.open(id);
 
 		// callback function
 		this._options.onToggle(this, item);
@@ -149,9 +142,7 @@ class Accordion {
 		item.active = false;
 
 		// rotate icon if set
-		if (item.iconEl) {
-			item.iconEl.classList.remove('rotate-180');
-		}
+		item.iconEl ? item.iconEl.classList.remove('rotate-180') : null;
 
 		// callback function
 		this._options.onClose(this, item);

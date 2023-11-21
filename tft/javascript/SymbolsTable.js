@@ -38,8 +38,6 @@ class SymbolsTable {
 			} else if (newValue < lastValue) {
 				colorClass = 'color_red';
 				caretHtml = this._iconDown;
-			} else {
-				// No change in value, keep the current class and caret
 			}
 
 			element.innerText = newValue;
@@ -89,9 +87,5 @@ class SymbolsTable {
 export const initSymbolsTable = () => {
 	const table = document.querySelector('.trade-section-upper');
 
-	if (!table) {
-		return;
-	}
-
-	new SymbolsTable();
+	table ? new SymbolsTable() : null;
 };
