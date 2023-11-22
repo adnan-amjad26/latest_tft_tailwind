@@ -169,10 +169,6 @@
 	padding-top: 2rem
 }
 
-.text-center {
-	text-align: center
-}
-
 .font-headers {
 	font-family: Wadik,sans-serif
 }
@@ -1804,63 +1800,7 @@ footer .bottom a:hover {
 /* End Site Footer */
 /* CSS Animations */
 
-@-webkit-keyframes bob {
-    0% {
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0)
-    }
 
-    50% {
-        -webkit-transform: translate3d(0,-2rem,0);
-        transform: translate3d(0,-2rem,0)
-    }
-
-    100% {
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0)
-    }
-}
-
-@keyframes bob {
-    0% {
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0)
-    }
-
-    50% {
-        -webkit-transform: translate3d(0,-2rem,0);
-        transform: translate3d(0,-2rem,0)
-    }
-
-    100% {
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0)
-    }
-}
-
-@-webkit-keyframes spin {
-    from {
-        -webkit-transform: translate3d(0,0,0) rotate(0);
-        transform: translate3d(0,0,0) rotate(0)
-    }
-
-    to {
-        -webkit-transform: translate3d(0,0,0) rotate(360deg);
-        transform: translate3d(0,0,0) rotate(360deg)
-    }
-}
-
-@keyframes spin {
-    from {
-        -webkit-transform: translate3d(0,0,0) rotate(0);
-        transform: translate3d(0,0,0) rotate(0)
-    }
-
-    to {
-        -webkit-transform: translate3d(0,0,0) rotate(360deg);
-        transform: translate3d(0,0,0) rotate(360deg)
-    }
-}
 
 @-webkit-keyframes flicker {
     from {
