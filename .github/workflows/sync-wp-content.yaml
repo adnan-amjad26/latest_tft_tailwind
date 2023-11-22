@@ -1,0 +1,25 @@
+name: Sync wp-content to server
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  sync-wp-content-folder:
+    runs-on:
+      - self-hosted
+      - tft-redesign
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+  
+      - name: Sync wp-content
+        run: |
+          sudo rsync -rv wp-content/ /var/www/html/wp-content/
+          sudo chown -R www-data:www-data /var/www/html/wp-content
+
+      - name: Restart nginx
+        run: |
+          sudo systemctl restart nginx
