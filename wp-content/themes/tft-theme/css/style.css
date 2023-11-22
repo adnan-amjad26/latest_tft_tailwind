@@ -489,37 +489,6 @@ figure img,figure video {
     display: inline-block
 }
 
-<<<<<<< HEAD
-table {
-    border-collapse: collapse
-}
-
-table td,table th {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: .75rem;
-    padding-bottom: .75rem
-}
-
-@media (min-width: 1025px) {
-    table td,table th {
-        padding-left:2rem;
-        padding-right: 2rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem
-    }
-}
-
-table td,table th {
-    border: 1px solid #ae9264
-}
-
-table td[colspan="3"],table th[colspan="3"] {
-    text-align: center
-}
-
-=======
->>>>>>> 1c8361a9682c16405a2c0cf6cc941aec150dd939
 table thead {
     font-family: Wadik,sans-serif;
     font-size: 1.4rem
@@ -1176,12 +1145,6 @@ body {
     margin: 0;
     width: 100%;
     overflow: hidden;
-<<<<<<< HEAD
-    font-family: Montserrat,sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-=======
->>>>>>> 1c8361a9682c16405a2c0cf6cc941aec150dd939
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
     background: #a49686;
@@ -1541,20 +1504,6 @@ section {
     }
 }
 
-<<<<<<< HEAD
-.container {
-    width: calc(100% - 1.5rem);
-    max-width: none
-}
-
-@media (min-width: 768px) {
-    .container {
-        width:84.375%
-    }
-}
-
-=======
->>>>>>> 1c8361a9682c16405a2c0cf6cc941aec150dd939
 .row {
     display: flex;
     flex-wrap: wrap
@@ -4840,12 +4789,6 @@ footer .bottom a:hover {
 .form .gform_wrapper.gravity-theme .gform_footer {
     padding-bottom: 0;
 }
-<<<<<<< HEAD
-.form .gform_wrapper.gravity-theme .gform_footer .btn {
-    margin: 0 auto;
-}
-=======
->>>>>>> 1c8361a9682c16405a2c0cf6cc941aec150dd939
 .form .gform_wrapper .gform_validation_errors {
     margin: 0 0 2rem;
     padding: 0;
@@ -4883,13 +4826,6 @@ footer .bottom a:hover {
 .woocommerce-checkout-wrap {
     padding-top: 20rem;
 }
-<<<<<<< HEAD
-.woocommerce-checkout h3 {
-    font-size: 2rem;
-    margin-bottom: 3rem;
-}
-=======
->>>>>>> 1c8361a9682c16405a2c0cf6cc941aec150dd939
 .woocommerce-billing-fields {
     margin-bottom: 4rem;
 }
@@ -4904,12 +4840,6 @@ footer .bottom a:hover {
     --tw-text-opacity: 1;
     color: rgb(247 151 30 / var(--tw-text-opacity));
 }
-<<<<<<< HEAD
-.woocommerce-checkout p {
-    margin-bottom: 1rem;
-}
-=======
->>>>>>> 1c8361a9682c16405a2c0cf6cc941aec150dd939
 .woocommerce-form-coupon-toggle {
     margin-bottom: 1rem;
 }
@@ -4920,15 +4850,6 @@ footer .bottom a:hover {
     text-decoration: none;
     color: #e2401c;
 }
-<<<<<<< HEAD
-.form-row label {
-    display: block;
-    margin-bottom: 1rem;
-    font-family: Wadik;
-    font-size: 1.2rem;
-}
-=======
->>>>>>> 1c8361a9682c16405a2c0cf6cc941aec150dd939
 .woocommerce-checkout .remove {
     position: relative;
     top: 0.25rem;
@@ -5052,37 +4973,6 @@ footer .bottom a:hover {
     transform: translateX(58%);
     background-image: url(../img/btn-gold-right.svg);
 }
-<<<<<<< HEAD
-.checkout-toggles {
-    width: 100%;
-    margin-bottom: 1rem;
-}
-.checkout-toggles-wrap h4 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-}
-.checkout-toggles {
-    display: flex;
-    flex-wrap: wrap;
-}
-.checkout-toggles label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    font-family: Montserrat;
-    font-weight: bold;
-    font-size: 1.1rem;
-    position: relative;
-    cursor: pointer;
-    width: 11.5rem;
-    height: 4rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    transition: .3s all;
-}
-=======
->>>>>>> 1c8361a9682c16405a2c0cf6cc941aec150dd939
 .checkout-toggles label:hover {
     transform: translate3d(0,-0.3rem,0);
     --tw-text-opacity: 1;
