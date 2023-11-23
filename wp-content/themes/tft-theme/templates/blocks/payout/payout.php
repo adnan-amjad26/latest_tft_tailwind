@@ -6,7 +6,7 @@
 <?php $title = get_field('title'); ?>
 <?php $text = get_field('text'); ?>
 <?php $image = get_field('image'); ?>
-<?php 
+<?php
     $leaderboard_url = get_field('leaderboard', 'option');
     if($leaderboard_url) {
         $leaderboard_response = file_get_contents($leaderboard_url);
@@ -16,24 +16,24 @@
         //var_dump($top_payout);
     }
 ?>
-<section class="content-avatar s-padding bricks-elem" data-scroll-section>
-    <div class="container">
-        <div class="row items-center">
-			<div class="w-full lg:w-1/2 row justify-end text-center lg:text-left">
-                <div class="w-full lg:w-5/6">
+<section class="content-avatar s-padding bricks-elem relative z-[2] px-[16px] md:px-[40px]" data-scroll-section>
+    <div class="max-w-[1300px] w-full mx-auto mt-[25px] lg:mt-0">
+        <div class="flex flex-col lg:flex-row justify-between items-center gap-[50px]">
+			<div class="w-full lg:w-[60%]">
+                <div class="w-full">
                     <?php if($title): ?>
-                        <div class="title">
-                            <h4><?php echo $title; ?></h4>
+                        <div class="title lg:max-w-[490px] text-center lg:text-left">
+                            <h4 class="text-[24px] lg:text-[30px] xl:text-[40px] 2xl:text-[40px]"><?php echo $title; ?></h4>
                         </div>
                     <?php endif; ?>
                     <?php if($text): ?>
-                        <div class="content mt-12 text-3xl">
+                        <div class="lg:max-w-[700px] content mt-12 text-[16px] lg:text-[18px] text-center lg:text-left">
                             <?php echo $text; ?>
                         </div>
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="w-full lg:w-1/2 mt-12 lg:mt-0">
+            <div class="w-full lg:w-[40%]">
                 <?php if($image || $top_payout_name): ?>
                     <figure class="w-fit mx-auto" data-scroll>
                         <?php if($image): ?>

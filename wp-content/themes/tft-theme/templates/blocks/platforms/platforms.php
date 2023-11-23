@@ -50,14 +50,14 @@
                     <?php endif; ?>
                     <?php if($title): ?>
                         <div class="title">
-                            <h3><?php echo $title; ?></h3>
+                            <h3 class="text-[40px]"><?php echo $title; ?></h3>
                         </div>
                     <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>
         <?php if($brokers || $image || $image_2): ?>
-            <div class="row mt-12 lg:mt-24">
+            <div class="flex items-center mt-[24px]">
                 <div class="w-full lg:w-1/2 flex justify-end img-side">
                     <?php if($image || $image_2): ?>
                         <div class="parallax-scene inline-flex">
@@ -80,12 +80,13 @@
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="w-full lg:w-2/5 mx-auto pt-12 button-side">
+                <div class="w-full max-w-[415px] mx-auto pt-12 button-side">
+                    <h4 class="text-[22px] text-center mb-[20px]">Our Trading Partners</h4>
                     <?php if($brokers): ?>
 						<?php $i = 1; foreach($brokers as $broker): ?>
 							<?php $image = $broker['image']; ?>
-							<figure class="max-w-md mt-12 lg:mt-16">
-								<button data-broker="<?php echo $i; ?>">
+							<figure class="max-w-[150px] flex flex-col justify-center items-center w-full mx-auto">
+								<button class="outline-0" data-broker="<?php echo $i; ?>">
 									<img decoding="async" loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
 								</button>
 							</figure>
@@ -95,15 +96,13 @@
 								<?php $links = $broker['links']; ?>
 								<?php if($links): ?>
 									<div class="button-group mt-12 lg:mt-16<?php if($i == 1) echo ' active'; ?>" data-broker="<?php echo $i; ?>">
-										<div class="buttons row gap-12">
-											<div class="buttons row gap-12">
+                                        <div class="max-w-[415px] buttons grid grid-cols-2 gap-[17px]">
 												<?php foreach($links as $link): ?>
 													<a href="<?php echo $link['url']; ?>" target="_blank" rel="noopener noreferrer">
-														<img decoding="async" loading="lazy" src="<?php echo $link['image']['url']; ?>" alt="<?php echo $link['image']['title']; ?>">
+														<img class="w-full" decoding="async" loading="lazy" src="<?php echo $link['image']['url']; ?>" alt="<?php echo $link['image']['title']; ?>">
 													</a>
 												<?php endforeach; ?>
 											</div>
-										</div>
 									</div>
 								<?php endif; ?>
 							<?php $i++; endforeach; ?>

@@ -28,10 +28,10 @@
 // $faq_0_answer = isset($faq_0_answer[1]) ? $faq_0_answer[1] : '';
 // Define default values for other fields as well
 ?>
-<section class="accordion py-12 bg-green-light" data-scroll-section>
-    <div class="container relative z-10">
+<section class="accordion p-[50px_40px] bg-green-light" data-scroll-section>
+    <div class="max-w-[1308px] w-full mx-auto relative z-10">
         <?php if($icon || $title): ?>
-            <div class="row">
+            <div class="flex">
                 <div class="w-full text-center">
                     <?php if($icon): ?>
                         <div class="icon mb-12 w-28 mx-auto">
@@ -40,67 +40,93 @@
                     <?php endif; ?>
                     <?php if($title): ?>
                         <div class="title">
-                            <h3><?php echo $title; ?></h3>
+                            <h3 class="text-[40px]"><?php echo $title; ?></h3>
                         </div>
                     <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>
-        <div class="row mt-12 lg:mt-16">
-            <div class="w-full row justify-between">
+        <div class="flex mt-12 lg:mt-16">
+            <div class="w-full flex flex-col gap-[100px] justify-between">
                 <?php if($faq): ?>
                     <?php $half = ceil(count($faq) / 2); ?>
                     <?php $faq_left = array_slice($faq, 0, $half); ?>
                     <?php $faq_right = array_slice($faq, $half); ?>
-                    <?php if($faq_left): ?>
-                        <ul class="items text-black">
-                            <?php foreach($faq_left as $item): ?>
-                                <li>
-                                    <div class="title-wrap flex justify-between">
-                                        <p class="title"><?php echo $item['question']; ?></p>
-                                        <div class="toggle">
-                                            <svg decoding="async"><use xlink:href="#plus"></use></svg>
-                                        </div>
-                                        <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/scroll-title.svg" alt="scroll-title">
+
+                        <div class="flex items-center gap-[70px]">
+                            <div class="max-w-[480px] w-full">
+                                <div class="w-full relative">
+                                    <h4 class="max-w-[176px] wadik text-[24px] text-black absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-center">getting started</h4>
+                                        <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/title-bg-shape.svg" alt="scroll-content">
                                     </div>
-                                    <div class="content">
-                                        <div class="inner">
-                                            <?php echo $item['answer']; ?>
+                            </div>
+                            <div class="w-full">
+                            <?php if($faq_left): ?>
+                                <ul class="w-full items text-white bg-black text-[14px] p-[0_15px_15px_15px] flex flex-col bg-opacity-[0.7]">
+                                <?php foreach($faq_left as $item): ?>
+                                    <li class="border-b border-b-[3px] border-[#90633E]">
+                                        <div class="wadik title-wrap flex items-center justify-between p-[25px_10px] mb-[6px]">
+                                            <p class="title"><?php echo $item['question']; ?></p>
+                                            <div class="toggle w-[18px] h-[18px]">
+                                                <svg class="fill-white w-full h-full" decoding="async"><use xlink:href="#plus"></use></svg>
+                                            </div>
                                         </div>
-                                        <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/scroll-content.svg" alt="scroll-content">
-                                    </div>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    <?php endif; ?>
-                    <?php if($faq_right): ?>
-                        <ul class="items text-black">
-                            <?php foreach($faq_right as $item): ?>
-                                <li>
-                                    <div class="title-wrap flex justify-between">
-                                        <p class="title"><?php echo $item['question']; ?></p>
-                                        <div class="toggle">
-                                            <svg decoding="async"><use xlink:href="#plus"></use></svg>
+                                        <div class="content">
+                                            <div class="inner pb-[20px] px-[10px] text-[1.5rem] font-[500] leading-[1.47]">
+                                                <?php echo $item['answer']; ?>
+                                            </div>
                                         </div>
-                                        <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/scroll-title.svg" alt="scroll-title">
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                            <?php endif; ?>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="flex items-center gap-[70px]">
+                            <div class="max-w-[480px] w-full">
+                                    <div class="w-full relative">
+                                    <h4 class="max-w-[216px] wadik text-[24px] text-black absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-center">ABOUT OUR CHALLENGES</h4>
+                                        <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/title-bg-shape.svg" alt="scroll-content">
                                     </div>
-                                    <div class="content">
-                                        <div class="inner">
-                                            <?php echo $item['answer']; ?>
-                                        </div>
-                                        <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/scroll-content.svg" alt="scroll-content">
-                                    </div>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    <?php endif; ?>
-                <?php endif; ?>
+                            </div>
+                            <div class="w-full">
+                            <?php if($faq_right): ?>
+                                    <ul  class="w-full items text-white bg-black text-[14px] p-[0_15px_15px_15px] flex flex-col bg-opacity-[0.7]">
+                                        <?php foreach($faq_right as $item): ?>
+                                            <li class="border-b border-b-[3px] border-[#90633E]">
+                                                <div class="wadik title-wrap flex items-center justify-between p-[25px_10px] mb-[6px]">
+                                                    <p class="title"><?php echo $item['question']; ?></p>
+                                                    <div class="toggle w-[18px] h-[18px]">
+                                                        <svg class="fill-white w-full h-full" decoding="async"><use xlink:href="#plus"></use></svg>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <div class="inner pb-[20px] px-[10px] text-[1.5rem] font-[500] leading-[1.47]">
+                                                        <?php echo $item['answer']; ?>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                <?php endif; ?>
+                            <?php endif; ?>
+                            </div>
+                        </div>
+
+
+
+
                 <?php if($link): ?>
                     <div class="button mt-12 lg:mt-24 mx-auto">
-                        <a href="<?php echo $link['url']; ?>" class="btn btn-gold">
-                            <span><?php echo $link['title']; ?></span>
-                            <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
-                            <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
+                        <a href="<?php echo $link['url']; ?>" class="btn btn-gold p-[.8rem_2rem_.7rem] rounded-[1rem] border-[.5rem] border-[#f7971e] border-t-[#f2af5d] border-b-[#c86e32] relative inline-flex items-center wadik text-[1.2rem]">
+                            <span class="z-[1]"><?php echo $link['title']; ?></span>
+                            <img class="left-0 -translate-x-[58%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
+                            <img class="right-0 translate-x-[58%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
                         </a>
                     </div>
                 <?php endif; ?>

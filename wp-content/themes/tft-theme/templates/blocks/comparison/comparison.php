@@ -6,12 +6,13 @@
 <?php $title = get_field('title'); ?>
 <?php $tabs = get_field('tabs'); ?>
 
-<section class="comparison s-padding bricks-elem" data-scroll-section>
+?>
+<!-- <section class="comparison py-[100px] bricks-elem relative z-[2]" data-scroll-section>
     <div class="container relative z-10">
         <?php if($title): ?>
             <div class="row">
                 <div class="w-full title text-center mb-12">
-                    <h3><?php echo $title; ?></h3>
+                    <h3 class="text-[30px]"><?php echo $title; ?></h3>
                 </div>
             </div>
         <?php endif; ?>
@@ -89,14 +90,10 @@
     <div class="tree absolute -top-24 left-0 z-0 imgs-day" data-scroll>
         <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/tree.svg" alt="tree">
     </div>
-</section>
-<figure class="bg absolute top-0 left-0 w-full h-full bricks-elem">
-    <div class="tree absolute top-24 right-0" data-scroll>
+</section> -->
+<figure class="bg absolute bottom-0 left-0 w-full h-full bricks-elem">
+    <div class="tree absolute top-24 right-0 z-[2] hidden lg:block" data-scroll>
         <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/tree.svg" alt="tree">
     </div>
-    <img class="imgs-night" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/bricks-bg.png" alt="bricks">
-</figure>
-<figure class="tower absolute left-0 w-full z-0 bricks-elem">
-    <img class="imgs-day" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/day/content-scrolls-bg.svg" alt="content-scrolls-bg">
-    <img class="imgs-night" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/content-scrolls-bg.png" alt="content-scrolls-bg">
+    <img class="imgs-night object-[top_center] 2xl:object-fill h-full" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/bricks-bg.png" alt="bricks">
 </figure>

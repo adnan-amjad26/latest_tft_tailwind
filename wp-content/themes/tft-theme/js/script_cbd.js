@@ -860,7 +860,7 @@ jQuery(document).ready(function ($) {
 		var comparison_table = $(
 			'.comparison-table[challenge_type="' + challange_type + '"]'
 		);
-		// $('.table.comparison-table').hide();
+		$('.table.comparison-table').hide();
 		comparison_table.toggle();
 		table
 			.find(".table:not(.comparison-table)")

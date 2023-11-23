@@ -52,7 +52,6 @@ function cbd_scripts() {
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css' );
 	wp_enqueue_style( 'cbd-style', get_template_directory_uri() . '/style_cbd.css' );
 	wp_enqueue_script('libs', get_template_directory_uri() . '/js/libs.js', array(), '', true);
-//	wp_enqueue_script('dotlottie', 'https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs', [], null, true);
 	wp_enqueue_script('script-cbd', get_template_directory_uri() . '/js/script_cbd.js', array(),time(),true);
 }
 add_action( 'wp_enqueue_scripts', 'cbd_scripts' );
