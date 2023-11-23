@@ -195,6 +195,16 @@ function register_acf_block_types() {
         'mode'              => 'edit',
     ));
 
+    // Process 2
+    acf_register_block_type(array(
+        'name'              => 'process 2',
+        'title'             => __('Process 2'),
+        'render_template'   => 'templates/blocks/process/process2.php',
+        'category'          => 'custom-blocks',
+        'icon'              => 'admin-generic',
+        'mode'              => 'edit',
+    ));
+
     // Product
     acf_register_block_type(array(
         'name'              => 'product',
@@ -234,26 +244,11 @@ function register_acf_block_types() {
         'icon'              => '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M3 18h8V6H3v12zM14 7.5V9h7V7.5h-7zm0 5.3h7v-1.5h-7v1.5zm0 3.7h7V15h-7v1.5z"></path></svg>',
         'mode'              => 'edit',
     ));
-	acf_register_block_type(array(
-        'name'              => 'team',
-        'title'             => __('Our Team'),
-        'render_template'   => 'templates/blocks/team/team.php',
-        'category'          => 'custom-blocks',
-        'icon'              => '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M3 18h8V6H3v12zM14 7.5V9h7V7.5h-7zm0 5.3h7v-1.5h-7v1.5zm0 3.7h7V15h-7v1.5z"></path></svg>',
-        'mode'              => 'edit',
-    ));
-	acf_register_block_type(array(
-        'name'              => 'our-mission',
-        'title'             => __('Our Mission'),
-        'render_template'   => 'templates/blocks/mission/mission.php',
-        'category'          => 'custom-blocks',
-        'icon'              => '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M3 18h8V6H3v12zM14 7.5V9h7V7.5h-7zm0 5.3h7v-1.5h-7v1.5zm0 3.7h7V15h-7v1.5z"></path></svg>',
-        'mode'              => 'edit',
-    ));
-	acf_register_block_type(array(
-        'name'              => 'action-points',
-        'title'             => __('Action Points'),
-        'render_template'   => 'templates/blocks/points/action-points.php',
+
+    acf_register_block_type(array(
+        'name'              => 'whychoose-table',
+        'title'             => __('Why Choose TheFunded Trader'),
+        'render_template'   => 'templates/blocks/whychoose/whychoose.php',
         'category'          => 'custom-blocks',
         'icon'              => '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M3 18h8V6H3v12zM14 7.5V9h7V7.5h-7zm0 5.3h7v-1.5h-7v1.5zm0 3.7h7V15h-7v1.5z"></path></svg>',
         'mode'              => 'edit',

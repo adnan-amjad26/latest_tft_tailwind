@@ -6,7 +6,7 @@
 ?>
 <?php $mobile_bar = get_field('mobile_bar', 'option'); ?>
 <?php if($mobile_bar): ?>
-    <div class="mobile-bar text-center font-headers">
+    <div class="mobile-bar text-center font-headers hidden">
         <div class="row">
             <?php foreach($mobile_bar as $item): ?>
 				<?php $link = $item['link']; ?>

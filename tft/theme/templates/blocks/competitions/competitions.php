@@ -4,8 +4,8 @@
  */
 ?>
 <?php $competitions = get_field('competitions'); ?>
-<section class="competitions s-padding text-center bg-lilac" data-scroll-section>
-    <div class="container">
+<section class="competitions p-[80px_40px] text-center bg-lilac" data-scroll-section>
+    <div class="max-w-[1360px] w-full mx-auto">
         <?php if($competitions): ?>
             <script>
                 function countDownTimer(end, d, h, m, s) {
@@ -25,20 +25,20 @@
                         document.getElementById(d).innerHTML = days;
                         document.getElementById(h).innerHTML = hours;
                         document.getElementById(m).innerHTML = minutes;
-                        document.getElementById(s).innerHTML = seconds; 
+                        document.getElementById(s).innerHTML = seconds;
                     }, 1000);
                 }
             </script>
-            <div class="row justify-evenly">
+            <div class="flex justify-between">
                 <?php $i = 1; foreach($competitions as $competition): ?>
-                    <div class="w-full lg:w-1/2 mt-24 lg:mt-0">
+                    <div class="max-w-[550px] w-full mx-auto mt-24 lg:mt-0">
                         <?php if($competition['title']): ?>
                             <div class="title w-full mb-12 lg:mb-24">
-                                <h4><?php echo $competition['title']; ?></h4>
+                                <h4 class="text-[40px]"><?php echo $competition['title']; ?></h4>
                             </div>
                         <?php endif; ?>
-                        <div class="w-full lg:w-3/4 2xl:w-2/3 mx-auto">
-                            <div class="competition text-black">
+                        <div class="w-full mx-auto">
+                            <div class="w-full max-w-[345px] mx-auto competition text-black p-[100px_30px] relative">
                                 <?php if($competition['subtitle']): ?>
                                     <div class="title mt-6">
                                         <h5><?php echo $competition['subtitle']; ?></h5>
@@ -48,24 +48,23 @@
                                     <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/hr.svg" alt="hr">
                                 </div>
                                 <?php if($competition['subtitle_2']): ?>
-                                    <div class="subtitle text-3xl font-headers">
-                                        <p><?php echo $competition['subtitle_2']; ?></p>
+                                    <div class="text-[18px] text-black wadik">
+                                        <h4><?php echo $competition['subtitle_2']; ?></h4>
                                     </div>
                                 <?php endif; ?>
                                 <?php if($competition['description']): ?>
-                                    <div class="content font-bold my-6">
+                                    <div class="content font-bold my-6 border-b border-black pb-[15px] text-[15px]">
                                         <?php echo $competition['description']; ?>
                                     </div>
                                 <?php endif; ?>
                                 <?php if($competition['title_date']): ?>
-                                    <hr>
                                     <div class="content font-bold uppercase mt-6">
                                         <p><?php echo $competition['title_date']; ?></p>
                                     </div>
                                 <?php endif; ?>
                                 <?php if($competition['date']): ?>
                                     <?php $date_now = date('Y-m-d H:i:s'); ?>
-                                    <div class="time flex justify-between my-6">
+                                    <div class="time flex justify-between my-6 text-[2.4rem] leading-1 wadik border-b border-black pb-[15px]">
                                         <div>
                                             <p id="competitionTimerDay<?php echo $i; ?>">00</p>
                                             <p><?php _e('Day', 'cbd'); ?></p>
@@ -86,11 +85,11 @@
                                     <script>
                                         countDownTimer('<?php echo $competition['date']; ?>', '<?php echo 'competitionTimerDay'.$i; ?>', '<?php echo 'competitionTimerHour'.$i; ?>', '<?php echo 'competitionTimerMin'.$i; ?>', '<?php echo 'competitionTimerSec'.$i; ?>');
                                     </script>
-                                    <hr>
+
                                 <?php endif; ?>
                                 <?php if($competition['subtitle_3']): ?>
-                                    <div class="subtitle text-3xl font-headers mt-6">
-                                        <p><?php echo $competition['subtitle_3']; ?></p>
+                                    <div class="mt-[25px]">
+                                        <h4 class="text-[18px]"><?php echo $competition['subtitle_3']; ?></h4>
                                     </div>
                                 <?php endif; ?>
                                 <?php if($competition['text']): ?>
@@ -110,10 +109,8 @@
                                             <a href="<?php echo $link_2['url']; ?>"<?php if($link_2['target']) echo ' target="'.$link_2['target'].'"'; ?> class="btn btn-text"><?php echo $link_2['title']; ?></a>
                                         <?php endif; ?>
                                         <?php if($link_3): ?>
-                                            <a href="<?php echo $link_3['url']; ?>"<?php if($link_3['target']) echo ' target="'.$link_3['target'].'"'; ?> class="btn btn-gold mt-12">
-                                                <span><?php echo $link_3['title']; ?></span>
-                                                <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
-                                                <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
+                                            <a href="<?php echo $link_3['url']; ?>"<?php if($link_3['target']) echo ' target="'.$link_3['target'].'"'; ?> class="text-[15px] text-black wadik mt-[35px]">
+                                                <span class="relative z-[1]"><?php echo $link_3['title']; ?></span>
                                             </a>
                                         <?php endif; ?>
                                     </div>

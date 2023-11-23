@@ -36,52 +36,52 @@
 // $background = isset($background[1]) ? $background[1] : '';
 // Define default values for other fields as well
 ?>
-<section class="discord s-padding text-center bg-lilac" data-scroll-section>
-    <div class="container relative z-10">
-        <div class="row justify-center">
+<section class="discord text-center bg-lilac pt-[300px] relative z-[1]" data-scroll-section>
+    <div class="max-w-[1360px] w-full mx-auto relative z-10">
+        <div class="flex flex-col items-center px-[40px]">
             <?php if($icon || $title || $logo): ?>
                 <div class="w-full lg:w-5/6 relative z-0">
                     <?php if($icon || $title): ?>
                         <div class="inner relative z-10 pb-12">
-                            <?php if($icon): ?>
-                                <div class="icon mb-12 w-28 mx-auto">
-                                    <?php echo file_get_contents($icon); ?>
-                                </div>
-                            <?php endif; ?>
                             <?php if($title): ?>
                                 <div class="title">
                                     <h3><?php echo $title; ?></h3>
-									<p class="h2">The Funded Trader</p>
                                 </div>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
-                    <?php /* if($logo): ?>
-                        <div class="bg absolute top-full left-0 w-full z-0">
+                    <?php if($logo): ?>
+                        <div class="bg absolute top-[-100px] left-[-100px] right-[-100px] z-0">
                             <img decoding="async" loading="lazy" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>">
                         </div>
-                    <?php endif; */ ?>
+                    <?php endif; ?>
                 </div>
             <?php endif; ?>
             <?php if($image || $link || $lottie): ?>
-                <div class="w-full lg:w-2/3 2xl:w-1/2 mt-12 relative z-10 mockup-col">
-                    <?php if($image): ?>
+                <div class="w-full max-w-[769px] mt-12 relative z-[auto] mockup-col">
+
+                    <div class="mockup-shadow absolute bottom-[50px] left-[-300px] right-[-300px] h-[450px] rounded-[500px_500px_0_0] z-[-1] opacity-[0.8] pointer-events-none"></div>
+                   <div class="w-full flex flex-col gap-[50px] mb-[-350px] relative z-[20]">
+                   <?php if($image): ?>
                         <figure class="mockup">
                             <img decoding="async" loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
                         </figure>
                     <?php endif; ?>
                     <?php if($link): ?>
                         <div class="button mt-12 lg:mt-20 text-center">
-                            <a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-blue">
-                                <span><?php echo $link['title']; ?></span>
+                            <a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-blue p-[.8rem_2rem_.7rem] rounded-[1rem] border-[.5rem] border-[#f7971e] border-t-[#f2af5d] border-b-[#c86e32] relative inline-flex items-center wadik text-[1.2rem]">
+                                <span class="relative z-[1]"><?php echo $link['title']; ?></span>
                                 <svg decoding="async"><use xlink:href="#discord"></use></svg>
-                                <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
-                                <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
+                                <img class="left-0 -translate-x-[58%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
+                                <img class="right-0 translate-x-[58%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
                             </a>
                         </div>
                     <?php endif; ?>
+                   </div>
                     <?php if($lottie): ?>
-                        <lottie-player src="<?php echo $lottie; ?>" background="transparent" speed="0.6" loop autoplay></lottie-player>
+                        <div class="absolute bottom-0 right-[100%] w-[18vmax] h-[fit-content] z-[1]">
+                            <lottie-player src="<?php echo $lottie; ?>" background="transparent" speed="0.6" loop autoplay></lottie-player>
+                        </div>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
@@ -92,4 +92,6 @@
             <img decoding="async" loading="lazy" src="<?php echo $background['url']; ?>" alt="<?php echo $background['title']; ?>">
         </figure>
     <?php endif; ?>
+
+    <div class="w-full h-[500px] bg-gradient-to-t from-[#4d466d] to-[#110246]"></div>
 </section>

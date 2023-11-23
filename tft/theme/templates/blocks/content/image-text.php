@@ -7,7 +7,7 @@
 <?php $text = get_field('text'); ?>
 <?php $image = get_field('image'); ?>
 <section class="content-avatar s-padding bricks-elem" data-scroll-section>
-    <div class="container">
+    <div class="max-w-[1750px] mx-auto">
         <div class="row items-center lg:flex-row-reverse">
             <div class="w-full lg:w-1/2">
                 <?php if($image): ?>

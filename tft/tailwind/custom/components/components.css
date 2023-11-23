@@ -17,9 +17,32 @@
  * The supplied styles are meant to match the default `h1` classes from
  * Tailwind Typography.
  */
+
+
+ .newsletter-form{
+	@apply relative flex h-[44px] border border-white border-opacity-[0.3] rounded-[4px];
+}
+.newsletter-form input[type=email] {
+	@apply w-full p-[0_1.5rem] bg-transparent border-0 text-[1.4rem] text-white outline-0 placeholder:text-[#75756c];
+}
+.newsletter-form .btn {
+	@apply cursor-pointer font-bold text-[#f7971e] p-[0_20px];
+}
+.newsletter-message {
+	@applay m-[0.5rem 0] text-center font-bold text-[1.2rem]
+}
+.newsletter-error {
+	@applay text-[#c02b0a]
+}
 .page-title,
 .entry-title {
 	@apply max-w-content mx-auto mb-6 text-3xl font-extrabold text-neutral-900;
+}
+.bricks {
+	@apply pt-[450px] relative bg-[#a49686];
+}
+.content-scrolls .toggles li {
+	@apply p-[2rem_2.5rem] bg-contain bg-center bg-no-repeat cursor-pointer;
 }
 
 /**
@@ -53,4 +76,12 @@
 
 .entry-content > .alignright {
 	@apply float-right ml-8;
+}
+
+
+.hero .animations .knight {
+	@apply w-[max(23rem,8vw)] lg:w-[max(12rem,8vw)] h-[fit-content] bottom-[8vh] right-[-28px] lg:right-[20%];
+}
+.hero .animations lottie-player {
+    @apply absolute;
 }

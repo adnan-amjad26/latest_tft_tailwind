@@ -31,12 +31,12 @@
 // $img_day = isset($img_day[1]) ? $img_day[1] : '';
 // $img_night = isset($img_night[1]) ? $img_night[1] : '';
 ?>
-<section class="media-boxes s-padding text-center bg-blue-dark" data-scroll-section>
-    <div class="container relative z-10">
+<section class="media-boxes p-[150px_40px_600px_40px] text-center bg-blue-dark" data-scroll-section>
+    <div class="max-w-[1720px] w-full mx-auto relative z-10">
         <?php if($title): ?>
             <div class="row">
                 <div class="w-full media-boxes-title">
-                    <h3><?php echo $title; ?></h3>
+                    <h3 class="text-[40px]"><?php echo $title; ?></h3>
                 </div>
             </div>
         <?php endif; ?>
@@ -84,8 +84,8 @@
                 <?php endforeach; ?>
             </div>
         <?php endif; */ ?>
-		
-		
+
+
 		<?php if($media): ?>
             <div class="row mt-12 lg:mt-16">
 				<div class="w-full">
@@ -99,7 +99,7 @@
 							</div>
 						</div>
 						<div class="swiper-wrapper">
-							
+
 							<?php foreach($media as $item): ?>
 								<?php $icon = $item['icon']; ?>
 								<?php $title = $item['title']; ?>
@@ -134,18 +134,19 @@
 										</figure>
 									<?php endif; ?>
 									<?php if($text): ?>
-										<div class="content mt-12 font-medium">
+										<div class="content mt-12 font-medium text-[18px]">
 											<?php echo $text; ?>
 										</div>
 									<?php endif; ?>
 								</div>
 							<?php endforeach; ?>
-							
+
 						</div>
 					</div>
 				</div>
             </div>
         <?php endif; ?>
+
     </div>
     <?php if($img_day || $img_night): ?>
         <figure class="bg absolute bottom-0 left-0 w-full h-full z-0">

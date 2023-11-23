@@ -24,14 +24,14 @@
 // $text = isset($text[1]) ? $text[1] : '';
 // $process_0_button = isset($process_0_button[1]) ? $process_0_button[1] : '';
 ?>
-<section class="content-scrolls s-padding" data-scroll-section>
-    <div class="container">
+<section class="bricks-elem content-scrolls no-transparent py-[115px] relative z-[2]" data-scroll-section>
+    <div class="max-w-[1460px] w-full mx-auto">
         <?php if($title || $subtitle): ?>
-            <div class="row justify-center text-center">
-                <div class="w-full lg:w-1/2">
+            <div class="flex justify-center text-center">
+                <div class="w-full">
                     <?php if($title): ?>
                         <div class="title">
-                            <h3><?php echo $title; ?></h3>
+                            <h3 class="text-[50px]"><?php echo $title; ?></h3>
                         </div>
                         <div class="hr">
                             <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/hr.svg" alt="hr">
@@ -46,8 +46,8 @@
             </div>
         <?php endif; ?>
         <?php if($process): ?>
-            <div class="row mt-12 lg:mt-16">
-                <ul class="toggles w-full row gap-6 lg:gap-12 justify-center font-headers text-lg">
+            <div class="flex mt-12 lg:mt-16">
+                <ul class="toggles w-full flex gap-6 lg:gap-12 justify-center font-headers text-[15px] wadik">
                     <?php $i = 1; foreach($process as $type): ?>
                         <?php $button =  $type['button']; ?>
                         <li<?php if($i == 1) echo ' class="active"'; ?> data-type="type-<?php echo $i; ?>"<?php if($button) echo ' style="background-image: url('.$button.');"'; ?>><span><?php echo $type['title']; ?></span></li>
@@ -58,20 +58,22 @@
                 <?php $phases = $type['phases']; ?>
                 <?php if($phases): ?>
                     <div class="scrolls-box"<?php if($i > 1) echo ' style="display: none;"'; ?> data-type="type-<?php echo $i; ?>">
-                        <div class="row justify-center text-center mt-12 lg:mt-16 scrolls">
+                        <div class="flex gap-[80px] text-center mt-12 lg:mt-16 scrolls justify-center">
                             <?php foreach($phases as $phase): ?>
-                                <div class="w-full lg:w-1/4">
+                                <div class="w-full lg:w-1/3 max-w-[420px]">
+
                                     <div class="inner">
-                                        <div class="title font-headers text-black relative">
-                                            <p><?php echo $phase['title']; ?></p>
-                                            <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/scroll-title.svg" alt="scroll-title">
+                                        <div class="title font-headers text-black relative z-[2]">
+                                            <h4 class="relative z-[1]"><?php echo $phase['title']; ?></h4>
+                                            <img class="w-full left-[50%] top-[50%] absolute -translate-x-1/2 -translate-y-1/2 z-[0]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/scroll-title.svg" alt="scroll-title">
                                         </div>
-                                        <div class="content w-2/3 mx-auto pt-8">
-                                            <div class="inner">
-                                                <?php echo $phase['text']; ?>
+
+                                        <div class="content w-[265px] sm:w-[295px] lg:w-[230px] xl:w-[275px] 2xl:w-2/3 mx-auto pt-8 relative h-[226px] sm:h-[282px] text-black font-[500] text-[12px] pr-[15px]">
+                                            <div class="inner h-full lg:h-[75%] xl:h-[90%] p-[15px] 2xl:p-[30px] overflow-y-auto relative z-[2]">
+                                                    <?php echo $phase['text']; ?>
+                                                </div>
+                                                <img class="w-[134%] max-w-[inherit] h-auto z-[1] absolute top-0 left-[50%] object-cover translate-x-[-50%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/scroll-content.svg" alt="scroll-content">
                                             </div>
-                                            <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/scroll-content.svg" alt="scroll-content">
-                                        </div>
                                     </div>
                                 </div>
                             <?php endforeach; ?>
@@ -84,10 +86,10 @@
             <div class="row justify-center mt-12 lg:mt-24">
                 <div class="w-auto">
                     <div class="button">
-                        <a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-gold">
-                            <span><?php echo $link['title']; ?></span>
-                            <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
-                            <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
+                        <a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-gold p-[.8rem_2rem_.7rem] rounded-[1rem] border-[.5rem] border-[#f7971e] border-t-[#f2af5d] border-b-[#c86e32] relative inline-flex items-center wadik text-[1.2rem]">
+                            <span class="z-[1]"><?php echo $link['title']; ?></span>
+                            <img class="left-0 -translate-x-[58%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
+                            <img class="right-0 translate-x-[58%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
                         </a>
                     </div>
                 </div>

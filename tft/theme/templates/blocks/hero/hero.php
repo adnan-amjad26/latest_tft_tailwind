@@ -50,15 +50,15 @@
                 <?php if($link || $link_social || $buttons): ?>
 	                <div class="buttons row gap-8 sm:gap-16 lg:gap-24 mt-12 lg:mt-16">
 	                	<?php if($link): ?>
-		                	<a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-gold">
-		                		<span><?php echo $link['title']; ?></span>
+		                	<a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-gold p-[.8rem_2rem_.7rem] rounded-[1rem] border-[.5rem] border-[#f7971e] border-t-[#f2af5d] border-b-[#c86e32] relative inline-flex items-center wadik text-[1.2rem]">
+		                		<span class="z-[1] relative"><?php echo $link['title']; ?></span>
 		                		<img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
 		                		<img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
 		                	</a>
 		                <?php endif; ?>
 		                <?php if($link_social): ?>
-		                	<a href="<?php echo $link_social['url']; ?>"<?php if($link_social['target']) echo ' target="'.$link_social['target'].'"'; ?> class="btn btn-blue">
-		                		<span><?php echo $link_social['title']; ?></span>
+		                	<a href="<?php echo $link_social['url']; ?>"<?php if($link_social['target']) echo ' target="'.$link_social['target'].'"'; ?> class="btn btn-blue p-[.8rem_2rem_.7rem] rounded-[1rem] border-[.5rem] border-[#f7971e] border-t-[#f2af5d] border-b-[#c86e32] relative inline-flex items-center wadik text-[1.2rem]">
+								<span class="relative z-[1]"><?php echo $link_social['title']; ?></span>
 		                		<svg decoding="async"><use xlink:href="#discord"></use></svg>
 		                		<img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
 		                		<img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
@@ -67,7 +67,7 @@
 		                <?php if($buttons): ?>
 		                	<?php $i = 0; foreach($buttons as $button): if ($i === 2): echo '<hr>'; endif; ?>
 		                		<?php $link = $button['button']; ?>
-		                		<a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-gold">
+		                		<a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-gold p-[.8rem_2rem_.7rem] rounded-[1rem] border-[.5rem] border-[#f7971e] border-t-[#f2af5d] border-b-[#c86e32] relative inline-flex items-center wadik text-[1.2rem]">
 		                			<span><?php echo $link['title']; ?></span>
 		                			<img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
 		                			<img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
