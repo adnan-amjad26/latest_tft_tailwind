@@ -1,13 +1,58 @@
 /* Controls the day/night mode appearance on page load */
-if (!localStorage.getItem('dnmode')) {
+if(!localStorage.theme) {
+	var DNMode = 'light', TimeNow = new Date().getHours();
+	DNMode = (TimeNow < 18) ? 'light' : 'dark';
+	localStorage.theme = DNMode;
+}
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+	document.documentElement.classList.add('dark');
+	document.documentElement.classList.remove('light');
+	jQuery(".mode .toggle-input").prop('checked', true);
+} else {
+	document.documentElement.classList.add('light');
+	document.documentElement.classList.remove('dark');
+	jQuery(".mode .toggle-input").prop('checked', false);
+}
+// Related Post Slider
+var relatedPost = new Swiper(".related-posts", {
+	slidesPerView: 1,
+	spaceBetween: 0,
+	//loop: true,
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+		renderBullet: function (index, className) {
+		return '<span class="' + className + '">' + (index + 1) + "</span>";
+		},
+	},
+	navigation: {
+	  nextEl: ".swiper-button-next",
+	  prevEl: ".swiper-button-prev",
+	},
+	breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 62,
+        }
+	}
+});
+
+
+
+/*if (!localStorage.getItem('dnmode')) {
 	var DNMode = 'night', TimeNow = new Date().getHours();
 	DNMode = (TimeNow < 18) ? 'day' : 'night';
 	localStorage.setItem('dnmode', DNMode);
+	localStorage.theme = DNMode;
 }
 if (localStorage.getItem('dnmode') == 'night') {
 	jQuery('.mode .toggle-input').trigger('click');
-	jQuery('body').addClass('theme-dark dark').removeAttr('data-day');
+	jQuery('body').addClass('theme-dark').removeAttr('data-day');
 }
+if (localStorage.getItem('dnmode') == 'day') {
+	jQuery('.mode .toggle-input').trigger('click');
+	jQuery('body').addClass('theme-light').removeAttr('data-night');
+}*/
 jQuery(document).ready(function ($) {
 	// Main Menu
 	$(".btn-menu").click(function () {
@@ -311,13 +356,20 @@ jQuery(document).ready(function ($) {
 	}
 	// Day / Night Switcher
 	$(".mode .toggle-input").click(function () {
+		if($('html').hasClass('light')) {
+			$('html').addClass('dark').removeClass('light');
+			localStorage.theme = 'dark';
+		} else {
+			$('html').addClass('light').removeClass('dark');
+			localStorage.theme = 'light';
+		}
 		// Change Body Class "theme-dark"
 		if($('body').hasClass("theme-dark")) {
-			$("body").addClass("theme-light").removeClass("theme-dark").removeClass("dark");
+			$("body").addClass("theme-light").removeClass("theme-dark");
 		} else {
-			$("body").addClass("theme-dark dark").removeClass("theme-light");
+			$("body").addClass("theme-dark").removeClass("theme-light");
 		}
-
+		
 		// Change Body Attr "data-day"
 		let day = $("body").attr("data-day");
 		typeof day !== "undefined" && day !== false
