@@ -632,9 +632,9 @@ body {
   width: 100%;
 }
 
-@media (min-width: 320px) {
+@media (min-width: 640px) {
   .container {
-    max-width: 320px;
+    max-width: 640px;
   }
 }
 
@@ -1309,7 +1309,7 @@ body {
   width: max(23rem,8vw);
 }
 
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 1024px) {
   .hero .animations .knight {
     right: 20%;
     width: max(12rem,8vw);
@@ -3283,7 +3283,7 @@ p#terms_and_conditions_3_field {
   width: 55%;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 640px) {
   p#terms_and_conditions_3_field {
     margin-bottom: 1rem;
     width: 100%;
@@ -3294,7 +3294,7 @@ p#refund_policy_3_field {
   width: 45%;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 640px) {
   p#refund_policy_3_field {
     width: 100%;
   }
@@ -3525,7 +3525,7 @@ span.payment-label:after {
   line-height: 1.4em;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 640px) {
   .woocommerce-checkout #payment .woocommerce-terms-and-conditions-wrapper {
     width: 100%;
   }
@@ -3772,7 +3772,7 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
     line-height: 1.2em;
   }
 
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (min-width: 640px) {
     .woocommerce-additional-fields > h3,
 	.woocommerce form .form-row.terms-condition-title > h3 {
       font-size: 24px !important;
@@ -3894,7 +3894,7 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 640px) {
   .sm\:top-\[0px\] {
     top: 0px;
   }
@@ -4106,7 +4106,7 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .md\:left-0 {
     left: 0px;
   }
@@ -4221,7 +4221,7 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 1024px) {
   .lg\:relative {
     position: relative;
   }
@@ -4483,7 +4483,7 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   }
 }
 
-@media (min-width: 1280px) and (max-width: 1535px) {
+@media (min-width: 1280px) {
   .xl\:-mt-\[140px\] {
     margin-top: -140px;
   }

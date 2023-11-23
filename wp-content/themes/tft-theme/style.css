@@ -43,11 +43,11 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
   src: url("fonts/WadikBold.eot");
 
   src:
-		url("fonts/WadikBold.eot") format("embedded-opentype"),
-		url("fonts/WadikBold.woff2") format("woff2"),
-		url("fonts/WadikBold.woff") format("woff"),
-		url("fonts/WadikBold.ttf") format("truetype"),
-		url("fonts/WadikBold.svg#WadikBold") format("svg");
+          url("fonts/WadikBold.eot") format("embedded-opentype"),
+          url("fonts/WadikBold.woff2") format("woff2"),
+          url("fonts/WadikBold.woff") format("woff"),
+          url("fonts/WadikBold.ttf") format("truetype"),
+          url("fonts/WadikBold.svg#WadikBold") format("svg");
 
   font-weight: 700;
 
@@ -104,7 +104,7 @@ html {
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-     tab-size: 4;
+  tab-size: 4;
   /* 3 */
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
@@ -147,7 +147,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /*
@@ -632,9 +632,9 @@ body {
   width: 100%;
 }
 
-@media (min-width: 320px) {
+@media (min-width: 640px) {
   .container {
-    max-width: 320px;
+    max-width: 640px;
   }
 }
 
@@ -1309,7 +1309,7 @@ body {
   width: max(23rem,8vw);
 }
 
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 1024px) {
   .hero .animations .knight {
     right: 20%;
     width: max(12rem,8vw);
@@ -2548,12 +2548,12 @@ body {
 
 .object-cover {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .object-\[top_center\] {
   -o-object-position: top center;
-     object-position: top center;
+  object-position: top center;
 }
 
 .p-12 {
@@ -3122,10 +3122,10 @@ input.checkout-input[type="radio"]:checked + label.check-text {
 }
 
 .woocommerce
-	form
-	.form-row
-	span.woocommerce-input-wrapper
-	> input.input-text:focus {
+form
+.form-row
+span.woocommerce-input-wrapper
+> input.input-text:focus {
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(247 151 30 / var(--tw-border-opacity));
@@ -3163,10 +3163,10 @@ input.checkout-input[type="radio"]:checked + label.check-text {
 }
 
 .woocommerce
-	form
-	.form-row
-	.select2-container.select2-container--open
-	span.select2-selection {
+form
+.form-row
+.select2-container.select2-container--open
+span.select2-selection {
   --tw-border-opacity: 1;
   border-color: rgb(247 151 30 / var(--tw-border-opacity));
 }
@@ -3283,7 +3283,7 @@ p#terms_and_conditions_3_field {
   width: 55%;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 640px) {
   p#terms_and_conditions_3_field {
     margin-bottom: 1rem;
     width: 100%;
@@ -3294,7 +3294,7 @@ p#refund_policy_3_field {
   width: 45%;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 640px) {
   p#refund_policy_3_field {
     width: 100%;
   }
@@ -3395,11 +3395,11 @@ p#order_comments_field {
 }
 
 .woocommerce
-	.woocommerce-checkout
-	#payment
-	ul.payment_methods
-	> li
-	> input.input-radio {
+.woocommerce-checkout
+#payment
+ul.payment_methods
+> li
+> input.input-radio {
   display: none;
 }
 
@@ -3436,13 +3436,13 @@ span.payment-label:after {
 }
 
 .woocommerce
-	.woocommerce-checkout
-	#payment
-	ul.payment_methods
-	> li
-	> input.input-radio:checked
-	+ label
-	span.payment-label:after {
+.woocommerce-checkout
+#payment
+ul.payment_methods
+> li
+> input.input-radio:checked
++ label
+span.payment-label:after {
   display: block;
 }
 
@@ -3456,11 +3456,11 @@ span.payment-label:after {
 }
 
 .woocommerce
-	.woocommerce-checkout
-	#payment
-	ul.payment_methods
-	> li
-	> .payment_box {
+.woocommerce-checkout
+#payment
+ul.payment_methods
+> li
+> .payment_box {
   margin-bottom: 0px;
   margin-top: 10px;
   width: 100%;
@@ -3473,41 +3473,41 @@ span.payment-label:after {
 }
 
 .woocommerce
-	.woocommerce-checkout
-	#payment
-	ul.payment_methods
-	> li
-	> label
-	img {
+.woocommerce-checkout
+#payment
+ul.payment_methods
+> li
+> label
+img {
   margin-left: 10px;
 }
 
 .woocommerce
-	.woocommerce-checkout
-	#payment
-	ul.payment_methods
-	> li
-	> .payment_box:before {
+.woocommerce-checkout
+#payment
+ul.payment_methods
+> li
+> .payment_box:before {
   display: none;
 }
 
 .woocommerce
-	.woocommerce-checkout
-	#payment
-	ul.payment_methods
-	> li.payment_method_migpaymentspayments
-	> label
-	img {
+.woocommerce-checkout
+#payment
+ul.payment_methods
+> li.payment_method_migpaymentspayments
+> label
+img {
   max-width: 132px;
 }
 
 .woocommerce
-	.woocommerce-checkout
-	#payment
-	ul.payment_methods
-	> li.payment_method_nmi
-	> label
-	img {
+.woocommerce-checkout
+#payment
+ul.payment_methods
+> li.payment_method_nmi
+> label
+img {
   margin-left: 10px !important;
   min-width: 50px;
 }
@@ -3525,7 +3525,7 @@ span.payment-label:after {
   line-height: 1.4em;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 640px) {
   .woocommerce-checkout #payment .woocommerce-terms-and-conditions-wrapper {
     width: 100%;
   }
@@ -3623,20 +3623,20 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
 }
 
 .contact-form .gravity-theme .gform-body .gfield input::-moz-placeholder, .contact-form
-	.gravity-theme
-	.gform-body
-	.gfield
-	textarea.textarea::-moz-placeholder {
+.gravity-theme
+.gform-body
+.gfield
+textarea.textarea::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(81 81 81 / var(--tw-text-opacity));
 }
 
 .contact-form .gravity-theme .gform-body .gfield input::placeholder,
 .contact-form
-	.gravity-theme
-	.gform-body
-	.gfield
-	textarea.textarea::placeholder {
+.gravity-theme
+.gform-body
+.gfield
+textarea.textarea::placeholder {
   --tw-text-opacity: 1;
   color: rgb(81 81 81 / var(--tw-text-opacity));
 }
@@ -3717,14 +3717,14 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   border-style: none;
 }
 
-.contact-form .form .gform_wrapper.gravity-theme .gfield input, 
-.contact-form .form .gform_wrapper.gravity-theme .gfield textarea, 
+.contact-form .form .gform_wrapper.gravity-theme .gfield input,
+.contact-form .form .gform_wrapper.gravity-theme .gfield textarea,
 .contact-form .form .gform_wrapper.gravity-theme .gfield select {
   font-size: 16px;
   line-height: 1.2em;
 }
 
-.contact-form .form .gform_wrapper.gravity-theme .gfield input, 
+.contact-form .form .gform_wrapper.gravity-theme .gfield input,
 .contact-form .form .gform_wrapper.gravity-theme .gfield select {
   height: 52px;
 }
@@ -3733,15 +3733,15 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   height: 260px;
 }
 
-.contact-form .form .gform_wrapper.gravity-theme .gfield input::-ms-input-placeholder, 
-.contact-form .form .gform_wrapper.gravity-theme .gfield textarea::-ms-input-placeholder, 
+.contact-form .form .gform_wrapper.gravity-theme .gfield input::-ms-input-placeholder,
+.contact-form .form .gform_wrapper.gravity-theme .gfield textarea::-ms-input-placeholder,
 .contact-form .form .gform_wrapper.gravity-theme .gfield select::-ms-input-placeholder {
   --tw-text-opacity: 1;
   color: rgb(81 81 81 / var(--tw-text-opacity));
 }
 
-.contact-form .form .gform_wrapper.gravity-theme .gfield input:placeholder, 
-.contact-form .form .gform_wrapper.gravity-theme .gfield textarea:placeholder, 
+.contact-form .form .gform_wrapper.gravity-theme .gfield input:placeholder,
+.contact-form .form .gform_wrapper.gravity-theme .gfield textarea:placeholder,
 .contact-form .form .gform_wrapper.gravity-theme .gfield select:placeholder {
   --tw-text-opacity: 1;
   color: rgb(81 81 81 / var(--tw-text-opacity));
@@ -3759,38 +3759,38 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   }
 
   .woocommerce form .form-row-first,
-	.woocommerce form .form-row-last,
-	.woocommerce-page form .form-row-first,
-	.woocommerce-page form .form-row-last,
-	.woocommerce form .form-row-wide,
-	.woocommerce-page form .form-row-wide {
+  .woocommerce form .form-row-last,
+  .woocommerce-page form .form-row-first,
+  .woocommerce-page form .form-row-last,
+  .woocommerce form .form-row-wide,
+  .woocommerce-page form .form-row-wide {
     width: 100%;
   }
 
   .woocommerce-additional-fields > h3,
-	.woocommerce form .form-row.terms-condition-title > h3 {
+  .woocommerce form .form-row.terms-condition-title > h3 {
     line-height: 1.2em;
   }
 
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (min-width: 640px) {
     .woocommerce-additional-fields > h3,
-	.woocommerce form .form-row.terms-condition-title > h3 {
+    .woocommerce form .form-row.terms-condition-title > h3 {
       font-size: 24px !important;
     }
   }
 
   p#terms_and_conditions_2_field,
-	p#refund_policy_2_field {
+  p#refund_policy_2_field {
     max-height: 332px;
   }
 
   .woocommerce #order_review table.shop_table thead th:last-child,
-	.woocommerce #order_review table.shop_table .cart_item td:last-child {
+  .woocommerce #order_review table.shop_table .cart_item td:last-child {
     display: none;
   }
 
   .woocommerce #order_review table.shop_table tr.cart_item td,
-	.woocommerce #order_review table.shop_table tr.cart_item {
+  .woocommerce #order_review table.shop_table tr.cart_item {
     display: block;
     width: 100%;
   }
@@ -3813,11 +3813,11 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   }
 
   .woocommerce
-		.woocommerce-checkout
-		#payment
-		ul.payment_methods
-		> li
-		> label {
+  .woocommerce-checkout
+  #payment
+  ul.payment_methods
+  > li
+  > label {
     flex-wrap: wrap;
   }
 
@@ -3829,7 +3829,7 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   }
 
   .woocommerce-additional-fields > h3,
-	.woocommerce form .form-row.terms-condition-title > h3 {
+  .woocommerce form .form-row.terms-condition-title > h3 {
     font-size: 1.5rem;
     line-height: 1.2;
   }
@@ -3839,12 +3839,12 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   }
 
   .woocommerce
-		.woocommerce-checkout
-		#payment
-		ul.payment_methods
-		> li
-		> label
-		img {
+  .woocommerce-checkout
+  #payment
+  ul.payment_methods
+  > li
+  > label
+  img {
     margin-right: 10px;
     margin-left: 0px;
   }
@@ -3854,12 +3854,12 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   }
 
   .woocommerce
-		.woocommerce-checkout
-		#payment
-		ul.payment_methods
-		> li.payment_method_nmi
-		> label
-		img {
+  .woocommerce-checkout
+  #payment
+  ul.payment_methods
+  > li.payment_method_nmi
+  > label
+  img {
     margin-left: 0px !important;
   }
 }
@@ -3894,7 +3894,7 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 640px) {
   .sm\:top-\[0px\] {
     top: 0px;
   }
@@ -4002,12 +4002,12 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
 
   .sm\:object-cover {
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 
   .sm\:object-center {
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
   }
 
   .sm\:pb-40 {
@@ -4106,7 +4106,7 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .md\:left-0 {
     left: 0px;
   }
@@ -4221,7 +4221,7 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 1024px) {
   .lg\:relative {
     position: relative;
   }
@@ -4483,7 +4483,7 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
   }
 }
 
-@media (min-width: 1280px) and (max-width: 1535px) {
+@media (min-width: 1280px) {
   .xl\:-mt-\[140px\] {
     margin-top: -140px;
   }
@@ -4675,7 +4675,7 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
 
   .\32xl\:object-fill {
     -o-object-fit: fill;
-       object-fit: fill;
+    object-fit: fill;
   }
 
   .\32xl\:p-\[30px\] {
