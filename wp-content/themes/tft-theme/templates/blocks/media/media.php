@@ -1,9 +1,7 @@
 <?php
 /**
  * Block Name: Media
- * Author:
  */
-
 ?>
 <?php $title = get_field('title'); ?>
 <?php $media = get_field('media'); ?>
@@ -33,12 +31,12 @@
 // $img_day = isset($img_day[1]) ? $img_day[1] : '';
 // $img_night = isset($img_night[1]) ? $img_night[1] : '';
 ?>
-<section class="media-boxes p-[150px_40px_600px_40px] text-center bg-blue-dark" data-scroll-section>
+<section class="media-boxes p-[100px_16px] md:p-[150px_40px] text-center bg-blue-dark" data-scroll-section>
     <div class="max-w-[1720px] w-full mx-auto relative z-10">
         <?php if($title): ?>
-            <div class="row">
-                <div class="w-full media-boxes-title">
-                    <h3 class="text-[40px]"><?php echo $title; ?></h3>
+            <div class="flex">
+                <div class="w-full">
+                    <h3 class="text-[36px] xl:text-[40px] 2xl:text-[40px]"><?php echo $title; ?></h3>
                 </div>
             </div>
         <?php endif; ?>
@@ -136,7 +134,7 @@
 										</figure>
 									<?php endif; ?>
 									<?php if($text): ?>
-										<div class="content mt-12 font-medium text-[18px]">
+										<div class="content mt-12 font-medium text-[16px] md:text-[18px]">
 											<?php echo $text; ?>
 										</div>
 									<?php endif; ?>

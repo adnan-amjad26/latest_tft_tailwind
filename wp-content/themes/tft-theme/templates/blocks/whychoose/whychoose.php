@@ -1,11 +1,11 @@
-<div class="w-full pt-[400px] pb-[100px] bg-black relative">
-<div class="max-w-[1068px] w-full mx-auto mt-[50px] relative z-[10]">
-            <h2 class="text-[40px] mb-[40px] max-w-[600px] w-full mx-auto text-center">WHY CHOOSE THE FUNDED TRADER</h2>
-            <div class="flex items-center mb-[-17px]">
+<div class="w-full pt-[200px] pb-[100px] bg-black relative px-[16px] md:px-[40px]">
+<div class="max-w-[1068px] w-full mx-auto relative z-[10]">
+            <h2 class="text-[36px] xl:text-[40px] 2xl:text-[40px] mb-[40px] max-w-[600px] w-full mx-auto text-center">WHY CHOOSE THE FUNDED TRADER</h2>
+            <div class="flex items-center mb-[-4px] md:mb-[-17px]">
                 <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/table-top-shape.svg" alt="torch">
             </div>
-            <div class="w-full relative custom-groove-border bg-white p-[30px_60px]">
-                <table class="w-full border-0 border-collapse text-[#3A4E5E] text-[16px]">
+            <div class="w-full relative custom-groove-border bg-white p-[10px] sm:p-[30px] md:p-[30px_60px]">
+                <table class="w-full border-0 border-collapse text-[#3A4E5E] text-[14px] md:text-[16px]">
                     <thead>
                         <tr>
                             <th></th>
@@ -104,12 +104,12 @@
                         </tr>
 
 
-                        
+
                     </tbody>
                 </table>
-            
+
             </div>
-            <div class="flex items-center mt-[-14px] relative">
+            <div class="flex items-center mt-[-4px] md:mt-[-14px] relative">
                 <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/table-bottom-shape.svg" alt="torch">
             </div>
         </div>

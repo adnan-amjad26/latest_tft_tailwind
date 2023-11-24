@@ -1,8 +1,8 @@
-<div class="w-full custom-gradient pt-[50px] pb-[400px] px-[16px] md:px-[40px] 2xl:px-[85px]">
+<div class="w-full custom-gradient pt-[50px] pb-[150px] lg:pb-[400px] px-[16px] md:px-[40px] 2xl:px-[85px]">
     <div class="max-w-[1750px] w-full mx-auto">
         <!-- Box -->
         <div class="flex flex-col mt-[100px]">
-            <div class="w-full"> 
+            <div class="w-full">
                 <div class="flex flex-col items-center gap-[20px]">
                     <h3 class="sm:max-w-[358px] lg:max-w-full sm:mx-auto text-[36px] sm:text-[36px] text-center sm:text-center md:text-center lg:text-left lg:text-[30px] xl:text-[40px] 2xl:text-[50px]">Evaluation process</h3>
                     <div class="w-full hr">
@@ -28,7 +28,7 @@
                                     <img class="w-full left-[50%] top-[50%] absolute -translate-x-1/2 -translate-y-1/2 z-[0]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/scroll-title.svg" alt="scroll-title">
                                 </div>
 
-                                <div class="content w-[265px] sm:w-[295px] lg:w-[230px] xl:w-[275px] 2xl:w-2/3 mx-auto pt-8 relative h-[226px] sm:h-[282px] text-black font-[500] text-[12px] pr-[15px]"> 
+                                <div class="content w-[265px] sm:w-[295px] lg:w-[230px] xl:w-[275px] 2xl:w-2/3 mx-auto pt-8 relative h-[226px] sm:h-[282px] text-black font-[500] text-[12px] pr-[15px]">
                                     <div class="inner h-full lg:h-[75%] xl:h-[90%] p-[15px] 2xl:p-[30px] overflow-y-auto relative z-[2]">
                                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam aliquid expedita, obcaecati amet accusantium, vero alias qui necessitatibus dicta iusto nobis assumenda hic voluptatibus explicabo fugiat placeat aperiam, quibusdam dolore?</p>
                                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam aliquid expedita, obcaecati amet accusantium, vero alias qui necessitatibus dicta iusto nobis assumenda hic voluptatibus explicabo fugiat placeat aperiam, quibusdam dolore?</p>
@@ -54,7 +54,7 @@
                                     <img class="w-full left-[50%] top-[50%] absolute -translate-x-1/2 -translate-y-1/2 z-[0]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/scroll-title.svg" alt="scroll-title">
                                 </div>
 
-                                <div class="content w-[265px] sm:w-[295px] lg:w-[230px] xl:w-[275px] 2xl:w-2/3 mx-auto pt-8 relative h-[226px] sm:h-[282px] text-black font-[500] text-[12px] pr-[15px]"> 
+                                <div class="content w-[265px] sm:w-[295px] lg:w-[230px] xl:w-[275px] 2xl:w-2/3 mx-auto pt-8 relative h-[226px] sm:h-[282px] text-black font-[500] text-[12px] pr-[15px]">
                                     <div class="inner h-full lg:h-[75%] xl:h-[90%] p-[15px] 2xl:p-[30px] overflow-y-auto relative z-[2]">
                                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam aliquid expedita, obcaecati amet accusantium, vero alias qui necessitatibus dicta iusto nobis assumenda hic voluptatibus explicabo fugiat placeat aperiam, quibusdam dolore?</p>
                                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam aliquid expedita, obcaecati amet accusantium, vero alias qui necessitatibus dicta iusto nobis assumenda hic voluptatibus explicabo fugiat placeat aperiam, quibusdam dolore?</p>
@@ -82,7 +82,7 @@
                                     <img class="w-full left-[50%] top-[50%] absolute -translate-x-1/2 -translate-y-1/2 z-[0]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/scroll-title.svg" alt="scroll-title">
                                 </div>
 
-                                <div class="content w-[265px] sm:w-[295px] lg:w-[230px] xl:w-[275px] 2xl:w-2/3 mx-auto pt-8 relative h-[226px] sm:h-[282px] text-black font-[500] text-[12px] pr-[15px]"> 
+                                <div class="content w-[265px] sm:w-[295px] lg:w-[230px] xl:w-[275px] 2xl:w-2/3 mx-auto pt-8 relative h-[226px] sm:h-[282px] text-black font-[500] text-[12px] pr-[15px]">
                                     <div class="inner h-full lg:h-[75%] xl:h-[90%] p-[15px] 2xl:p-[30px] overflow-y-auto relative z-[2]">
                                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam aliquid expedita, obcaecati amet accusantium, vero alias qui necessitatibus dicta iusto nobis assumenda hic voluptatibus explicabo fugiat placeat aperiam, quibusdam dolore?</p>
                                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam aliquid expedita, obcaecati amet accusantium, vero alias qui necessitatibus dicta iusto nobis assumenda hic voluptatibus explicabo fugiat placeat aperiam, quibusdam dolore?</p>
