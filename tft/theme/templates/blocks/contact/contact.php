@@ -17,7 +17,7 @@
 <?php $social = get_field('social', 'option'); ?>
 <section class="contact-details large py-[115px] <?php if(is_front_page()) echo ' bg-blue-dark'; ?>" data-scroll-section>
 
-<div class="max-w-[1683px] w-full mx-auto px-[40px] 2xl:px-[85px] relative z-[10]">
+<div class="max-w-[1683px] w-full mx-auto px-[16px] md:px-[40px] 2xl:px-[85px] relative z-[10]">
 <div class="max-w-[724px] mx-auto relative z-10 text-center">
         <div class="flex flex-col">
             <div class="w-full">
@@ -26,7 +26,7 @@
                 </div>
                 <?php if($title): ?>
                     <div class="title">
-                        <h2 class="text-[50px]"><?php echo $title; ?></h2>
+                        <h2 class="text-[36px] xl:text-[40px] 2xl:text-[50px]"><?php echo $title; ?></h2>
                     </div>
                 <?php endif; ?>
                 <?php if($address['title']): ?>

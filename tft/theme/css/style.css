@@ -443,27 +443,6 @@ lite-youtube:before {
     overflow: hidden;
     margin-top: -1rem;
 }
-@media (max-width: 639px) {
-    .accordion .items li {
-        padding:1rem 0;
-        margin-bottom: 4rem
-    }
-
-    .accordion .items li .title-wrap {
-        padding: 0;
-        overflow: visible
-    }
-
-    .accordion .items li .title-wrap>img {
-        max-width: none;
-        min-width: 152vw;
-        height: max(160%,5rem)
-    }
-    .accordion .items li .content>img {
-        width: 100vw
-    }
-}
-
 .accordion .items li.active .title-wrap .toggle svg {
     -webkit-transform: rotate3d(0,0,1,135deg);
     transform: rotate3d(0,0,1,135deg)
@@ -967,13 +946,6 @@ body {
         overflow:hidden
     }
 }
-
-p+p {
-    margin-top: 1.5em
-}
-b,strong {
-    font-weight: 700
-}
 .btn img {
     position: absolute;
     height: 190%;
@@ -1143,8 +1115,13 @@ header .menu .current-menu-item:not(.menu-item-type-custom) > a {
         visibility: hidden;
         overflow: auto;
         gap: 3rem;
+        position: fixed;
         transition: .4s all;
         background: linear-gradient(0deg,#4e1e4d 0,#12111b 100%)
+    }
+    header .menu-toggle,
+    header .buttons-setup {
+        display: flex;
     }
 
     header .menu-container .menu {
@@ -1949,21 +1926,10 @@ footer .bottom a:hover {
     --tw-text-opacity: 1;
     color: rgb(247 151 30 / var(--tw-text-opacity))
 }
-
-@media (max-width: 1024px) {
-    .content-scrolls .scrolls>div:not(:first-child) {
-        margin-top:max(3rem,3vw)
-    }
-}
 .content-scrolls .scrolls .inner .title p {
     position: relative;
     z-index: 1
 }
-/* .content-scrolls .scrolls .inner .title img {
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    z-index: 0
-} */
 /* End Content Scrolls Block */
 /* Table Tabs Block */
 .table-tabs {
@@ -2533,67 +2499,6 @@ footer .bottom a:hover {
     animation: bob 6s ease-in-out infinite;
     will-change: transform
 }
-
-.platform .parallax-scene>div:first-child {
-    z-index: 5;
-    position: absolute!important;
-    top: auto!important;
-    bottom: 0;
-    left: 0!important;
-    width: 15.47vmax;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content
-}
-
-.platform .parallax-scene>div:first-child>img {
-    -webkit-transform: translate(-50%,-5%);
-    transform: translate(-50%,-5%)
-}
-
-.platform .parallax-scene>div:nth-child(2) {
-    z-index: 4;
-    position: relative!important;
-    width: 28.28vmax;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content
-}
-
-.platform .parallax-scene>div:nth-child(3) {
-    z-index: 3;
-    position: absolute!important;
-    top: 0;
-    left: 0;
-    width: 17.6vmax;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content
-}
-
-.platform .parallax-scene>div:nth-child(3)>img {
-    -webkit-transform: translate(-42%,12%);
-    transform: translate(-42%,12%)
-}
-
-.platform .parallax-scene>div:nth-child(4) {
-    z-index: 2;
-    position: absolute!important;
-    top: auto!important;
-    bottom: 0;
-    left: auto!important;
-    right: 0;
-    width: 17.19vmax;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content
-}
-
-.platform .parallax-scene>div:nth-child(4)>img {
-    -webkit-transform: translate(18%,10%);
-    transform: translate(18%,10%)
-}
-
 .platform .toggles li {
     cursor: pointer;
     transition: .3s all
@@ -2606,26 +2511,6 @@ footer .bottom a:hover {
     box-shadow: 0 1.3rem 2.8rem 0 rgba(0,0,0,.1);
     -webkit-transform: translate3d(0,-.3rem,0);
     transform: translate3d(0,-.3rem,0)
-}
-
-/* End Platform Block */
-/* Competitions Block */
-.competitions .competition .time p:nth-child(2) {
-    font-size: 1rem;
-    margin: 0;
-    font-weight: 700
-}
-
-.competitions .competition>img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: calc(100% + 3rem);
-    width: auto;
-    max-width: none;
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    z-index: -1
 }
 
 /* End Competitions Block */
@@ -4856,6 +4741,60 @@ body .swiper-button-prev.swiper-button-disabled {
     -webkit-transform: scaleX(-1) translateX(-4%);
     transform: scaleX(-1) translateX(-4%)
 }
+.platform .parallax-scene>div:first-child {
+    z-index: 5;
+    position: absolute!important;
+    top: auto!important;
+    bottom: 0;
+    left: 15px !important;
+    width: 15.47vmax;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content
+}
+.platform .parallax-scene>div:first-child>img {
+    -webkit-transform: translate(-50%,-5%);
+    transform: translate(-50%,-5%)
+}
+.platform .parallax-scene>div:nth-child(2) {
+    z-index: 4;
+    position: relative!important;
+    width: 28.28vmax;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content
+}
+.platform .parallax-scene>div:nth-child(3) {
+    z-index: 3;
+    position: absolute!important;
+    top: 0;
+    left: 0;
+    width: 17.6vmax;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content
+}
+.platform .parallax-scene>div:nth-child(3)>img {
+    -webkit-transform: translate(-42%,12%);
+    transform: translate(-42%,12%)
+}
+.platform .parallax-scene>div:nth-child(4) {
+    z-index: 2;
+    position: absolute!important;
+    top: auto!important;
+    bottom: 0;
+    left: auto!important;
+    right: 0;
+    width: 17.19vmax;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content
+}
+.platform .parallax-scene>div:nth-child(4)>img {
+    -webkit-transform: translate(18%,10%);
+    transform: translate(18%,10%)
+}
+
 
 @media all and (max-width: 991px) {
     .hero .animations .dragon {

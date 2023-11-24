@@ -28,7 +28,7 @@
 // $faq_0_answer = isset($faq_0_answer[1]) ? $faq_0_answer[1] : '';
 // Define default values for other fields as well
 ?>
-<section class="accordion p-[50px_40px] bg-green-light" data-scroll-section>
+<section class="accordion p-[50px_16px] md:p-[50px_40px] bg-green-light" data-scroll-section>
     <div class="max-w-[1308px] w-full mx-auto relative z-10">
         <?php if($icon || $title): ?>
             <div class="flex">
@@ -40,21 +40,21 @@
                     <?php endif; ?>
                     <?php if($title): ?>
                         <div class="title">
-                            <h3 class="text-[40px]"><?php echo $title; ?></h3>
+                            <h3 class="text-[36px] xl:text-[40px] 2xl:text-[40px]"><?php echo $title; ?></h3>
                         </div>
                     <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>
         <div class="flex mt-12 lg:mt-16">
-            <div class="w-full flex flex-col gap-[100px] justify-between">
+            <div class="w-full flex flex-col gap-[20px] md:gap-[50px] xl:gap-[100px] justify-between">
                 <?php if($faq): ?>
                     <?php $half = ceil(count($faq) / 2); ?>
                     <?php $faq_left = array_slice($faq, 0, $half); ?>
                     <?php $faq_right = array_slice($faq, $half); ?>
 
-                        <div class="flex items-center gap-[70px]">
-                            <div class="max-w-[480px] w-full">
+                        <div class="flex flex-col lg:flex-row items-center gap-[70px]">
+                            <div class="max-w-[480px] w-full hidden md:block">
                                 <div class="w-full relative">
                                     <h4 class="max-w-[176px] wadik text-[24px] text-black absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-center">getting started</h4>
                                         <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/title-bg-shape.svg" alt="scroll-content">
@@ -67,7 +67,7 @@
                                     <li class="border-b border-b-[3px] border-[#90633E]">
                                         <div class="wadik title-wrap flex items-center justify-between p-[25px_10px] mb-[6px]">
                                             <p class="title"><?php echo $item['question']; ?></p>
-                                            <div class="toggle w-[18px] h-[18px]">
+                                            <div class="toggle min-w-[18px] w-[18px] h-[18px]">
                                                 <svg class="fill-white w-full h-full" decoding="async"><use xlink:href="#plus"></use></svg>
                                             </div>
                                         </div>
@@ -86,8 +86,8 @@
 
 
 
-                        <div class="flex items-center gap-[70px]">
-                            <div class="max-w-[480px] w-full">
+                        <div class="flex flex-col lg:flex-row items-center gap-[70px]">
+                            <div class="max-w-[480px] w-full hidden md:block">
                                     <div class="w-full relative">
                                     <h4 class="max-w-[216px] wadik text-[24px] text-black absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-center">ABOUT OUR CHALLENGES</h4>
                                         <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/title-bg-shape.svg" alt="scroll-content">
@@ -100,7 +100,7 @@
                                             <li class="border-b border-b-[3px] border-[#90633E]">
                                                 <div class="wadik title-wrap flex items-center justify-between p-[25px_10px] mb-[6px]">
                                                     <p class="title"><?php echo $item['question']; ?></p>
-                                                    <div class="toggle w-[18px] h-[18px]">
+                                                    <div class="toggle min-w-[18px] w-[18px] h-[18px]">
                                                         <svg class="fill-white w-full h-full" decoding="async"><use xlink:href="#plus"></use></svg>
                                                     </div>
                                                 </div>

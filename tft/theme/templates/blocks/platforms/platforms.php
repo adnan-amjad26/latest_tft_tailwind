@@ -38,10 +38,10 @@
 // Define default values for other fields as well
 
 ?>
-<section class="platform s-padding !pt-12 bg-lilac" data-scroll-section>
-    <div class="container relative z-10">
+<section class="platform p-[100px_16px] md:p-[150px_40px] bg-lilac" data-scroll-section>
+    <div class="max-w-[1290px] mx-auto relative z-10">
         <?php if($icon || $title): ?>
-            <div class="row">
+            <div class="flex">
                 <div class="w-full text-center">
                     <?php if($icon): ?>
                         <div class="icon mb-12 w-28 mx-auto">
@@ -50,15 +50,15 @@
                     <?php endif; ?>
                     <?php if($title): ?>
                         <div class="title">
-                            <h3 class="text-[40px]"><?php echo $title; ?></h3>
+                            <h3 class="text-[36px] xl:text-[40px] 2xl:text-[40px]"><?php echo $title; ?></h3>
                         </div>
                     <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>
         <?php if($brokers || $image || $image_2): ?>
-            <div class="flex items-center mt-[24px]">
-                <div class="w-full lg:w-1/2 flex justify-end img-side">
+            <div class="flex flex-col lg:flex-row items-center mt-[24px]">
+                <div class="w-full lg:w-1/2 flex justify-center lg:justify-end img-side !ml-[80px] !md:ml-[14%]">
                     <?php if($image || $image_2): ?>
                         <div class="parallax-scene inline-flex">
                             <?php if($image_2): ?>
@@ -85,7 +85,7 @@
                     <?php if($brokers): ?>
 						<?php $i = 1; foreach($brokers as $broker): ?>
 							<?php $image = $broker['image']; ?>
-							<figure class="max-w-[150px] flex flex-col justify-center items-center w-full mx-auto">
+							<figure class="max-w-full md:max-w-[150px] flex flex-col justify-center items-center w-full mx-auto">
 								<button class="outline-0" data-broker="<?php echo $i; ?>">
 									<img decoding="async" loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
 								</button>

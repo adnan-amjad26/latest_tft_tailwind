@@ -5,8 +5,6 @@
 ?>
 <?php $title = get_field('title'); ?>
 <?php $tabs = get_field('tabs'); ?>
-
-?>
 <!-- <section class="comparison py-[100px] bricks-elem relative z-[2]" data-scroll-section>
     <div class="container relative z-10">
         <?php if($title): ?>

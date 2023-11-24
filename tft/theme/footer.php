@@ -13,8 +13,8 @@
 ?>
 </main>
 <footer class="bg-gradient-to-t from-[#3F0C39] to-[#1e0b22]" data-scroll-section>
-	<div class="max-w-[1389px] w-full mx-auto">
-		<div class="flex justify-center py-24">
+	<div class="max-w-[1737px] w-full mx-auto">
+		<div class="flex justify-center py-24 px-[20px] md:px-[40px]">
 			<div class="w-full">
 				<div class="flex flex-wrap mb-[30px]">
 					<?php if ($footerOptions['logo_2']): ?>
@@ -39,7 +39,7 @@
 						<div class="w-full">
 							<?php wp_nav_menu(array(
 								'theme_location' => 'footer-2',
-								'menu_class' => 'menu flex justify-center gap-[47px] font-headers text-[14px]',
+								'menu_class' => 'menu flex flex-col md:flex-row text-center justify-center gap-[20px] md:gap-[47px] font-headers text-[14px] wadik',
 								'container' => false,
 							)); ?>
 						</div>
@@ -56,22 +56,22 @@
 					<?php endif; ?> -->
 				</div>
 				<?php if ($footerOptions['trustpilot'] || $footerOptions['newsletter']['text'] || $footerOptions['newsletter']['form']): ?>
-					<div class="flex">
-						<?php if ($trustpilot): ?>
-							<div class="inline-block w-full lg:w-auto">
-								<?php echo $trustpilot; ?>
+					<div class="flex flex-col lg:flex-row">
+						<?php if ($footerOptions['trustpilot']): ?>
+							<div class="flex lg:inline-block justify-center w-full lg:w-auto lg:ml-[-20px] lg:ml-0">
+								<?php echo $footerOptions['trustpilot']; ?>
 							</div>
 						<?php endif; ?>
 						<?php if ($footerOptions['newsletter']['text'] || $footerOptions['newsletter']['form']): ?>
 							<div class="w-full flex font-headers items-center justify-between px-[50px] gap-[50px] border-l border-[#fff] border-opacity-[30%]">
-								<?php if ($newsletter['text']): ?>
-									<div class="w-full max-w-[539px] text-[14px]">
-										<?php echo $newsletter['text']; ?>
+								<?php if ($footerOptions['trustpilot']['text']): ?>
+									<div class="w-full sm:min-w-[475px] mx-auto text-center md:text-left text-[14px] wadik">
+										<?php echo $footerOptions['trustpilot']['text']; ?>
 									</div>
 								<?php endif; ?>
 								<?php if ($footerOptions['newsletter']['form']): ?>
 									<div class="w-full">
-										<?php echo do_shortcode($newsletter['form']); ?>
+										<?php echo do_shortcode($footerOptions['trustpilot']['form']); ?>
 									</div>
 								<?php endif; ?>
 							</div>
@@ -79,14 +79,14 @@
 					</div>
 				<?php endif; ?>
 				<?php if ($footerOptions['description'] || $footerOptions['link']): ?>
-					<div class="flex mt-12 lg:mt-16 items-center gap-[50px] justify-between footer-bottom">
-						<div class="w-full max-w-[1080px]">
-							<?php if ($description): ?>
-								<div class="content text-lg"><?php echo $description; ?></div>
+					<div class="flex flex-col md:flex-row mt-12 lg:mt-16 items-center gap-[50px] justify-between footer-bottom">
+						<div class="w-full max-w-[286px] sm:max-w-[1080px] mx-auto sm:mx-0 text-center md:text-left">
+						<?php if ($footerOptions['description']): ?>
+							<div class="content text-[12px] font-[600] flex flex-col gap-[15px]"><?php echo $description; ?></div>
 							<?php endif; ?>
 						</div>
-						<div class="w-auto">
-							<?php if ($footerOptions['footer_link']): ?>
+						<div class="md:min-w-[226px] text-center md:text-right">
+						<?php if ($footerOptions['footer_link']): ?>
 								<div class="button">
 									<div class="disclaimer-toggle btn btn-simple cursor-pointer p-[.8rem_2rem_.7rem] rounded-[1rem] relative text-[1.1rem] inline-flex items-center wadik text-center">
 										<span class="z-[1] relative"><?php echo html_entity_decode($footerOptions['footer_link']['title']); ?></span>
@@ -104,15 +104,15 @@
 	</div>
 	<?php if ($footerOptions['copyright'] || $footerOptions['powered']): ?>
 		<div class="bottom bg-purple-dark py-8">
-			<div class="max-w-[1750px] w-full mx-auto px-[40px] 2xl:px-[85px]">
+			<div class="w-full mx-auto px-[16px] md:px-[40px] 2xl:px-[85px]">
 				<div class="flex justify-between items-center font-headers">
 					<?php if ($footerOptions['copyright']): ?>
-						<div class="w-auto">
+						<div class="w-auto wadik text-[11px]">
 							<p><?php echo '© ' . date('Y') . ' ' . $footerOptions['copyright']; ?></p>
 						</div>
 					<?php endif; ?>
 					<?php if ($footerOptions['powered']): ?>
-						<div class="w-auto text-[11px]">
+						<div class="w-auto text-[11px] wadik hidden sm:block">
 							<p>
 								<a href="<?php echo $footerOptions['powered']['url']; ?>"<?php if ($footerOptions['powered']['target']) echo ' target="' . $footerOptions['powered']['target'] . '"'; ?>
 								   rel="noopener noreferrer"><?php echo $powered['title']; ?></a></p>

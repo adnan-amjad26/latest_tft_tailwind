@@ -36,13 +36,13 @@
 // $background = isset($background[1]) ? $background[1] : '';
 // Define default values for other fields as well
 ?>
-<section class="discord text-center bg-lilac pt-[300px] relative z-[1]" data-scroll-section>
+<section class="discord text-center bg-lilac pt-0 lg:pt-[300px] relative z-[1]" data-scroll-section>
     <div class="max-w-[1360px] w-full mx-auto relative z-10">
-        <div class="flex flex-col items-center px-[40px]">
+        <div class="flex flex-col items-center px-[16px] md:px-[40px]">
             <?php if($icon || $title || $logo): ?>
                 <div class="w-full lg:w-5/6 relative z-0">
                     <?php if($icon || $title): ?>
-                        <div class="inner relative z-10 pb-12">
+                        <div class="inner relative z-10">
                             <?php if($title): ?>
                                 <div class="title">
                                     <h3><?php echo $title; ?></h3>
@@ -51,16 +51,20 @@
                         </div>
                     <?php endif; ?>
                     <?php if($logo): ?>
-                        <div class="bg absolute top-[-100px] left-[-100px] right-[-100px] z-0">
+                        <div class="bg absolute top-0 lg:top-[-100px] left-0 lg:left-[-100px] right-0 lg:right-[-100px] z-0">
                             <img decoding="async" loading="lazy" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>">
                         </div>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
             <?php if($image || $link || $lottie): ?>
-                <div class="w-full max-w-[769px] mt-12 relative z-[auto] mockup-col">
-
-                    <div class="mockup-shadow absolute bottom-[50px] left-[-300px] right-[-300px] h-[450px] rounded-[500px_500px_0_0] z-[-1] opacity-[0.8] pointer-events-none"></div>
+                <div class="w-full xl:max-w-[769px] relative z-[auto] mockup-col">
+                <?php if($lottie): ?>
+                        <div class="relative xl:absolute bottom-0 xl:right-[100%] w-[120px] sm:w-[18vmax] h-[fit-content] z-[1]">
+                            <lottie-player src="<?php echo $lottie; ?>" background="transparent" speed="0.6" loop autoplay></lottie-player>
+                        </div>
+                    <?php endif; ?>
+                    <div class="mockup-shadow absolute top-[50px] xl:top-auto xl:bottom-[50px] left-0 xl:left-[-300px] right-0 xl:right-[-300px] h-[200px] lg:h-[450px] rounded-[500px_500px_0_0] z-[-1] opacity-[0.8] pointer-events-none"></div>
                    <div class="w-full flex flex-col gap-[50px] mb-[-350px] relative z-[20]">
                    <?php if($image): ?>
                         <figure class="mockup">
@@ -78,11 +82,7 @@
                         </div>
                     <?php endif; ?>
                    </div>
-                    <?php if($lottie): ?>
-                        <div class="absolute bottom-0 right-[100%] w-[18vmax] h-[fit-content] z-[1]">
-                            <lottie-player src="<?php echo $lottie; ?>" background="transparent" speed="0.6" loop autoplay></lottie-player>
-                        </div>
-                    <?php endif; ?>
+
                 </div>
             <?php endif; ?>
         </div>
