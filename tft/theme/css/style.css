@@ -5132,7 +5132,7 @@ body:not(.theme-dark) .imgs-night {
 .theme-dark main,
 .theme-dark main.bg-red {
     --tw-bg-opacity: 1;
-    background-color: rgb(15 0 34 / var(--tw-bg-opacity));
+    background-color: rgb(0 0 50 / var(--tw-bg-opacity));
 }
 .theme-dark main.bg-green-light {
     --tw-bg-opacity: 1;
@@ -5144,7 +5144,7 @@ body:not(.theme-dark) .imgs-night {
 }
 .theme-dark main.bg-lilac {
     --tw-bg-opacity: 1;
-    background-color: rgb(62 10 61 / var(--tw-bg-opacity));
+    background-color: rgb(41 16 73 / var(--tw-bg-opacity));
 }
 .theme-dark footer .bottom {
     --tw-bg-opacity: 1;
