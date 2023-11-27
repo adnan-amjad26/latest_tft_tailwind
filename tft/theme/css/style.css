@@ -24,7 +24,7 @@
 
 .bg-indigo {
 	--tw-bg-opacity: 1;
-	background-color: rgb(44 47 76 / var(--tw-bg-opacity))
+	background-color: rgb(51 54 87 / var(--tw-bg-opacity))
 }
 
 .bg-lilac {
@@ -5140,7 +5140,7 @@ body:not(.theme-dark) .imgs-night {
 }
 .theme-dark main.bg-indigo {
     --tw-bg-opacity: 1;
-    background-color: rgb(18 17 27 / var(--tw-bg-opacity));
+    background-color: rgb(31 30 44 / var(--tw-bg-opacity));
 }
 .theme-dark main.bg-lilac {
     --tw-bg-opacity: 1;

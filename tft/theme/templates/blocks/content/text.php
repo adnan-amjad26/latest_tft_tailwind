@@ -19,7 +19,7 @@ if ( isset( $fields['backgrounds'] ) ) {
 			$bottom_overlay = 'bg-[linear-gradient(0deg,_rgba(129,131,20,0.00)_0%,_#818314_65%)]';
 			break;
 		case 'indigo':
-			$bottom_overlay = 'bg-[linear-gradient(0deg,_rgba(51,54,87,0.00)_0%,_#2c2f4c_65%)]';
+			$bottom_overlay = 'bg-[linear-gradient(0deg,_rgba(51,54,87,0.00)_0%,_#333657_65%)]';
 			break;
 		case 'lilac':
 			$bottom_overlay = 'bg-[linear-gradient(0deg,_rgba(154,153,175,0.00)_0%,_#a49db9_65%)]';
@@ -31,7 +31,7 @@ if ( isset( $fields['backgrounds'] ) ) {
 
 	switch ( $fields['backgrounds']['dark_theme'] ) {
 		case 'indigo':
-			$dark_bottom_overlay = 'bg-[linear-gradient(0deg,_rgba(42,35,68,0.00)_0%,_#2A2344_65%)]';
+			$dark_bottom_overlay = 'bg-[linear-gradient(0deg,_rgba(31,30,44,0.00)_0%,_#1F1E2C_65%)]';
 			break;
 		case 'navy':
 			$dark_bottom_overlay = 'dark:bg-[linear-gradient(0deg,_rgba(0,0,50,0.00)_0%,_#000032_65%)]';
