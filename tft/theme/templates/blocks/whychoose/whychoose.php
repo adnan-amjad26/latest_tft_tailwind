@@ -114,6 +114,6 @@
             </div>
         </div>
         <figure class="bg absolute bottom-0 left-0 w-full h-full z-0">
-                <img class="w-full" class="imgs-night" src="http://tfttailwind.local/wp-content/uploads/2023/04/media-bg.svg" alt="">
+			<img class="w-full" class="imgs-night" src="<?php echo wp_get_upload_dir()['url'].'/media-bg.svg'; ?>" alt="">
         </figure>
         </div>
