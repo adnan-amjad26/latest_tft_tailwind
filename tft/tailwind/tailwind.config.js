@@ -2,6 +2,7 @@
 const includePreflight = 'editor' === process.env._TW_TARGET ? false : true;
 
 module.exports = {
+	darkMode: 'class',
 	presets: [
 		// Manage Tailwind Typography's configuration in a separate file.
 		require('./tailwind-typography.config.js'),
@@ -47,13 +48,24 @@ module.exports = {
 					'97%': {opacity: 0.5},
 					'to': {opacity: 0.5},
 				}
-			}
+			},
+			colors: {
+				'navy': '#092236',
+				'orange': '#F7971E',
+				'yellow': '#EEC042',
+				'night-blue': '#000032',
+				'olive': '#818314',
+			},
+			backgroundImage: {
+				'button-rapid': "url('img/btn-rapid.svg')",
+				'button-standard': "url('img/btn-standard.svg')",
+				'button-gold': "url('img/btn-gold.svg')",
+			},
 		},
 		fontFamily: {
 			'body': ['"Montserrat"', 'sans-serif'],
-			'wadik': ['"Wadik"','"Open Sans"'],
+			'wadik': ['"Wadik"', '"Open Sans"'],
 		},
-
 	},
 	corePlugins: {
 		// Disable Preflight base styles in builds targeting the editor.
