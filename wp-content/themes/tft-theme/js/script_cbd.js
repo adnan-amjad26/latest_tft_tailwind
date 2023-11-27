@@ -863,7 +863,7 @@ jQuery(document).ready(function ($) {
 		$('.table.comparison-table').hide();
 		comparison_table.toggle();
 		table
-			.find(".table:not(.comparison-table)")
+			.find(".custom-table:not(.comparison-table)")
 			.toggle()
 			.after(comparison_table);
 	});

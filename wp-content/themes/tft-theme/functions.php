@@ -7,7 +7,7 @@
  * @package tft
  */
 
-if (!defined('TFT_VERSION')) {
+if ( ! defined( 'TFT_VERSION' ) ) {
 	/*
 	 * Set the theme’s version number.
 	 *
@@ -15,10 +15,10 @@ if (!defined('TFT_VERSION')) {
 	 * to create your production build, the value below will be replaced in the
 	 * generated zip file with a timestamp, converted to base 36.
 	 */
-	define('TFT_VERSION', '0.1.0');
+	define( 'TFT_VERSION', '0.1.0' );
 }
 
-if (!defined('TFT_TYPOGRAPHY_CLASSES')) {
+if ( ! defined( 'TFT_TYPOGRAPHY_CLASSES' ) ) {
 	/*
 	 * Set Tailwind Typography classes for the front end, block editor and
 	 * classic editor using the constant below.
@@ -42,7 +42,7 @@ if (!defined('TFT_TYPOGRAPHY_CLASSES')) {
 	);
 }
 
-if (!function_exists('tft_setup')) :
+if ( ! function_exists( 'tft_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -50,18 +50,17 @@ if (!function_exists('tft_setup')) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function tft_setup()
-	{
+	function tft_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on tft, use a find and replace
 		 * to change 'tft' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain('tft', get_template_directory() . '/languages');
+		load_theme_textdomain( 'tft', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
-		add_theme_support('automatic-feed-links');
+		add_theme_support( 'automatic-feed-links' );
 
 		/*
 		 * Let WordPress manage the document title.
@@ -69,20 +68,20 @@ if (!function_exists('tft_setup')) :
 		 * hard-coded <title> tag in the document head, and expect WordPress to
 		 * provide it for us.
 		 */
-		add_theme_support('title-tag');
+		add_theme_support( 'title-tag' );
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support('post-thumbnails');
+		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'menu-1' => __('Primary', 'tft'),
-				'menu-2' => __('Footer Menu', 'tft'),
+				'menu-1' => __( 'Primary', 'tft' ),
+				'menu-2' => __( 'Footer Menu', 'tft' ),
 			)
 		);
 
@@ -104,22 +103,22 @@ if (!function_exists('tft_setup')) :
 		);
 
 		// Add theme support for selective refresh for widgets.
-		add_theme_support('customize-selective-refresh-widgets');
+		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		// Add support for editor styles.
-		add_theme_support('editor-styles');
+		add_theme_support( 'editor-styles' );
 
 		// Enqueue editor styles.
-		add_editor_style('style-editor.css');
+		add_editor_style( 'style-editor.css' );
 
 		// Add support for responsive embedded content.
-		add_theme_support('responsive-embeds');
+		add_theme_support( 'responsive-embeds' );
 
 		// Remove support for block templates.
-		remove_theme_support('block-templates');
+		remove_theme_support( 'block-templates' );
 	}
 endif;
-add_action('after_setup_theme', 'tft_setup');
+add_action( 'after_setup_theme', 'tft_setup' );
 
 /**
  * Register widget area.

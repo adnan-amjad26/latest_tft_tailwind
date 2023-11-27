@@ -171,6 +171,7 @@
 .leading-relaxed {
 	line-height: 1.625
 }
+<<<<<<< HEAD
 
 .opacity-70 {
 	opacity: .7
@@ -180,6 +181,8 @@
 	opacity: .8
 }
 
+=======
+>>>>>>> aeb6c7cd45428aa22d65f304fa8afd686683c0e3
 .shadow {
 	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),0 1px 2px -1px rgb(0 0 0 / 0.1);
 	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);
