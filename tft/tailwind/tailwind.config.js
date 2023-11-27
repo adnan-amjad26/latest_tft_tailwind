@@ -47,7 +47,20 @@ module.exports = {
 					'95%': {opacity: 0.6},
 					'97%': {opacity: 0.5},
 					'to': {opacity: 0.5},
+				},
+				bob: {
+					'0%': {transform: 'translate3d(-50%, 0, 0)'},
+					'50%': {transform: 'translate3d(-50%, -2rem, 0)'},
+					'100%': {transform: 'translate3d(-50%, 0, 0)'},
+				},
+				spin: {
+					'0%': {transform: 'translate3d(0,0,0) rotate(0)'},
+					'100%': {transform: 'translate3d(0,0,0) rotate(360deg)'},
 				}
+			},
+			animation: {
+				bob: 'bob 8s infinite cubic-bezier(.45,0,.55,1)',
+				spin: 'spin 120s linear infinite',
 			},
 			colors: {
 				'navy': '#092236',
