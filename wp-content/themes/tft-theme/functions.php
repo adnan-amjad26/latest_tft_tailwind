@@ -15,7 +15,11 @@ if ( ! defined( 'TFT_VERSION' ) ) {
 	 * to create your production build, the value below will be replaced in the
 	 * generated zip file with a timestamp, converted to base 36.
 	 */
+<<<<<<< HEAD
 	define( 'TFT_VERSION', '0.1.0' );
+=======
+	define('TFT_VERSION', '0.1.1');
+>>>>>>> f9f9ee465533e329218886b60a99a963d27c0bb6
 }
 
 if ( ! defined( 'TFT_TYPOGRAPHY_CLASSES' ) ) {

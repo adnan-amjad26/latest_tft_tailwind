@@ -8,7 +8,7 @@
 !README.md
 
 # track source dev files
-!tft/
+!tft/*
 
 # track .gitignore
 !.gitignore

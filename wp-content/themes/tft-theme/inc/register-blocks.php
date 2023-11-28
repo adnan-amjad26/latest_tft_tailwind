@@ -294,6 +294,16 @@ function register_acf_block_types() {
 		'mode'              => 'edit',
 	));
 
+	// Terms of use hero
+	acf_register_block_type(array(
+		'name'              => 'terms-hero',
+		'title'             => __('Terms of Use Hero'),
+		'render_template'   => 'templates/blocks/terms-of-use/hero.php',
+		'category'          => 'custom-blocks',
+		'icon'              => '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M3 18h8V6H3v12zM14 7.5V9h7V7.5h-7zm0 5.3h7v-1.5h-7v1.5zm0 3.7h7V15h-7v1.5z"></path></svg>',
+		'mode'              => 'edit',
+	));
+
 }
 
 if(function_exists('acf_register_block_type')) {

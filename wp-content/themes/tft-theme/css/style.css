@@ -168,6 +168,41 @@
 	padding-top: 2rem
 }
 
+<<<<<<< HEAD
+=======
+.font-headers {
+	font-family: Wadik,sans-serif
+}
+
+.text-3xl {
+	font-size: 1.8rem
+}
+
+.text-lg {
+	font-size: 1.2rem
+}
+
+.text-xl {
+	font-size: 1.4rem
+}
+
+.font-bold {
+	font-weight: 700
+}
+
+.font-medium {
+	font-weight: 500
+}
+
+.uppercase {
+	text-transform: uppercase
+}
+
+.italic {
+	font-style: italic
+}
+
+>>>>>>> f9f9ee465533e329218886b60a99a963d27c0bb6
 .leading-relaxed {
 	line-height: 1.625
 }
@@ -1252,63 +1287,7 @@ footer .bottom a:hover {
 /* End Site Footer */
 /* CSS Animations */
 
-@-webkit-keyframes bob {
-    0% {
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0)
-    }
 
-    50% {
-        -webkit-transform: translate3d(0,-2rem,0);
-        transform: translate3d(0,-2rem,0)
-    }
-
-    100% {
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0)
-    }
-}
-
-@keyframes bob {
-    0% {
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0)
-    }
-
-    50% {
-        -webkit-transform: translate3d(0,-2rem,0);
-        transform: translate3d(0,-2rem,0)
-    }
-
-    100% {
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0)
-    }
-}
-
-@-webkit-keyframes spin {
-    from {
-        -webkit-transform: translate3d(0,0,0) rotate(0);
-        transform: translate3d(0,0,0) rotate(0)
-    }
-
-    to {
-        -webkit-transform: translate3d(0,0,0) rotate(360deg);
-        transform: translate3d(0,0,0) rotate(360deg)
-    }
-}
-
-@keyframes spin {
-    from {
-        -webkit-transform: translate3d(0,0,0) rotate(0);
-        transform: translate3d(0,0,0) rotate(0)
-    }
-
-    to {
-        -webkit-transform: translate3d(0,0,0) rotate(360deg);
-        transform: translate3d(0,0,0) rotate(360deg)
-    }
-}
 
 @-webkit-keyframes flicker {
     from {
