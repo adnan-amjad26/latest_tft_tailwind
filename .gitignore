@@ -11,7 +11,7 @@
 !README.md
 
 # track source dev files
-!tft/
+!tft/**
 
 # track .gitignore
 !.gitignore
@@ -29,7 +29,7 @@ Thumbs.db
 
 # ignore everything in the "wp-content" directory, except:
 # "themes" directory
-wp-content/*
+wp-content/**
 !wp-content/themes/
 /wp-content/themes/**
 !/wp-content/themes/tft-theme**
