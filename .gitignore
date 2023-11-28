@@ -32,7 +32,7 @@ Thumbs.db
 wp-content/**
 !wp-content/themes/
 /wp-content/themes/**
-!/wp-content/themes/tft-theme**
+!/wp-content/themes/tft-theme/**
 /wp-content/plugins
 # Ignore dependencies managed by package managers
 /node_modules/
