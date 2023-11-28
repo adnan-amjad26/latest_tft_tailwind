@@ -27,8 +27,7 @@ Thumbs.db
 # ignore everything in the "wp-content" directory, except:
 # "themes" directory
 wp-content/*
-wp-content/themes/*
-!wp-content/themes/tft-theme
+!wp-content/themes/tft-theme/*
 
 #ingnore npm packages
 node_modules
