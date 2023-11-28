@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<section class="checkout-page pt-[260px] relative overflow-visible" data-scroll-section>
+<section class="checkout-page pt-[260px] sm:!pb-[220px] pb-[75px] relative overflow-visible" data-scroll-section>
     <!--- Page background --->
 	<figure class="bg absolute top-0 left-0 w-full h-full z-0">
 		<div class="dark:hidden block h-screen">

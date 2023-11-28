@@ -395,9 +395,6 @@ section.article-content .content h3 {
 
 /*===== Responsive Mobile view =====*/
 @media only screen and (max-width: 768px) {
-	.checkout-toggles > label:nth-child(2n + 2) {
-		@apply mr-0;
-	}
 	.woocommerce form .form-row-first,
 	.woocommerce form .form-row-last,
 	.woocommerce-page form .form-row-first,
