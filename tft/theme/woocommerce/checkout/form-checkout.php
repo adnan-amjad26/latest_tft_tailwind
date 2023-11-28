@@ -19,27 +19,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<section class="checkout-page pt-[260px] relative overflow-visible" data-scroll-section>
+<section class="checkout-page pt-[260px] sm:!pb-[220px] pb-[75px] relative overflow-visible" data-scroll-section>
     <!--- Page background --->
 	<figure class="bg absolute top-0 left-0 w-full h-full z-0">
-		<div class="imgs-day absolute theme-dark:hidden theme-light:block sm:h-screen">
-			<img class="sm:object-cover sm:h-screen sm:object-center sm:w-full relative z-10" src="<?php echo get_template_directory_uri(); ?>/img/checkout-bg-light.png" alt="Checkout background day">
-            <div class="check-bg-day absolute left-0 top-[250px] sm:top-[0px] w-full h-full z-20"></div>
+		<div class="dark:hidden block h-screen">
+			<img class="object-cover h-screen object-center w-full relative z-10" src="<?php echo get_template_directory_uri(); ?>/img/checkout-bg-light.png" alt="Checkout background day">
+            <div class="check-bg-day absolute left-0 sm:!top-[250px] top-[0px] w-full h-full z-20"></div>
 		</div>
-		<div class="imgs-night absolute theme-light:hidden theme-dark:block sm:h-screen">
-			<img class="sm:object-cover sm:h-screen sm:object-center sm:w-full relative z-10" src="<?php echo get_template_directory_uri(); ?>/img/checkout-bg-dark.png" alt="Checkout background night">
-            <div class="check-bg-night absolute left-0 top-[450px] sm:top-[350px] w-full h-full z-20"></div>
+		<div class="hidden dark:block h-screen">
+			<img class="object-cover h-screen object-center w-full relative z-10" src="<?php echo get_template_directory_uri(); ?>/img/checkout-bg-dark.png" alt="Checkout background night">
+            <div class="check-bg-night absolute left-0 sm:!top-[450px] top-[350px] w-full h-full z-20"></div>
 		</div>
 	</figure>
     <!--- Page background --->
 
 	<!--- Checkout Page Title --->
-    <div class="checkout-page-title mb-[160px] sm:h-[20vh]">
-        <div class="container 2xl:max-w-[1380px] xl:max-w-full sm:max-w-full w-full m-auto pl-4 pr-4 relative z-30">
+    <div class="checkout-page-title mb-[160px] sm:!h-auto h-[20vh]">
+        <div class="container max-w-[1780px] m-auto pl-4 pr-4 relative z-30">
             <div class="row relative">
                 <div class="w-full lg:w-3/5">
-                    <div class="title font-wadik text-white sm:text-center">
-                        <h1 class="text-[64px]/[1.2] sm:text-[40px]/[1.2]"><?php the_title(); ?></h1>
+                    <div class="title font-wadik text-white sm:!text-left text-center">
+                        <h1 class="sm:!text-[64px]/[1.2] text-[40px]/[1.2]"><?php the_title(); ?></h1>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <!--- Checkout Form --->
 	<div class="checkout-form text-white">
-        <div class="container 2xl:max-w-[1380px] xl:max-w-full sm:max-w-full w-full m-auto pl-4 pr-4 relative z-30">
+        <div class="container max-w-[1780px] m-auto pl-4 pr-4 relative z-30">
             <?php if(!WC()->cart->cart_contents_count == 0): ?>
                 <?php do_action( 'woocommerce_before_checkout_form', $checkout );
                 // If checkout registration is disabled and not logged in, the user cannot checkout.
@@ -59,7 +59,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 } ?>
                 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
                     <div class="row flex flex-wrap justify-between">
-                        <div class="w-full lg:w-[65%] 2xl:w-[58%] mb-12">
+                        <div class="w-full sm:!w-[58%] mb-12">
                             <?php if ( $checkout->get_checkout_fields() ) : ?>
                                 <?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
                                 <?php do_action( 'woocommerce_checkout_billing' ); ?>
@@ -68,8 +68,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <?php endif; ?>
                             <?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
                         </div>
-                        <div class="w-full lg:w-[33%] 2xl:w-[40%] mb-12">
-                            <h3 id="order_review_heading" class="font-wadik text-[32px]/[1.2] sm:text-[24px]/[1.2] text-white mb-[35px]"><?php esc_html_e( 'Your Virtual Order', 'woocommerce' ); ?></h3>
+                        <div class="w-full sm:!w-[40%] mb-12">
+                            <h3 id="order_review_heading" class="font-wadik sm:!text-[32px]/[1.2] text-[24px]/[1.2] text-white mb-[35px]"><?php esc_html_e( 'Your Virtual Order', 'woocommerce' ); ?></h3>
                             <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
                             <div id="order_review" class="woocommerce-checkout-review-order">
                                 <?php do_action( 'woocommerce_checkout_order_review' ); ?>
