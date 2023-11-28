@@ -5,8 +5,8 @@
 /.websockets/**
 !/tft/
 /tft/**
-/tft/node_modules/**
 !/tft/theme**
+/tft/node_modules/**
 !/wp-content/
 /wp-content/**
 !/wp-content/themes/
