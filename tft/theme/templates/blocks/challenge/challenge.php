@@ -4,14 +4,15 @@
  */
 ?>
 <?php
-	$id = get_field('id');
-	$title = get_field('title');
-	$light_image = get_field('light_image');
-	$dark_image = get_field('dark_image');
-	$dark_image_2 = get_field('dark_image_2');
-	$dark_image_3 = get_field('dark_image_3');
-	$light_lottie = get_field('light_lottie');
-	$product = get_field('product');
+	$challegeData = get_fields();
+	$id = $challegeData['id'];
+	$title = $challegeData['title'];
+	$light_image = $challegeData['light_image'];
+	$dark_image = $challegeData['dark_image'];
+	$dark_image_2 = $challegeData['dark_image_2'];
+	$dark_image_3 = $challegeData['dark_image_3'];
+	$light_lottie = $challegeData['light_lottie'];
+	$product = $challegeData['product'];
 	$tables = get_field('product_tables', $product->ID);
 	$challenge_type = wp_get_post_terms($product->ID, 'pa_challenge_type');
 	$account_type = wp_get_post_terms($product->ID, 'pa_account_type');

@@ -29,20 +29,20 @@ $broker = wp_get_post_terms($product, 'pa_broker');
 <section<?php if($id) echo ' id="'.$id.'"'; ?> class="table-tabs bricks-elem relative z-[2]">
 	<div class="max-w-[1750px] w-full mx-auto pt-[100px] px-[16px] md:px-[40px] 2xl:px-[85px]">
 		<?php if($title): ?>
-			<div class="flex">
-				<div class="w-full text-center">
-					<div class="title relative">
-						<h3 class="relative z-[2] max-w-[400px] mx-auto text-center text-[36px] sm:text-[36px] lg:text-[30px] xl:text-[40px] 2xl:text-[40px] mt-[178px] md:mt-0"><?php echo $title; ?></h3>
-						<div class="absolute left-1/2 top-[-138px] -translate-x-1/2">
-							<div class="w-[63px] h-[230px]">
-								<img class="h-full relative z-[2]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/torch.svg" alt="torch">
-								<div class="absolute z-[1] w-full pb-[80%] rounded-full glow bg-[#ff4202] top-[35%] left-[50%] opacity-[0.7] translate-x-[-50%]"></div>
-							</div>
+            <div class="flex">
+                <div class="w-full text-center">
+                    <div class="title relative">
+                        <h3 class="relative z-[2] max-w-[400px] mx-auto text-center text-[36px] sm:text-[36px] lg:text-[30px] xl:text-[40px] 2xl:text-[40px] mt-[178px] md:mt-0"><?php echo $title; ?></h3>
+                        <div class="absolute left-1/2 top-[-138px] -translate-x-1/2">
+                            <div class="w-[63px] h-[230px]">
+                                <img class="h-full relative z-[2]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/torch.svg" alt="torch">
+                                <div class="absolute z-[1] w-full pb-[80%] rounded-full glow bg-[#ff4202] top-[35%] left-[50%] opacity-[0.7] translate-x-[-50%]"></div>
+                            </div>
 
-						</div>
-					</div>
-				</div>
-			</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 		<?php endif; ?>
 		<?php if($product): ?>
 			<div class="row justify-center mt-24">

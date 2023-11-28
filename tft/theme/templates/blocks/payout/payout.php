@@ -3,9 +3,10 @@
  * Block Name: Payout
  */
 ?>
-<?php $title = get_field('title'); ?>
-<?php $text = get_field('text'); ?>
-<?php $image = get_field('image'); ?>
+<?php $payoutData = get_fields();?>
+<?php $title = $payoutData['title']; ?>
+<?php $text = $payoutData['text']; ?>
+<?php $image = $payoutData['image']; ?>
 <?php
     $leaderboard_url = get_field('leaderboard', 'option');
     if($leaderboard_url) {

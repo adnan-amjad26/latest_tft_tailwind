@@ -4794,8 +4794,41 @@ body .swiper-button-prev.swiper-button-disabled {
     -webkit-transform: translate(18%,10%);
     transform: translate(18%,10%)
 }
-
-
+table.whychoose-table tbody tr td.no:before {
+    content: url(../img/decline-icon.svg);
+}
+table.whychoose-table tbody tr td.yes:before {
+    content: url(../img/checkSign.svg);
+}
+table.whychoose-table tbody tr td.tooltipp:before {
+    content: url(../img/info-icon.svg);
+}
+table.whychoose-table tbody tr td.tooltipp {
+    width: 40px;
+    position: relative;
+}
+table.whychoose-table tbody tr td.tooltipp:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 63%;
+    width: 135px;
+    background: #12111b;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    border-radius: 4px;
+    color: #fff;
+    padding: 9px 10px;
+    transition: all 0.5s ease 0s;
+    opacity: 0;
+    visibility: hidden;
+}
+table.whychoose-table tbody tr td.tooltipp:hover:after {
+    opacity: 1;
+    visibility: visible;
+    left: 100%;
+}
 @media all and (max-width: 991px) {
     .hero .animations .dragon {
         width: 89vmax;

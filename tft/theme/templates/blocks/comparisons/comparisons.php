@@ -4,15 +4,16 @@
  */
 ?>
 <?php
-	$title = get_field('title');
-	$table_1 = get_field('table_1');
-	$table_2 = get_field('table_2');
-	$links = get_field('links');
-	$light_image = get_field('light_image');
-	$dark_image = get_field('dark_image');
-	$dark_image_2 = get_field('dark_image_2');
-	$dark_image_3 = get_field('dark_image_3');
-	$light_lottie = get_field('light_lottie');
+	$comparisonsData = get_fields();
+	$title = $comparisonsData['title'];
+	$table_1 = $comparisonsData['table_1'];
+	$table_2 = $comparisonsData['table_2'];
+	$links = $comparisonsData['links'];
+	$light_image = $comparisonsData['light_image'];
+	$dark_image = $comparisonsData['dark_image'];
+	$dark_image_2 = $comparisonsData['dark_image_2'];
+	$dark_image_3 = $comparisonsData['dark_image_3'];
+	$light_lottie = $comparisonsData['light_lottie'];
 ?>
 
 <!-- Comparisons Section -->

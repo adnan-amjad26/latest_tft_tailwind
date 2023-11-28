@@ -4,17 +4,18 @@
  * @package CBD
  */
 ?>
-<?php $logo = get_field('logo_2', 'option'); ?>
+<?php $footerOptions = get_fields('option');  ?>
+<?php $logo = $footerOptions['logo_2']; ?>
 <?php $menus = get_nav_menu_locations(); ?>
 <?php $menu_1 = wp_get_nav_menu_object($menus['footer-1']); ?>
 <?php $menu_2 = wp_get_nav_menu_object($menus['footer-2']); ?>
 <?php $menu_3 = wp_get_nav_menu_object($menus['footer-3']); ?>
-<?php $trustpilot = get_field('trustpilot', 'option'); ?>
-<?php $newsletter = get_field('newsletter', 'option'); ?>
-<?php $description = get_field('description', 'option'); ?>
-<?php $link = get_field('footer_link', 'option'); ?>
-<?php $copyright = get_field('copyright', 'option'); ?>
-<?php $powered = get_field('powered', 'option'); ?>
+<?php $trustpilot = $footerOptions['trustpilot']; ?>
+<?php $newsletter = $footerOptions['newsletter']; ?>
+<?php $description = $footerOptions['description']; ?>
+<?php $link = $footerOptions['footer_link']; ?>
+<?php $copyright = $footerOptions['copyright']; ?>
+<?php $powered = $footerOptions['powered']; ?>
 </main>
 <footer class="bg-gradient-to-t from-[#3F0C39] to-[#1e0b22]" data-scroll-section>
 	<div class="max-w-[1737px] w-full mx-auto">
@@ -29,16 +30,7 @@
 							</a>
 						</div>
 					<?php endif; ?>
-					<!-- <?php if ($menu_1): ?>
-						<div class="w-full">
-							<h3 class="menu-title mb-8"><?php echo $menu_1->name; ?></h3>
-							<?php wp_nav_menu(array(
-								'theme_location' => 'footer-1',
-								'menu_class' => 'menu font-headers text-lg',
-								'container' => false,
-							)); ?>
-						</div>
-					<?php endif; ?> -->
+
 					<?php if ($menu_2): ?>
 						<div class="w-full">
 							<?php wp_nav_menu(array(
@@ -48,16 +40,7 @@
 							)); ?>
 						</div>
 					<?php endif; ?>
-					<!-- <?php if ($menu_3): ?>
-						<div class="lg:w-1/4">
-							<h3 class="menu-title mb-8"><?php echo $menu_3->name; ?></h3>
-							<?php wp_nav_menu(array(
-								'theme_location' => 'footer-3',
-								'menu_class' => 'menu font-headers text-lg',
-								'container' => false,
-							)); ?>
-						</div>
-					<?php endif; ?> -->
+
 				</div>
 				<?php if ($trustpilot || $newsletter['text'] || $newsletter['form']): ?>
 					<div class="flex flex-col lg:flex-row">
