@@ -30,8 +30,10 @@
 
                             <div class="content w-[265px] sm:w-[295px] lg:w-[230px] xl:w-[275px] 2xl:w-2/3 mx-auto pt-8 relative h-[226px] sm:h-[282px] text-black font-[500] text-[12px] pr-[15px]">
                                 <div class="inner h-full lg:h-[75%] xl:h-[90%] p-[15px] 2xl:p-[30px] overflow-y-auto relative z-[2]">
-                                    <p>Phase 1 is the first phase of the evaluation process. You must achieve a Virtual Profit target while following the rules. In Phase 1, you will execute Simulated Trades within a demo environment that looks to simulate the real market via latency and static slippage associated with the size of your Virtual Order.
-                                        Once you successfully complete all of the Trading objectives and prove your skills, you will receive your phase 2 Demo Account within 24 hours and continue your path to getting funded.</p>
+                                    <p>Phase 1 is the first phase of the evaluation process. You must achieve a Virtual Profit target while following the rules. In Phase 1, 
+                                        you will execute Simulated Trades within a demo environment that looks to simulate the real market via latency and static slippage associated with the size of your Virtual Order.</p>
+                                    <p> Once you successfully complete all of the Trading objectives and prove your skills, 
+                                        you will receive your phase 2 Demo Account within 24 hours and continue your path to getting funded.</p>
                                 </div>
                                 <img class="w-[134%] max-w-[inherit] h-auto z-[1] absolute top-0 left-[50%] object-cover translate-x-[-50%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/scroll-content.svg" alt="scroll-content">
                             </div>
@@ -56,7 +58,9 @@
 
                             <div class="content w-[265px] sm:w-[295px] lg:w-[230px] xl:w-[275px] 2xl:w-2/3 mx-auto pt-8 relative h-[226px] sm:h-[282px] text-black font-[500] text-[12px] pr-[15px]">
                                 <div class="inner h-full lg:h-[75%] xl:h-[90%] p-[15px] 2xl:p-[30px] overflow-y-auto relative z-[2]">
-                                    <p>Phase 2 is the validation phase where you will again prove your skills. You must achieve a Virtual Profit target while following the rules. In Phase 2, you will again execute Simulated Trades within a demo environment that looks to simulate the real market via latency and static slippage associated with the size of your Virtual Order.
+                                    <p>Phase 2 is the validation phase where you will again prove your skills. 
+                                        You must achieve a Virtual Profit target while following the rules. </p>
+                                       <p> In Phase 2, you will again execute Simulated Trades within a demo environment that looks to simulate the real market via latency and static slippage associated with the size of your Virtual Order.
                                         Once you successfully complete all of the Trading objectives and prove your skills, your results will be verified and you will move forward to becoming a Funded trader.</p>
                                 </div>
                                 <img class="w-[134%] max-w-[inherit] h-auto z-[1] absolute top-0 left-[50%] object-cover translate-x-[-50%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/scroll-content.svg" alt="scroll-content">
@@ -85,8 +89,8 @@
                             <div class="content w-[265px] sm:w-[295px] lg:w-[230px] xl:w-[275px] 2xl:w-2/3 mx-auto pt-8 relative h-[226px] sm:h-[282px] text-black font-[500] text-[12px] pr-[15px]">
                                 <div class="inner h-full lg:h-[75%] xl:h-[90%] p-[15px] 2xl:p-[30px] overflow-y-auto relative z-[2]">
                                     <p>You have officially made it!
-                                        You must continue to display sound risk management as well as consistency and you will receive up to a 90% Virtual Profit split.
-                                        Your Simulated Performance will be evaluated every 3 months and if eligible you can scale up to $1,500,000 in Demo Account Virtual Balance. Please note that when Trading on a Funded Demo Account, the real market is simulated as closely as possible by using real Virtual Order book quotes aggregated from various liquidity providers. During times of high volatility, this will result in increased slippage. Due to the nature of simulating the real market as closely as possible, strategies that are successful in the Challenge and Verification phases may not necessarily be Virtual Profitable in the Funded phase</p>
+                                        You must continue to display sound risk management as well as consistency and you will receive up to a 90% Virtual Profit split.</p>
+                                       <p> Your Simulated Performance will be evaluated every 3 months and if eligible you can scale up to $1,500,000 in Demo Account Virtual Balance. Please note that when Trading on a Funded Demo Account, the real market is simulated as closely as possible by using real Virtual Order book quotes aggregated from various liquidity providers. During times of high volatility, this will result in increased slippage. Due to the nature of simulating the real market as closely as possible, strategies that are successful in the Challenge and Verification phases may not necessarily be Virtual Profitable in the Funded phase</p>
                                 </div>
                                 <img class="w-[134%] max-w-[inherit] h-auto z-[1] absolute top-0 left-[50%] object-cover translate-x-[-50%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/scroll-content.svg" alt="scroll-content">
                             </div>
