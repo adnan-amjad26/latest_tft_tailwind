@@ -108,7 +108,7 @@ $overall_costs        = $fields['overall_costs'];
 				<div id="forex"
 					 role="tabpanel"
 					 class="hidden overflow-x-auto no-scrollbar z-10 xl:w-[68%] xl:h-[56%] xl:absolute xl:top-2/4 xl:left-2/4 xl:-translate-y-1/2 xl:-translate-x-1/2 2xl:w-[66%] 2xl:h-[60%]">
-					<h3 class="font-wadik text-[30px] text-left pb-[75px] block xl:text-center xl:pb-[25px] 2xl:pb-[50px]"><?= $fields['forex_tab_name']; ?></h3>
+					<h3 class="font-wadik text-[30px] text-left pb-[75px] block xl:!text-center xl:pb-[25px] 2xl:pb-[50px]"><?= $fields['forex_tab_name']; ?></h3>
 					<?php require __DIR__ . '/forex-table.php'; ?>
 				</div>
 			<?php endif; ?>
@@ -117,7 +117,7 @@ $overall_costs        = $fields['overall_costs'];
 				<div id="indices"
 					 role="tabpanel"
 					 class="hidden overflow-x-auto no-scrollbar z-10 xl:w-[68%] xl:h-[56%] xl:absolute xl:top-2/4 xl:left-2/4 xl:-translate-y-1/2 xl:-translate-x-1/2 2xl:w-[66%] 2xl:h-[60%]">
-					<h3 class="font-wadik text-[30px] text-left pb-[75px] block xl:text-center xl:pb-[25px] 2xl:pb-[50px]"><?= $fields['indices_tab_name']; ?></h3>
+					<h3 class="font-wadik text-[30px] text-left pb-[75px] block xl:!text-center xl:pb-[25px] 2xl:pb-[50px]"><?= $fields['indices_tab_name']; ?></h3>
 					<?php require __DIR__ . '/indices-table.php'; ?>
 				</div>
 			<?php endif; ?>
@@ -126,7 +126,7 @@ $overall_costs        = $fields['overall_costs'];
 				<div id="metals"
 					 role="tabpanel"
 					 class="hidden overflow-x-auto no-scrollbar z-10 xl:w-[68%] xl:h-[56%] xl:absolute xl:top-2/4 xl:left-2/4 xl:-translate-y-1/2 xl:-translate-x-1/2 2xl:w-[66%] 2xl:h-[60%]">
-					<h3 class="font-wadik text-[30px] text-left pb-[75px] block xl:text-center xl:pb-[25px] 2xl:pb-[50px]"><?= $fields['metals_tab_name']; ?></h3>
+					<h3 class="font-wadik text-[30px] text-left pb-[75px] block xl:!text-center xl:pb-[25px] 2xl:pb-[50px]"><?= $fields['metals_tab_name']; ?></h3>
 					<?php require __DIR__ . '/metals-table.php'; ?>
 				</div>
 			<?php endif; ?>
@@ -135,7 +135,7 @@ $overall_costs        = $fields['overall_costs'];
 				<div id="crypto"
 					 role="tabpanel"
 					 class="hidden overflow-x-auto no-scrollbar z-10 xl:w-[68%] xl:h-[56%] xl:absolute xl:top-2/4 xl:left-2/4 xl:-translate-y-1/2 xl:-translate-x-1/2 2xl:w-[66%] 2xl:h-[60%]">
-					<h3 class="font-wadik text-[30px] text-left pb-[75px] block xl:text-center xl:pb-[25px] 2xl:pb-[50px]"><?= $fields['crypto_tab_name']; ?></h3>
+					<h3 class="font-wadik text-[30px] text-left pb-[75px] block xl:!text-center xl:pb-[25px] 2xl:pb-[50px]"><?= $fields['crypto_tab_name']; ?></h3>
 					<?php require __DIR__ . '/crypto-table.php'; ?>
 				</div>
 			<?php endif; ?>

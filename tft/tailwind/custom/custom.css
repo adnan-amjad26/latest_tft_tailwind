@@ -5,7 +5,7 @@
 	@apply w-[1780px];
 }
 .check-bg-day {
-	@apply bg-gradient-to-b from-[rgb(15,0,34,0)] via-[#441F57] via-20% via-[#441F57] via-90% to-[rgb(15,0,34,0)] to-100%;
+	@apply bg-gradient-to-b from-[rgb(15,0,34,0)] via-[#441F57] via-20% via-[#441F57] via-90% to-[#441F57] to-100%;
 }
 .check-bg-day-overlay {
 	@apply bg-gradient-to-b from-[#441F57] to-[rgb(15,0,34,0)];
@@ -124,10 +124,10 @@ p#refund_policy_3_field {
 	@apply font-wadik text-[13px]/[1.2em] mb-0;
 }
 p#terms_and_conditions_3_field {
-	@apply mr-auto sm:mb-4 w-[55%] sm:w-full;
+	@apply mr-auto sm:!mb-0 mb-4 sm:!w-[55%] w-full;
 }
 p#refund_policy_3_field {
-	@apply w-[45%] sm:w-full;
+	@apply sm:!w-[45%] w-full;
 }
 p.thwcfd-field-checkbox label.checkbox {
 	@apply block relative pl-[26px];
@@ -254,7 +254,7 @@ span.payment-label:after {
 	@apply mb-0 p-0 text-left;
 }
 .woocommerce-checkout #payment .woocommerce-terms-and-conditions-wrapper {
-	@apply w-[577px] sm:w-full text-[14px]/[1.4em] mb-10;
+	@apply sm:!w-[577px] w-full text-[14px]/[1.4em] mb-10;
 }
 .woocommerce-checkout #payment button#place_order {
 	@apply float-none bg-[#493830] font-wadik h-[46px] rounded-[15px] tracking-[0px] p-[10px_26px] text-[14px]/[1] w-[282px] border-none;
@@ -277,12 +277,17 @@ span.payment-icon {
 span.payment-label {
 	@apply block relative pl-[25px];
 }
-body.woocommerce-checkout.theme-dark section.contact-details .contact-details-overly {
+html.dark section.contact-details .contact-details-overly {
     @apply bg-gradient-to-b from-[#0F0022] to-[rgba(15,0,34,0)];
 }
-body.woocommerce-checkout.theme-light section.contact-details .contact-details-overly {
+html.light body.checkout section.contact-details .contact-details-overly,
+html.light section.contact-details .contact-details-overly {
     @apply bg-gradient-to-b from-[#441F57] to-[rgba(15,0,34,0)];
 }
+html.dark body.single-post section.contact-details .contact-details-overly {
+    @apply bg-gradient-to-b from-[#000032] to-[rgba(15,0,34,0)];
+}
+
 /*====== Contact Page =====*/
 .contact-form .gravity-theme .gform_heading {
 	@apply hidden;
@@ -364,12 +369,32 @@ body.woocommerce-checkout.theme-light section.contact-details .contact-details-o
 .contact-form .form .gform_wrapper.gravity-theme .gfield_description {
 	@apply pt-[10px];
 }
+/*======= Single Blog Page =======*/
+section.article-content .content h2,
+section.article-content .content h3 {
+	@apply font-wadik sm:!text-[30px]/[1.2em] font-bold mt-[0] text-[24px]/[1.2em];
+}
+section.article-content .content h2 {
+	@apply sm:!mb-[75px] text-center mb-[20px];
+}
+section.article-content .content p {
+	@apply mt-[0] sm:!mb-[75px] last:mb-[0] text-[18px]/[1.3em] font-medium mb-[50px] sm:!text-left text-center;
+}
+section.article-content .content .wp-block-spacer {
+	@apply hidden;
+}
+section.article-content .content h3 {
+	@apply mb-[30px] sm:!text-left text-center;
+}
+.related-posts .swiper-pagination .swiper-pagination-bullet {
+	@apply block w-[22px] h-[22px] bg-[#493830] hover:text-[#F7971E] flex items-center justify-center !ml-[5px] !mr-[5px] before:hidden;
+}
+.related-posts .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	@apply text-[#F7971E] bg-none;
+}
 
 /*===== Responsive Mobile view =====*/
 @media only screen and (max-width: 768px) {
-	.checkout-toggles > label:nth-child(2n + 2) {
-		@apply mr-0;
-	}
 	.woocommerce form .form-row-first,
 	.woocommerce form .form-row-last,
 	.woocommerce-page form .form-row-first,
