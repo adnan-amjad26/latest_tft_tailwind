@@ -171,6 +171,7 @@
 		    const chooseChallengeScrollBodyDiv = document.querySelector('.chooseChallengeScrollBodyDiv')
 		    let chooseChallengeScrollBodyDivWidth = chooseChallengeScrollBodyDiv.clientWidth
 
+<<<<<<< HEAD
 		    for (let i = 0; i < classChoiceButtons.length; i++) {
 		        classChoiceButtons[i].addEventListener('click', () => {
 		            gsap.to('.chooseChallengeScrollBodyDiv', {duration: 0.5, width: 20, ease: 'Power1.easeInOut'})
@@ -188,6 +189,33 @@
 		            challengePriceChangeAnimations(chooseChallengeColumnBalanceDiv)
 		        })
 		    }
+=======
+			classChoiceButtons.forEach(button => {
+				button.addEventListener('click', () => {
+					gsap.to('.chooseChallengeScrollBodyDiv', {
+						duration: 0.5,
+						width: 20,
+						ease: 'Power1.easeInOut'
+					});
+					gsap.to('.chooseChallengeScrollBodyDiv', {
+						duration: 0.5,
+						delay: 0.75,
+						width: chooseChallengeScrollBodyDivWidth,
+						ease: 'Power1.easeInOut'
+					});
+					challengePriceChangeAnimations(challengeTypeCell);
+				});
+			});
+			// Price Changes
+			const classPriceButtons = document.querySelectorAll('.classPriceButton')
+			const chooseChallengeColumnBalanceDiv = document.querySelector('.chooseChallengeColumnBalanceDiv')
+
+			classPriceButtons.forEach(button => {
+				button.addEventListener('click', () => {
+					challengePriceChangeAnimations(chooseChallengeColumnBalanceDiv)
+				});
+			});
+>>>>>>> 4df809d5fb25d28b078e81bd1ef07c267ae4c4f3
 
 		    // Choose Challenge Price Change Animations
 		    // Call this function to highlight a change in the scroll

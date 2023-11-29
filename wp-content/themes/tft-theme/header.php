@@ -64,18 +64,7 @@ if (is_singular('post')) $bg = 'bg-lilac-dark'; ?>
 									<div class="toggle-switch-figureAlt"></div>
 								</div>
 							</div>`
-					<script>
-						/* Controls the day/night mode appearance on page load */
-						if (!localStorage.getItem('dnmode')) {
-							var DNMode = 'night', TimeNow = new Date().getHours();
-							DNMode = (TimeNow < 18) ? 'day' : 'night';
-							localStorage.setItem('dnmode', DNMode);
-						}
-						if (localStorage.getItem('dnmode') == 'night') {
-							jQuery('.mode .toggle-input').trigger('click');
-							jQuery('body').addClass('theme-dark').removeAttr('data-day');
-						}
-					</script>
+					
 				</div>
 
 				<!-- Logo -->

@@ -79,10 +79,10 @@
                 <lottie-player src="<?php echo $lottie; ?>" background="transparent" speed="1" loop autoplay></lottie-player>
             <?php endif; ?>
             <?php if($image): ?>
-                <img class="imgs-day" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
+                <img class="dark:hidden block" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
             <?php endif; ?>
             <?php if($image_2): ?>
-                <img class="imgs-night" src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['title']; ?>">
+                <img class="hidden dark:block" src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['title']; ?>">
             <?php endif; ?>
         </figure>
     <?php endif; ?>

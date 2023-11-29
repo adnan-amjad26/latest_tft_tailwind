@@ -6,11 +6,6 @@
 .inter {
     font-family: 'Inter', sans-serif;
 }
-.bg-blue-dark {
-	--tw-bg-opacity: 1;
-	background-color: rgb(18 17 27 / var(--tw-bg-opacity))
-}
-
 .bg-green {
 	--tw-bg-opacity: 1;
 	background-color: rgb(21 84 62 / var(--tw-bg-opacity))
@@ -1286,7 +1281,63 @@ footer .bottom a:hover {
 /* End Site Footer */
 /* CSS Animations */
 
+@-webkit-keyframes bob {
+    0% {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0)
+    }
 
+    50% {
+        -webkit-transform: translate3d(0,-2rem,0);
+        transform: translate3d(0,-2rem,0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0)
+    }
+}
+
+@keyframes bob {
+    0% {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0)
+    }
+
+    50% {
+        -webkit-transform: translate3d(0,-2rem,0);
+        transform: translate3d(0,-2rem,0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0)
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: translate3d(0,0,0) rotate(0);
+        transform: translate3d(0,0,0) rotate(0)
+    }
+
+    to {
+        -webkit-transform: translate3d(0,0,0) rotate(360deg);
+        transform: translate3d(0,0,0) rotate(360deg)
+    }
+}
+
+@keyframes spin {
+    from {
+        -webkit-transform: translate3d(0,0,0) rotate(0);
+        transform: translate3d(0,0,0) rotate(0)
+    }
+
+    to {
+        -webkit-transform: translate3d(0,0,0) rotate(360deg);
+        transform: translate3d(0,0,0) rotate(360deg)
+    }
+}
 
 @-webkit-keyframes flicker {
     from {
@@ -4527,9 +4578,6 @@ button.button:hover {
 
 
 /* Adnan CSS */
-.custom-gradient {
-background: linear-gradient(to bottom,  rgba(18,17,27,1) 80%,rgb(18 18 27) 60%,rgba(255,255,255,0) 100%);
-}
 .wadik {
     font-family: "Wadik", sans-serif;
 }
@@ -4827,4 +4875,16 @@ table.whychoose-table tbody tr td.tooltipp:hover:after {
     .hero .animations .horse {
         right:28%
     }
+}
+
+/* Light mode */
+body:not(.theme-dark) .hero .animations:before {
+    display: none;
+}
+body.theme-dark .bg-blue-dark {
+	--tw-bg-opacity: 1;
+	background-color: rgb(18 17 27 / var(--tw-bg-opacity))
+}
+body.theme-dark .custom-gradient {
+    background: linear-gradient(to bottom,  rgba(18,17,27,1) 80%,rgb(18 18 27) 60%,rgba(255,255,255,0) 100%);
 }
