@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en-US">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>new tailwind &#8211; The Funded Trader</title>
+<meta name='robots' content='noindex, nofollow' />
+<link rel="alternate" hreflang="en" href="http://cbd.test/new-tailwind/" />
+<link rel="alternate" hreflang="x-default" href="http://cbd.test/new-tailwind/" />
+<link rel="alternate" type="application/rss+xml" title="The Funded Trader &raquo; Feed" href="http://cbd.test/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Funded Trader &raquo; Comments Feed" href="http://cbd.test/comments/feed/" />
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<script type="rocketlazyloadscript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/cbd.test\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.3.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='http://cbd.test/wp-includes/css/dist/block-library/style.min.css?ver=6.3.2' media='all' />
+<style id='safe-svg-svg-icon-style-inline-css'>
+.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<link data-minify="1" rel='stylesheet' id='wc-blocks-vendors-style-css' href='http://cbd.test/wp-content/cache/min/1/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=1698991024' media='all' />
+<link data-minify="1" rel='stylesheet' id='wc-blocks-style-css' href='http://cbd.test/wp-content/cache/min/1/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=1698991025' media='all' />
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--background: #ffffff;--wp--preset--color--foreground: #404040;--wp--preset--color--primary: #b91c1c;--wp--preset--color--secondary: #15803d;--wp--preset--color--tertiary: #0369a1;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}body { margin: 0;--wp--style--global--content-size: 40rem;--wp--style--global--wide-size: 60rem; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}.wp-element-button, .wp-block-button__link{background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-background-color{color: var(--wp--preset--color--background) !important;}.has-foreground-color{color: var(--wp--preset--color--foreground) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-tertiary-color{color: var(--wp--preset--color--tertiary) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-background-color{background-color: var(--wp--preset--color--background) !important;}.has-foreground-background-color{background-color: var(--wp--preset--color--foreground) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-background-color{background-color: var(--wp--preset--color--tertiary) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-border-color{border-color: var(--wp--preset--color--background) !important;}.has-foreground-border-color{border-color: var(--wp--preset--color--foreground) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-border-color{border-color: var(--wp--preset--color--tertiary) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel='stylesheet' id='wpml-blocks-css' href='http://cbd.test/wp-content/cache/min/1/wp-content/plugins/sitepress-multilingual-cms/dist/css/blocks/styles.css?ver=1698991025' media='all' />
+<style id='woocommerce-inline-inline-css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link data-minify="1" rel='stylesheet' id='wt-smart-coupon-for-woo-css' href='http://cbd.test/wp-content/cache/min/1/wp-content/plugins/wt-smart-coupons-for-woocommerce/public/css/wt-smart-coupon-public.css?ver=1698991025' media='all' />
+<link rel='stylesheet' id='wpml-legacy-dropdown-click-0-css' href='//cbd.test/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown-click/style.min.css?ver=1' media='all' />
+<link data-minify="1" rel='stylesheet' id='style-css' href='http://cbd.test/wp-content/cache/min/1/wp-content/themes/tft/theme/css/style.css?ver=1698991025' media='all' />
+<link data-minify="1" rel='stylesheet' id='cbd-style-css' href='http://cbd.test/wp-content/cache/min/1/wp-content/themes/tft/theme/style.css?ver=1698991025' media='all' />
+<link data-minify="1" rel='stylesheet' id='newsletter-css' href='http://cbd.test/wp-content/cache/min/1/wp-content/plugins/newsletter/style.css?ver=1698991025' media='all' />
+<style id='rocket-lazyload-inline-css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(http://cbd.test/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}.wp-embed-responsive .wp-has-aspect-ratio .rll-youtube-player{position:absolute;padding-bottom:0;width:100%;height:100%;top:0;bottom:0;left:0;right:0}
+</style>
+<script type="rocketlazyloadscript" data-rocket-src='http://cbd.test/wp-includes/js/jquery/jquery.min.js?ver=3.7.0' id='jquery-core-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-src='http://cbd.test/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1' id='jquery-migrate-js' defer></script>
+<script id='wpml-cookie-js-extra'>
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"\/"}};
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"\/"}};
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src='http://cbd.test/wp-content/cache/min/1/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=1698991026' id='wpml-cookie-js' defer></script>
+<script id='wt-smart-coupon-for-woo-js-extra'>
+var WTSmartCouponOBJ = {"ajaxurl":"http:\/\/cbd.test\/wp-admin\/admin-ajax.php","wc_ajax_url":"http:\/\/cbd.test\/?wc-ajax=","nonces":{"public":"4a0bcef18f","apply_coupon":"10eb091e45"},"labels":{"please_wait":"Please wait...","choose_variation":"Please choose a variation","error":"Error !!!"}};
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src='http://cbd.test/wp-content/cache/min/1/wp-content/plugins/wt-smart-coupons-for-woocommerce/public/js/wt-smart-coupon-public.js?ver=1698991026' id='wt-smart-coupon-for-woo-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-src='//cbd.test/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown-click/script.min.js?ver=1' id='wpml-legacy-dropdown-click-0-js' defer></script>
+<script id='ajax_scripts-js-extra'>
+var ajax_params = {"ajax_url":"http:\/\/cbd.test\/wp-admin\/admin-ajax.php","ajax_nonce":"ed25e97022"};
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src='http://cbd.test/wp-content/cache/min/1/wp-content/themes/tft/theme/js/ajax.js?ver=1698991026' id='ajax_scripts-js' defer></script>
+<link rel="https://api.w.org/" href="http://cbd.test/wp-json/" /><link rel="alternate" type="application/json" href="http://cbd.test/wp-json/wp/v2/pages/1998" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cbd.test/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.3.2" />
+<meta name="generator" content="WooCommerce 7.8.2" />
+<link rel="canonical" href="http://cbd.test/new-tailwind/" />
+<link rel='shortlink' href='http://cbd.test/?p=1998' />
+<link rel="alternate" type="application/json+oembed" href="http://cbd.test/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcbd.test%2Fnew-tailwind%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://cbd.test/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcbd.test%2Fnew-tailwind%2F&#038;format=xml" />
+<meta name="generator" content="WPML ver:4.6.0 stt:37,1,4,3,41,2;" />
+<meta property="fb:pages" content="" />
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<link rel="icon" href="http://cbd.test/wp-content/uploads/2023/03/favicon.png" sizes="32x32" />
+<link rel="icon" href="http://cbd.test/wp-content/uploads/2023/03/favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="http://cbd.test/wp-content/uploads/2023/03/favicon.png" />
+<meta name="msapplication-TileImage" content="http://cbd.test/wp-content/uploads/2023/03/favicon.png" />
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>	<script type="rocketlazyloadscript">
+		(function (w, d, s, r, n) {
+			w.TrustpilotObject = n;
+			w[n] = w[n] || function () {
+				(w[n].q = w[n].q || []).push(arguments)
+			};
+			a = d.createElement(s);
+			a.async = 1;
+			a.src = r;
+			a.type = 'text/java' + s;
+			f = d.getElementsByTagName(s)[0];
+			f.parentNode.insertBefore(a, f)
+		})(window, document, 'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
+		tp('register', 'Uhf3Id4hdsMHEOke');
+	</script>
+</head>
+<body class="page-template-default page page-id-1998 wp-embed-responsive theme-tft/theme woocommerce-no-js" data-day>
+<header class="fixed z-50 top-0 left-0 w-full text-white">
+	<div class="container relative z-10">
+		<div class="row justify-between">
+			<div class="w-auto flex-1 relative z-50">
+									<a href="http://cbd.test" class="logo inline-block z-50">
+						<img width="506" height="161" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20506%20161'%3E%3C/svg%3E" alt="logo-white" data-lazy-src="http://cbd.test/wp-content/uploads/2023/03/logo-white.svg"><noscript><img width="506" height="161" src="http://cbd.test/wp-content/uploads/2023/03/logo-white.svg" alt="logo-white"></noscript>
+					</a>
+							</div>
+			<div class="w-auto z-40 row items-center justify-end gap-12">
+				<div class="menu-container fixed z-40 top-0 right-0 w-full h-full p-12 lg:p-0 lg:relative lg:flex-1 flex flex-col lg:items-center lg:flex-row lg:gap-12">
+					<ul id="menu-header" class="menu flex flex-col lg:flex-row gap-12 2xl:gap-24 lg:mr-12"><li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-59"><a href="http://cbd.test/">Home</a></li>
+<li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a href="/#challenge">Challenge</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="http://cbd.test/about-us/">About Us</a></li>
+<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="http://cbd.test/media/">Media</a></li>
+<li id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a target="_blank" rel="noopener" href="https://help.thefundedtraderprogram.com/en/">FAQ</a></li>
+<li id="menu-item-1543" class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1543"><a target="_blank" rel="noopener" href="https://hunt.thefundedtraderprogram.com/wallet">Treasure Hunt App</a></li>
+<li id="menu-item-1544" class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1544"><a target="_blank" rel="noopener" href="https://dashboard.thefundedtraderprogram.com/Account/Login?ReturnUrl=%2Fcompetitions">Competitions</a></li>
+<li id="menu-item-1545" class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1545"><a target="_blank" rel="noopener" href="https://dashboard.thefundedtraderprogram.com/Account/Login?ReturnUrl=%2F">Leaderboard</a></li>
+<li id="menu-item-1546" class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1546"><a target="_blank" rel="noopener" href="https://help.thefundedtraderprogram.com/en/">FAQ</a></li>
+<li id="menu-item-1547" class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1547"><a target="_blank" rel="noopener" href="https://dashboard.thefundedtraderprogram.com/Account/Login?ReturnUrl=%2Faffiliateportal">Affiliate Program</a></li>
+</ul>					<ul id="menu-header-1" class="menu-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-59"><a href="http://cbd.test/">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a href="/#challenge">Challenge</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="http://cbd.test/about-us/">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="http://cbd.test/media/">Media</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a target="_blank" rel="noopener" href="https://help.thefundedtraderprogram.com/en/">FAQ</a></li>
+<li class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1543"><a target="_blank" rel="noopener" href="https://hunt.thefundedtraderprogram.com/wallet">Treasure Hunt App</a></li>
+<li class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1544"><a target="_blank" rel="noopener" href="https://dashboard.thefundedtraderprogram.com/Account/Login?ReturnUrl=%2Fcompetitions">Competitions</a></li>
+<li class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1545"><a target="_blank" rel="noopener" href="https://dashboard.thefundedtraderprogram.com/Account/Login?ReturnUrl=%2F">Leaderboard</a></li>
+<li class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1546"><a target="_blank" rel="noopener" href="https://help.thefundedtraderprogram.com/en/">FAQ</a></li>
+<li class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1547"><a target="_blank" rel="noopener" href="https://dashboard.thefundedtraderprogram.com/Account/Login?ReturnUrl=%2Faffiliateportal">Affiliate Program</a></li>
+</ul>					<div class="buttons flex gap-6 justify-between mt-12 lg:mt-0">
+													<a href="https://dashboard.thefundedtraderprogram.com/Account/Login?ReturnUrl=%2F" target="_blank"							   class="btn btn-gold">
+								<span>Trade Hub</span>
+								<img width="147" height="174" decoding="async"
+									 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20147%20174'%3E%3C/svg%3E"
+									 alt="btn-gold-left" data-lazy-src="http://cbd.test/wp-content/themes/tft/theme/img/btn-gold-left.svg"><noscript><img width="147" height="174" decoding="async" loading="lazy"
+									 src="http://cbd.test/wp-content/themes/tft/theme/img/btn-gold-left.svg"
+									 alt="btn-gold-left"></noscript>
+								<img width="147" height="174" decoding="async"
+									 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20147%20174'%3E%3C/svg%3E"
+									 alt="btn-gold-right" data-lazy-src="http://cbd.test/wp-content/themes/tft/theme/img/btn-gold-right.svg"><noscript><img width="147" height="174" decoding="async" loading="lazy"
+									 src="http://cbd.test/wp-content/themes/tft/theme/img/btn-gold-right.svg"
+									 alt="btn-gold-right"></noscript>
+							</a>
+												<div class="buttons-setup flex items-center">
+							<div class="mode lg:fixed">
+								<div class="toggle">
+									<input class="toggle-input" type="checkbox" aria-label="Day/Night">
+									<div class="toggle-bg"></div>
+									<div class="toggle-switch">
+										<div class="toggle-switch-figure"></div>
+										<div class="toggle-switch-figureAlt"></div>
+									</div>
+								</div>
+								<script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+									/* Controls the day/night mode appearance on page load */
+									if (!localStorage.getItem('dnmode')) {
+										var DNMode = 'night', TimeNow = new Date().getHours();
+										DNMode = (TimeNow < 18) ? 'day' : 'night';
+										localStorage.setItem('dnmode', DNMode);
+									}
+									if (localStorage.getItem('dnmode') == 'night') {
+										jQuery('.mode .toggle-input').trigger('click');
+										jQuery('body').addClass('theme-dark').removeAttr('data-day');
+									}
+								});</script>
+							</div>
+							<div class='lang-switcher'>
+																
+<div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-dropdown-click js-wpml-ls-legacy-dropdown-click">
+	<ul>
+
+		<li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-last-item wpml-ls-item-legacy-dropdown-click">
+
+			<a href="#" class="js-wpml-ls-item-toggle wpml-ls-item-toggle">
+                                                    <img width="18" height="12"
+            class="wpml-ls-flag"
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2018%2012'%3E%3C/svg%3E"
+            alt="English"
+           
+           
+    data-lazy-src="http://cbd.test/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" /><noscript><img width="18" height="12"
+            class="wpml-ls-flag"
+            src="http://cbd.test/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png"
+            alt="English"
+           
+           
+    /></noscript></a>
+
+			<ul class="js-wpml-ls-sub-menu wpml-ls-sub-menu">
+							</ul>
+
+		</li>
+
+	</ul>
+</div>
+							</div>
+																						<div class="music-controls">
+									<img width="292" height="374" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20292%20374'%3E%3C/svg%3E"
+										 alt="lute" data-lazy-src="http://cbd.test/wp-content/themes/tft/theme/img/lute.svg"><noscript><img width="292" height="374" decoding="async" src="http://cbd.test/wp-content/themes/tft/theme/img/lute.svg"
+										 alt="lute"></noscript>
+									<audio loop>
+										<source src="http://cbd.test/wp-content/uploads/2023/04/336_Medieval_Banquet.mp3" type="audio/ogg">
+										<source src="http://cbd.test/wp-content/uploads/2023/04/336_Medieval_Banquet.mp3" type="audio/mpeg">
+									</audio>
+								</div>
+														<button class="btn-menu"><i></i></button>
+						</div>
+					</div>
+				</div>
+				<div class="menu-toggle w-24 flex flex-col items-center justify-center lg:hidden">
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+			<div class="menu-nav-wrap">
+			<ul id="menu-header-2" class="menu-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-59"><a href="http://cbd.test/">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a href="/#challenge">Challenge</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="http://cbd.test/about-us/">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="http://cbd.test/media/">Media</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a target="_blank" rel="noopener" href="https://help.thefundedtraderprogram.com/en/">FAQ</a></li>
+<li class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1543"><a target="_blank" rel="noopener" href="https://hunt.thefundedtraderprogram.com/wallet">Treasure Hunt App</a></li>
+<li class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1544"><a target="_blank" rel="noopener" href="https://dashboard.thefundedtraderprogram.com/Account/Login?ReturnUrl=%2Fcompetitions">Competitions</a></li>
+<li class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1545"><a target="_blank" rel="noopener" href="https://dashboard.thefundedtraderprogram.com/Account/Login?ReturnUrl=%2F">Leaderboard</a></li>
+<li class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1546"><a target="_blank" rel="noopener" href="https://help.thefundedtraderprogram.com/en/">FAQ</a></li>
+<li class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-1547"><a target="_blank" rel="noopener" href="https://dashboard.thefundedtraderprogram.com/Account/Login?ReturnUrl=%2Faffiliateportal">Affiliate Program</a></li>
+</ul>			<button class="btn-menu-close"></button>
+		</div>
+	</header>
+<div class="z-40" data-scroll-container>
+	<main class="relative bg-red">
+	</main>
+<footer class="bg-purple" data-scroll-section>
+	<div class="container">
+		<div class="top row justify-center py-24">
+			<div class="w-full lg:w-5/6 lg:px-12">
+				<div class="flex flex-col lg:flex-row gap-12 2xl:gap-24">
+											<div class="logo row justify-center">
+							<a class="w-80" href="http://cbd.test">
+								<img width="506" height="161" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20506%20161'%3E%3C/svg%3E"
+									 alt="logo-white" data-lazy-src="http://cbd.test/wp-content/uploads/2023/03/logo-white.svg"><noscript><img width="506" height="161" decoding="async" loading="lazy" src="http://cbd.test/wp-content/uploads/2023/03/logo-white.svg"
+									 alt="logo-white"></noscript>
+							</a>
+						</div>
+																<div class="lg:w-1/4">
+							<h3 class="menu-title mb-8">Get in Touch</h3>
+							<ul id="menu-get-in-touch" class="menu font-headers text-lg"><li id="menu-item-1970" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1970"><a href="mailto:support@thefundedtraderprogram.com">Email</a></li>
+<li id="menu-item-1969" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1969"><a href="http://cbd.test/contact-us/">Contact Us</a></li>
+</ul>						</div>
+																<div class="lg:w-1/4">
+							<h3 class="menu-title mb-8">Quick Links</h3>
+							<ul id="menu-quick-links" class="menu font-headers text-lg"><li id="menu-item-1964" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1964"><a target="_blank" rel="noopener" href="https://dashboard.thefundedtraderprogram.com/Account/Login?ReturnUrl=%2F">Trade Hub</a></li>
+<li id="menu-item-1965" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1965"><a href="/#challenge">Challenge</a></li>
+<li id="menu-item-1966" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1966"><a target="_blank" rel="noopener" href="https://dashboard.thefundedtraderprogram.com/Account/Login?ReturnUrl=%2Fcompetitions">Competitions</a></li>
+<li id="menu-item-1967" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1967"><a target="_blank" rel="noopener" href="https://dashboard.thefundedtraderprogram.com/Account/Login?ReturnUrl=%2Fleaderboard">Leaderboard</a></li>
+<li id="menu-item-1968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1968"><a target="_blank" rel="noopener" href="https://help.thefundedtraderprogram.com/en/">FAQ</a></li>
+</ul>						</div>
+																<div class="lg:w-1/4">
+							<h3 class="menu-title mb-8">Legal</h3>
+							<ul id="menu-legal" class="menu font-headers text-lg"><li id="menu-item-1963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1963"><a rel="privacy-policy" href="http://cbd.test/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1962" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1962"><a href="http://cbd.test/refund-policy/">Refund Policy</a></li>
+<li id="menu-item-1961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1961"><a href="http://cbd.test/terms-of-use/">Terms of Use</a></li>
+</ul>						</div>
+									</div>
+									<div class="row mt-12 lg:mt-16 gap-12">
+													<div class="tp inline-block w-full lg:w-auto">
+								<div class="trustpilot-widget" data-locale="en-US" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="60ae286334523f0001ff6ef4" data-style-height="150px" data-style-width="300px" data-theme="dark"></div>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="http://cbd.test/wp-content/cache/min/1/bootstrap/v5/tp.widget.bootstrap.min.js?ver=1698991027" async defer></script>							</div>
+																			<div class="w-full flex-1 font-headers row items-center justify-between lg:px-12">
+																	<div class="w-full lg:flex-1 flex justify-center">
+										<p>Join one of our competitions every month<br />
+We host free competitions for traders</p>
+									</div>
+																									<div class="w-full lg:w-2/5 mt-6 lg:mt-0">
+										<form class="newsletter-form" method="post" action="/?na=s">
+	<input type="hidden" name="nlang" value="">
+	<input type="email" name="ne" value="" placeholder="Your Email" required>
+	<input class="btn" type="submit" value="Submit">
+</form>									</div>
+															</div>
+											</div>
+													<div class="row mt-12 lg:mt-16 items-center justify-between footer-bottom">
+						<div class="w-full lg:w-2/3">
+															<div class="content text-lg"><p>Financial instrument trading, including trading activities referenced by or undertaken utilizing The Funded Trader LLC, involves substantial risk of loss and is not suitable for every investor. The valuation of financial instruments, such as foreign exchange contracts, futures, and options, may be highly volatile and fluctuate significantly and as a result, clients may lose or gain more than their initial trade order. The impact of seasonal and geopolitical events may be already factored into market prices. The highly leveraged nature of trading means that even small price movements may have a great impact on a trading account, potentially resulting in substantial losses or gains.</p>
+<p>The Funded Trader does not offer or provide trading or investment recommendations, and any trading or investment decisions you make are entirely your responsibility and at your own risk. Past performance is not necessarily indicative of future results. The performance quoted represents past performance in a simulated environment and does not guarantee current or future performance or that losses will not occur.</p>
+</div>
+													</div>
+						<div class="w-full lg:w-auto mt-12 lg:mt-0">
+															<div class="button">
+									<div class="disclaimer-toggle btn btn-simple cursor-pointer">
+										<span>Funded Account <br>Disclaimer</span>
+										<img width="75" height="23" decoding="async"
+											 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2075%2023'%3E%3C/svg%3E"
+											 alt="btn-simple" data-lazy-src="http://cbd.test/wp-content/themes/tft/theme/img/btn-simple.svg"><noscript><img width="75" height="23" decoding="async" loading="lazy"
+											 src="http://cbd.test/wp-content/themes/tft/theme/img/btn-simple.svg"
+											 alt="btn-simple"></noscript>
+									</div>
+								</div>
+													</div>
+					</div>
+							</div>
+		</div>
+	</div>
+			<div class="bottom bg-purple-dark py-8">
+			<div class="container">
+				<div class="row justify-between font-headers">
+											<div class="w-auto">
+							<p>© 2023 The Funded Trader. All Rights Reserved.</p>
+						</div>
+																<div class="w-auto">
+							<p>
+								<a href="#" target="_blank"								   rel="noopener noreferrer">Web Design Agency</a></p>
+						</div>
+									</div>
+			</div>
+		</div>
+	</footer>
+</div>
+    <div class="mobile-bar text-center font-headers">
+        <div class="row">
+            								<a href="#" class="flex-1 flex items-center justify-center relative">
+					<img width="381" height="36" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20381%2036'%3E%3C/svg%3E" data-lazy-src="http://cbd.test/wp-content/themes/tft/theme/img/hr.svg"><noscript><img width="381" height="36" decoding="async" loading="lazy" src="http://cbd.test/wp-content/themes/tft/theme/img/hr.svg"></noscript>
+					<p>Start Free Competition</p>
+				</a>
+            								<a href="#" class="flex-1 flex items-center justify-center relative">
+					<img width="381" height="36" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20381%2036'%3E%3C/svg%3E" data-lazy-src="http://cbd.test/wp-content/themes/tft/theme/img/hr.svg"><noscript><img width="381" height="36" decoding="async" loading="lazy" src="http://cbd.test/wp-content/themes/tft/theme/img/hr.svg"></noscript>
+					<p>Buy Funded Challenge</p>
+				</a>
+            								<a href="#" class="flex-1 flex items-center justify-center relative">
+					<img width="381" height="36" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20381%2036'%3E%3C/svg%3E" data-lazy-src="http://cbd.test/wp-content/themes/tft/theme/img/hr.svg"><noscript><img width="381" height="36" decoding="async" loading="lazy" src="http://cbd.test/wp-content/themes/tft/theme/img/hr.svg"></noscript>
+					<p>View Payouts</p>
+				</a>
+                    </div>
+    </div>
+	<div class="disclaimer" role="dialog" aria-modal>
+		<div data-bg="http://cbd.test/wp-content/themes/tft/theme/img/disclaimer-bg.png" class="disclaimer-inner rocket-lazyload" style="">
+			<div class="content">
+				<h4>Funded Account Disclaimer</h4>
+<p>Hypothetical or simulated performance results have certain limitations. Unlike an actual performance record, simulated results do not represent actual trading. Also, because the trades have not actually been executed, the results may have under-or-over compensated for the impact, if any, of certain market factors, such as lack of liquidity. Simulated trading programs, in general, are also subject to the fact that they are designed with the benefit of hindsight. No representation is being made that any account will or is likely to achieve profit or losses similar to those shown.</p>
+<p>The Funded Trader funded accounts are not live trading accounts, they are fully simulated accounts utilizing real market quotes from liquidity providers.</p>
+<p>The Traders featured are representative only and includes selected traders who allow their names to be publicly disclosed. Trader performance quoted represents past performance in a simulated environment and does not guarantee current or future performance. Further, financial instrument trading involves substantial risk of loss and is not suitable for every investor, trading activities referenced by or undertaken utilizing The Funded Trader may not be suitable for all persons.</p>
+			</div>
+		</div>
+	</div>
+<svg decoding="async" loading="lazy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
+    <symbol id="instagram" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></symbol>
+    <symbol id="facebook" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></symbol>
+    <symbol id="youtube" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></symbol>
+    <symbol id="telegram" viewBox="0 0 496 512"><path d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"></path></symbol>
+    <symbol id="discord" viewBox="0 0 640 512"><path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"></path></symbol>
+    <symbol id="reddit" viewBox="0 0 512 512"><path d="M440.3 203.5c-15 0-28.2 6.2-37.9 15.9-35.7-24.7-83.8-40.6-137.1-42.3L293 52.3l88.2 19.8c0 21.6 17.6 39.2 39.2 39.2 22 0 39.7-18.1 39.7-39.7s-17.6-39.7-39.7-39.7c-15.4 0-28.7 9.3-35.3 22l-97.4-21.6c-4.9-1.3-9.7 2.2-11 7.1L246.3 177c-52.9 2.2-100.5 18.1-136.3 42.8-9.7-10.1-23.4-16.3-38.4-16.3-55.6 0-73.8 74.6-22.9 100.1-1.8 7.9-2.6 16.3-2.6 24.7 0 83.8 94.4 151.7 210.3 151.7 116.4 0 210.8-67.9 210.8-151.7 0-8.4-.9-17.2-3.1-25.1 49.9-25.6 31.5-99.7-23.8-99.7zM129.4 308.9c0-22 17.6-39.7 39.7-39.7 21.6 0 39.2 17.6 39.2 39.7 0 21.6-17.6 39.2-39.2 39.2-22 .1-39.7-17.6-39.7-39.2zm214.3 93.5c-36.4 36.4-139.1 36.4-175.5 0-4-3.5-4-9.7 0-13.7 3.5-3.5 9.7-3.5 13.2 0 27.8 28.5 120 29 149 0 3.5-3.5 9.7-3.5 13.2 0 4.1 4 4.1 10.2.1 13.7zm-.8-54.2c-21.6 0-39.2-17.6-39.2-39.2 0-22 17.6-39.7 39.2-39.7 22 0 39.7 17.6 39.7 39.7-.1 21.5-17.7 39.2-39.7 39.2z"></path></symbol>
+    <symbol id="tiktok" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"></path></symbol>
+    <symbol id="twitter" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></symbol>
+    <symbol id="linkedin" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></symbol>
+    <symbol id="plus" viewBox="0 0 448 512"><path d="M256 80V48H192V80 224H48 16v64H48 192V432v32h64V432 288H400h32V224H400 256V80z"></path></symbol>
+    <symbol id="crown" viewBox="0 0 576 512"><path d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z"></path></symbol>
+    <symbol id="user-crown" viewBox="0 0 448 512"><path d="M144 128v16c0 44.2 35.8 80 80 80s80-35.8 80-80V128H144zm0-108.8c10.2 7.5 23.8 8.3 34.9 2L209.1 4c4.6-2.6 9.7-4 14.9-4s10.4 1.4 14.9 4l30.2 17.2c11 6.3 24.7 5.5 34.9-2l.1-.1c.3-.2 .6-.4 .8-.6l3-2.4L323.6 3.5c2.8-2.3 6.4-3.5 10-3.5H336c8.8 0 16 7.2 16 16V39v3.2 .1V144c0 70.7-57.3 128-128 128s-128-57.3-128-128V42.3v-.1V39 16c0-8.8 7.2-16 16-16h2.4c3.6 0 7.2 1.2 10 3.5L140 16l3 2.4c.3 .2 .6 .4 .8 .6l.1 .1zM0 472c0-92.8 75.2-168 168-168H280c92.8 0 168 75.2 168 168v8c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32v-8z"></path></symbol>
+    <symbol id="sword" viewBox="0 0 72 99"><path d="M32.178 22.653h-7.372v-7.431h7.372V.359h7.413v14.863h7.414v7.431H32.178Zm-3.665 14.713h-.002v41.201l7.374 14.675V27.493h35.823l-4.961 9.873H45.735v41.82l-9.837 19.579h-.013l-9.851-19.582V37.366H5.038L.077 27.493h28.436v9.873Zm28.384 19.747h-6.239V47.24h11.2l-4.961 9.873Z"/></symbol>
+    <symbol id="back" viewBox="0 0 10 7"><path d="M9.229.328.771 3.147l8.458 3.525V.328Z"/></symbol>
+</svg><script type="rocketlazyloadscript" data-rocket-type="module" data-rocket-src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" defer></script>
+<script type="rocketlazyloadscript" data-cfasync="false">
+  document.onreadystatechange = function () {
+    if (document.readyState == "complete") {
+      var logout_link = document.querySelectorAll('a[href*="wp-login.php?action=logout"]');
+      if (logout_link) {
+        for(var i=0; i < logout_link.length; i++) {
+          logout_link[i].addEventListener( "click", function() {
+            Intercom('shutdown');
+          });
+        }
+      }
+    }
+  };
+</script>
+<script type="rocketlazyloadscript" data-cfasync="false">
+  window.intercomSettings = {"app_id":"","language_override":"en"};
+</script>
+<script type="rocketlazyloadscript" data-cfasync="false">(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script type="rocketlazyloadscript" data-rocket-src='http://cbd.test/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.7.8.2' id='jquery-blockui-js' defer></script>
+<script id='wc-add-to-cart-js-extra'>
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"http:\/\/cbd.test","is_cart":"","cart_redirect_after_add":"no"};
+</script>
+<script type="rocketlazyloadscript" data-rocket-src='http://cbd.test/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=7.8.2' id='wc-add-to-cart-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-src='http://cbd.test/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.7.8.2' id='js-cookie-js' defer></script>
+<script id='woocommerce-js-extra'>
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+</script>
+<script type="rocketlazyloadscript" data-rocket-src='http://cbd.test/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=7.8.2' id='woocommerce-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-src='http://cbd.test/wp-content/themes/tft/theme/js/script.min.js?ver=0.1.0' id='tft-script-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src='http://cbd.test/wp-content/cache/min/1/wp-content/themes/tft/theme/js/libs.js?ver=1698991027' id='libs-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src='http://cbd.test/wp-content/cache/min/1/wp-content/themes/tft/theme/js/script_cbd.js?ver=1698991028' id='script-cbd-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-src='http://cbd.test/wp-content/plugins/woocommerce-multilingual/res/js/front-scripts.min.js?ver=5.1.2' id='wcml-front-scripts-js' defer></script>
+<script id='cart-widget-js-extra'>
+var actions = {"is_lang_switched":"0","force_reset":"0"};
+</script>
+<script type="rocketlazyloadscript" data-rocket-src='http://cbd.test/wp-content/plugins/woocommerce-multilingual/res/js/cart_widget.min.js?ver=5.1.2' id='cart-widget-js' defer></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="http://cbd.test/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1699004687 -->
