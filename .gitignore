@@ -30,7 +30,7 @@ wp-content/*
 !wp-content/themes/
 wp-content/themes/*
 !wp-content/themes/tft-theme
-!wp-content/themes/tft
+!wp-content/themes/tft_tailwind
 
 #ingnore npm packages
 node_modules

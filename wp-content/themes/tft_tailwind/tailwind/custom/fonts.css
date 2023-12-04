@@ -1,0 +1,18 @@
+/**
+ * Custom `@font-face` rules
+ *
+ * These will be added immediately before Tailwind’s `base` layer.
+ */
+@font-face {
+	font-family: "Wadik";
+	src: url("fonts/WadikBold.eot");
+	src:
+		url("fonts/WadikBold.eot") format("embedded-opentype"),
+		url("fonts/WadikBold.woff2") format("woff2"),
+		url("fonts/WadikBold.woff") format("woff"),
+		url("fonts/WadikBold.ttf") format("truetype"),
+		url("fonts/WadikBold.svg#WadikBold") format("svg");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
