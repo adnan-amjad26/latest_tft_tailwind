@@ -88,7 +88,7 @@
 		</div>
 	</div>
 	<?php if ($copyright || $powered): ?>
-		<div class="bottom bg-purple-dark py-8">
+		<div class="bottom bg-purple-dark dark:bg-red-500 py-8">
 			<div class="w-full mx-auto px-[16px] md:px-[40px] 2xl:px-[85px]">
 				<div class="flex justify-between items-center font-headers">
 					<?php if ($copyright): ?>
