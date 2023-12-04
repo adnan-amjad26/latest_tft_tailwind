@@ -1,1 +1,0 @@
-K‰;e<?php exit; ?>a:1:{s:7:"content";s:216:"a:2:{s:41:"woocommerce-zapier/woocommerce-zapier.php";a:2:{i:0;s:31:"OM4\WooCommerceZapier\Uninstall";i:1;s:3:"run";}s:35:"litespeed-cache/litespeed-cache.php";s:47:"LiteSpeed\Activation::uninstall_litespeed_cache";}";}

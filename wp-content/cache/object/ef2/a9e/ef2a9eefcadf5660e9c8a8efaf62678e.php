@@ -1,1 +1,0 @@
-K‰;e<?php exit; ?>a:1:{s:7:"content";a:1:{s:4:"data";s:75:"http://cbd.test/wp-cron.php?doing_wp_cron=1698400405.8537549972534179687500";}}
