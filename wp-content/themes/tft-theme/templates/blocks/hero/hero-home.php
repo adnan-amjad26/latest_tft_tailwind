@@ -30,7 +30,7 @@
 			<div class="w-full md:min-w-[597px] hero-col flex flex-col">
 				<?php if ($title) : ?>
 					<div class="title md:max-w-[598px] sm:text-center md:text-left">
-						<h1 class="text-[48px] xl:text-[64px]"><?php echo $title; ?></h1>
+						<h1 class="text-[48px] xl:text-[100px]"><?php echo $title; ?></h1>
 					</div>
 				<?php endif; ?>
 				<?php if ($text) : ?>

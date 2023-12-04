@@ -36,10 +36,6 @@
 	background-color: rgb(62 10 61 / var(--tw-bg-opacity))
 }
 
-.bg-purple-dark {
-	--tw-bg-opacity: 1;
-	background-color: rgb(42 35 68 / var(--tw-bg-opacity))
-}
 
 .bg-purple-darker {
 	--tw-bg-opacity: 1;
