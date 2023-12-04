@@ -52,7 +52,7 @@
 								<?php $rating = $review['stars']; ?>
 								<?php if($rating >= 4): ?>
 
-									<div class="swiper-slide bg-black rounded-[20px] p-[3rem] flex flex-col justify-between review-container min-h-[400px]">
+									<div class="swiper-slide bg-black rounded-[40px] p-[3rem] flex flex-col justify-between review-container min-h-[400px]">
 											<div class="top py-[20px] max-w-[258px] mx-auto min-h-[inherit]">
 												<div class="content flex flex-col justify-between min-h-[inherit]">
 													<?php if($name): ?>

@@ -35,33 +35,33 @@
                     <div class="flex flex-col gap-[30px] p-[20px_30px] md:p-[20px_65px] relative z-[10]">
                         <div class="flex justify-between items-center text-[16px] md:text-[20px] wadik text-white gap-[25px]">
                             <h4>1ST</h4>
-                            <h4 class="flex items-center gap-[15px]"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
-                            <h4 class="flex items-center gap-[15px] hidden sm:block"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
-                            <h4 class="flex items-center gap-[15px] hidden sm:block"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center gap-[15px] hidden sm:block pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center gap-[15px] hidden sm:block pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
                         </div>
                         <div class="flex justify-between items-center text-[16px] md:text-[20px] wadik text-white gap-[25px]">
                             <h4>2ND</h4>
-                            <h4 class="flex items-center gap-[15px]"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
-                            <h4 class="flex items-center gap-[15px] hidden sm:block"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
-                            <h4 class="flex items-center gap-[15px] hidden sm:block"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center gap-[15px] pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center gap-[15px] hidden sm:block pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center gap-[15px] hidden sm:block pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
                         </div>
                         <div class="flex justify-between items-center text-[16px] md:text-[20px] wadik text-white gap-[25px]">
                             <h4>3RD</h4>
-                            <h4 class="flex items-center gap-[15px]"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
-                            <h4 class="flex items-center gap-[15px] hidden sm:block"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
-                            <h4 class="flex items-center gap-[15px] hidden sm:block"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center gap-[15px] pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center gap-[15px] hidden sm:block pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center gap-[15px] hidden sm:block pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
                         </div>
                         <div class="flex justify-between items-center text-[16px] md:text-[20px] wadik text-white gap-[25px]">
                             <h4>4th</h4>
-                            <h4 class="flex items-center gap-[15px]"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
-                            <h4 class="flex items-center gap-[15px] hidden sm:block"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
-                            <h4 class="flex items-center gap-[15px] hidden sm:block"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center gap-[15px] pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center gap-[15px] hidden sm:block pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center gap-[15px] hidden sm:block pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
                         </div>
                         <div class="flex justify-between items-center text-[16px] md:text-[20px] wadik text-white gap-[25px]">
                             <h4>5th</h4>
-                            <h4 class="flex items-center gap-[15px]"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
-                            <h4 class="flex items-center gap-[15px] hidden sm:block"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
-                            <h4 class="flex items-center gap-[15px] hidden sm:block"><img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center gap-[15px] pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center gap-[15px] hidden sm:block pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
+                            <h4 class="flex items-center gap-[15px] hidden sm:block pl-[30px] relative"><img class="absolute left-0 top-0" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/userIcon.svg" alt="torch"> Long Name</h4>
                         </div>
                     </div>
                     <?php if($leaderboard): ?>

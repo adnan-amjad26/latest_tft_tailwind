@@ -83,7 +83,7 @@
             <?php $i++; endforeach; ?>
         <?php endif; ?>
         <?php if($link): ?>
-            <div class="row justify-center mt-12 lg:mt-24">
+            <div class="row justify-center mt-[100px]">
                 <div class="w-auto">
                     <div class="button">
                         <a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-gold p-[.8rem_2rem_.7rem] rounded-[1rem] border-[.5rem] border-[#f7971e] border-t-[#f2af5d] border-b-[#c86e32] relative inline-flex items-center wadik text-[1.2rem]">

@@ -38,7 +38,7 @@
                             </div>
                         <?php endif; ?>
                         <div class="w-full mx-auto">
-                            <div class="w-full max-w-[250px] sm:max-w-[305px] xl:max-w-[345px] mx-auto competition text-black p-[50px_30px] sm:p-[60px_30px] xl:p-[100px_30px] relative">
+                            <div class="w-full max-w-[250px] sm:max-w-[305px] xl:max-w-[345px] mx-auto competition text-black p-[50px_30px] sm:p-[60px_30px] xl:p-[100px_15px] relative">
                                 <?php if($competition['subtitle']): ?>
                                     <div class="title mt-6 text-[17px] sm:text-[20px] xl:text-[26px]">
                                         <h5><?php echo $competition['subtitle']; ?></h5>
@@ -103,12 +103,6 @@
                                 <?php if($link || $link_2 || $link_3): ?>
 
                                     <div class="links flex flex-col items-center justify-center text-[10px] sm:text-[15px]">
-                                        <?php if($link): ?>
-                                            <a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-text"><span><?php echo $link['title']; ?></span></a>
-                                        <?php endif; ?>
-                                        <?php if($link_2): ?>
-                                            <a href="<?php echo $link_2['url']; ?>"<?php if($link_2['target']) echo ' target="'.$link_2['target'].'"'; ?> class="btn btn-text"><?php echo $link_2['title']; ?></a>
-                                        <?php endif; ?>
                                         <?php if($link_3): ?>
                                             <a href="<?php echo $link_3['url']; ?>"<?php if($link_3['target']) echo ' target="'.$link_3['target'].'"'; ?> class="text-[10px] sm:text-[15px] text-black wadik my-[20px] xl:my-[35px]">
                                                 <span class="relative z-[1]"><?php echo $link_3['title']; ?></span>
