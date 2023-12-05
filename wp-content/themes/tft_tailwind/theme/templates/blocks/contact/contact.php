@@ -18,6 +18,7 @@
 <section class="contact-details large pt-[150px] pb-[40px] md:py-[115px] overflow-hidden <?php if(is_front_page()) echo ' bg-blue-dark'; ?>" data-scroll-section>
 
 <div class="max-w-[1683px] w-full mx-auto px-[16px] md:px-[40px] 2xl:px-[85px] relative z-[10]">
+
 <div class="max-w-[724px] mx-auto relative z-10 text-center">
         <div class="flex flex-col">
             <div class="w-full">
@@ -74,15 +75,15 @@
     </div>
 </div>
     <?php if($image || $image_2 || $lottie): ?>
-        <figure class="bg absolute top-0 left-0 w-full h-full z-0<?php if(!is_singular('post') && !is_checkout()) echo ' opacity-80'; ?>">
+        <figure class="bg absolute top-0 left-0 w-full h-full z-0<?php if(!is_singular('post') && !is_checkout()); ?>">
             <?php if($lottie): ?>
                 <lottie-player class="hidden md:block" src="<?php echo $lottie; ?>" background="transparent" speed="1" loop autoplay></lottie-player>
             <?php endif; ?>
             <?php if($image): ?>
-                <img class="dark:hidden block" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
+                <img class="imgs-day" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
             <?php endif; ?>
             <?php if($image_2): ?>
-                <img class="hidden dark:block h-[1000px] md:h-full mt-[-260px] md:mt-0" src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['title']; ?>">
+                <img class="imgs-night h-[1000px] md:h-full mt-[-260px] md:mt-0" src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['title']; ?>">
             <?php endif; ?>
         </figure>
     <?php endif; ?>

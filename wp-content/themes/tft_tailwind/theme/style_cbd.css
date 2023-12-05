@@ -195,11 +195,6 @@ footer .tp+div {
 [data-day] .media-boxes .bg:after {
 	background: linear-gradient(0deg,#a49db9 0,rgba(164,157,185,0.3) 20%);
 }
-
-[data-day] .contact-details .bg:after {
-	background: linear-gradient(0deg,#3e0a3d 0,rgba(62,10,61,0.4) 20%);
-}
-
 @media (min-width: 1536px) {
 	.h2,
 	h2 {

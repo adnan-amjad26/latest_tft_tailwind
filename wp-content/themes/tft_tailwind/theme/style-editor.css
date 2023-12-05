@@ -885,6 +885,11 @@ body {
   position: absolute;
 }
 
+[data-day] section:not(.hero) + .video-text-content {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 17 27 / var(--tw-bg-opacity));
+}
+
 /**
  * This injects Tailwind's utility classes and any utility classes registered
  * by plugins, then adds custom utility classes.
@@ -1459,6 +1464,10 @@ body {
   margin-top: 35px;
 }
 
+.mt-\[370px\] {
+  margin-top: 370px;
+}
+
 .mt-\[50px\] {
   margin-top: 50px;
 }
@@ -1581,10 +1590,6 @@ body {
 
 .h-\[32px\] {
   height: 32px;
-}
-
-.h-\[350px\] {
-  height: 350px;
 }
 
 .h-\[3px\] {
@@ -2587,6 +2592,11 @@ body {
   background-color: rgb(68 31 87 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#501E4E\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(80 30 78 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#CED3D7\] {
   --tw-bg-opacity: 1;
   background-color: rgb(206 211 215 / var(--tw-bg-opacity));
@@ -2711,12 +2721,6 @@ body {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-\[\#4d466d\] {
-  --tw-gradient-from: #4d466d var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(77 70 109 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-\[rgb\(0\2c 0\2c 50\2c 0\)\] {
   --tw-gradient-from: rgb(0,0,50,0) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 50 / 0) var(--tw-gradient-to-position);
@@ -2739,10 +2743,6 @@ body {
 
 .to-\[\#000032\] {
   --tw-gradient-to: #000032 var(--tw-gradient-to-position);
-}
-
-.to-\[\#110246\] {
-  --tw-gradient-to: #110246 var(--tw-gradient-to-position);
 }
 
 .to-\[\#1e0b22\] {
@@ -2978,6 +2978,11 @@ body {
 .py-\[50px\] {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.py-\[60px\] {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .py-\[75px\] {
@@ -5235,10 +5240,6 @@ section.article-content .content h3 {
 
   .md\:hidden {
     display: none;
-  }
-
-  .md\:h-\[500px\] {
-    height: 500px;
   }
 
   .md\:h-\[680px\] {

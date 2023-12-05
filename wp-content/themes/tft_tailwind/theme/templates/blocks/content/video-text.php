@@ -22,7 +22,7 @@
 <?php $padding = ($padding) ? $padding : 's-padding'; ?>
 <?php $bg = get_field('bg'); ?>
 <?php $bg = ($bg) ? ' '.$bg : ''; ?>
-<section<?php if($id) echo ' id="'.$id.'"'; ?> class="px-[16px] md:px-[40px] 2xl:px-[85px] content-image overflow-visible<?php echo $bg; ?> <?php echo $padding; ?> z-10" data-scroll-section>
+<section<?php if($id) echo ' id="'.$id.'"'; ?> class="video-text-content py-[60px] px-[16px] 2xl:px-[85px] content-image overflow-visible<?php echo $bg; ?> <?php echo $padding; ?> z-10" data-scroll-section>
     <div class="max-w-[1750px] w-full mx-auto py-[50px] relative z-[10]">
         <div class="flex gap-[100px] sm:gap-[100px] lg:gap-[50px] flex-col-reverse lg:pr-[50px] justify-between items-center<?php if($reverse) echo ' lg:flex-row-reverse'; ?>">
             <div class="max-w-[720px] lg:max-w-[450px] 2xl:max-w-[542px] w-full lg:w-1/2 video-col">

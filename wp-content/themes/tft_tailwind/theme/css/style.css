@@ -879,18 +879,6 @@ header .mode .toggle-input:checked~.toggle-switch .toggle-switch-figureAlt {
     z-index: 0
 }
 
-[data-day] .contact-details .bg:before {
-    background: linear-gradient(0deg,rgba(18,17,27,0.5) 80%,#12111b 100%)
-}
-
-[data-day] .title-news~.contact-details .bg:before {
-    background: linear-gradient(0deg,rgba(87,17,20,0.5) 80%,#571114 100%)
-}
-
-[data-day] .title-contact~.contact-details .bg:before {
-    background: linear-gradient(0deg,rgba(44,47,76,0.5) 80%,#2c2f4c 100%)
-}
-
 /* End Day Mode Specifics */
 /* Base CSS */
 
@@ -2665,28 +2653,6 @@ footer .bottom a:hover {
         transform: none
     }
 }
-
-.contact-details .bg:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg,rgb(0 0 0 / 58%) 70%,#2a2344 100%) !important;
-    z-index: 1
-}
-
-.contact-details .bg:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg,#3e0a3d 0,rgba(62,10,61,0) 20%)
-}
-
 .contact-details.slim {
     overflow: visible
 }
@@ -4052,10 +4018,6 @@ body:not(.theme-dark) .imgs-night {
     --tw-bg-opacity: 1;
     background-color: rgb(62 10 61 / var(--tw-bg-opacity));
 }
-.theme-dark footer .bottom {
-    --tw-bg-opacity: 1;
-    background-color: rgb(78 30 77 / var(--tw-bg-opacity));
-}
 .theme-dark .hero.bg-green,
 .theme-dark .hero.bg-green + section {
     --tw-bg-opacity: 1;
@@ -4840,7 +4802,28 @@ table.whychoose-table tbody tr td.tooltipp:hover:after {
         right:28%
     }
 }
-
+.contact-details .bg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg,rgb(0 0 0 / 58%) 70%,#2a2344 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+.contact-details .bg:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(0deg,#1f0a22 0,rgba(62,10,61,0) 20%);
+}
 /* Light mode */
 body:not(.theme-dark) .hero .animations:before {
     display: none;
@@ -4851,4 +4834,14 @@ body.theme-dark .bg-blue-dark {
 }
 body.theme-dark .custom-gradient {
     background: linear-gradient(to bottom,  rgba(18,17,27,1) 80%,rgb(18 18 27) 60%,rgba(255,255,255,0) 100%);
+}
+[data-day] .contact-details .bg:before {
+  background: linear-gradient(to bottom,  rgb(17 17 27) 0%,rgba(255,255,255,0) 100%);
+
+}
+[data-day] .contact-details .bg:after {
+    background: linear-gradient(0deg,#1f0a22 0,rgb(20 14 20 / 0%) 100%);
+    top: auto;
+    height: 300px;
+    bottom: 0;
 }

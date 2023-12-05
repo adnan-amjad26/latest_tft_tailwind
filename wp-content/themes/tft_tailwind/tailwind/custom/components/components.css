@@ -85,3 +85,7 @@
 .hero .animations lottie-player {
     @apply absolute;
 }
+
+[data-day] section:not(.hero) + .video-text-content {
+	@apply bg-[#11111b]
+}

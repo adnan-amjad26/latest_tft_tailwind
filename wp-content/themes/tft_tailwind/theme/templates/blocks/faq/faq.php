@@ -29,7 +29,7 @@
 // Define default values for other fields as well
 ?>
 <section class="accordion p-[50px_16px] md:p-[50px_40px] bg-green-light" data-scroll-section>
-    <div class="max-w-[1308px] w-full mx-auto relative z-10">
+    <div class="max-w-[1308px] w-full mx-auto relative z-10 mt-[370px]">
         <?php if($icon || $title): ?>
             <div class="flex">
                 <div class="w-full text-center">
@@ -46,7 +46,7 @@
                 </div>
             </div>
         <?php endif; ?>
-        <div class="flex mt-12 lg:mt-16">
+        <div class="flex">
             <div class="w-full flex flex-col gap-[20px] md:gap-[50px] xl:gap-[100px] justify-between">
                 <?php if($faq): ?>
                     <?php $half = ceil(count($faq) / 2); ?>

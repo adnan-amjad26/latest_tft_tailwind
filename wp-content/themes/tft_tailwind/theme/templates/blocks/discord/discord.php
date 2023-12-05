@@ -92,6 +92,4 @@
             <img decoding="async" loading="lazy" src="<?php echo $background['url']; ?>" alt="<?php echo $background['title']; ?>">
         </figure>
     <?php endif; ?>
-
-    <div class="w-full h-[350px] md:h-[500px] bg-gradient-to-t from-[#4d466d] to-[#110246]"></div>
 </section>
