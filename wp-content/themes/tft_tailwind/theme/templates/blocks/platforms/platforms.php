@@ -38,7 +38,7 @@
 // Define default values for other fields as well
 
 ?>
-<section class="platform p-[100px_16px] md:p-[150px_40px] bg-lilac" data-scroll-section>
+<section class="platform p-[100px_16px] md:p-[150px_40px] !pt-0 bg-lilac" data-scroll-section>
     <div class="max-w-[1290px] mx-auto relative z-10">
         <?php if($icon || $title): ?>
             <div class="flex">

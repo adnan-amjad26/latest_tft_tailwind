@@ -15,7 +15,7 @@ $table = get_field('table');
 		<div class="flex items-center mb-[-4px] md:mb-[-17px]">
 			<img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/table-top-shape.svg" alt="torch">
 		</div>
-		<div class="w-full relative custom-groove-border bg-white p-[10px] sm:p-[30px] md:p-[30px_60px]">
+		<div class="w-full relative custom-groove-border bg-white p-[10px] sm:p-[30px] md:p-[30px_60px] min-h-[800px]">
 			<table class="w-full border-0 border-collapse text-[#3A4E5E] text-[14px] md:text-[16px] whychoose-table">
 				<thead>
 					<tr>
@@ -58,7 +58,8 @@ $table = get_field('table');
 			<img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/table-bottom-shape.svg" alt="torch">
 		</div>
 	</div>
-	<figure class="bg absolute bottom-0 left-0 w-full h-full z-0">
-		<img class="w-full" class="imgs-night" src="<?php echo wp_get_upload_dir()['url'] . '/media-bg.svg'; ?>" alt="">
+	<figure class="bg absolute bottom-0 left-0 w-full h-full z-0 shadow-mixen after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:z-[2] after:h-[200px]  before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:z-[2] before:h-[200px] ">
+		<img class="w-full imgs-day" src="<?php echo wp_get_upload_dir()['url'] . '/lightMode-media.svg'; ?>" alt="">
+		<img class="w-full imgs-night" src="<?php echo wp_get_upload_dir()['url'] . '/media-bg.svg'; ?>" alt="">
 	</figure>
 </div>

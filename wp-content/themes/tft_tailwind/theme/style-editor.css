@@ -1669,6 +1669,10 @@ body {
   min-height: 640px;
 }
 
+.min-h-\[800px\] {
+  min-height: 800px;
+}
+
 .min-h-\[inheri\] {
   min-height: inheri;
 }
@@ -2773,9 +2777,19 @@ body {
   fill: #fff;
 }
 
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.\!object-top {
+  -o-object-position: top !important;
+     object-position: top !important;
 }
 
 .object-\[top_center\] {
@@ -2988,6 +3002,14 @@ body {
 .py-\[75px\] {
   padding-top: 75px;
   padding-bottom: 75px;
+}
+
+.\!pb-\[500px\] {
+  padding-bottom: 500px !important;
+}
+
+.\!pt-0 {
+  padding-top: 0px !important;
 }
 
 .pb-1 {
@@ -4536,6 +4558,11 @@ section.article-content .content h3 {
   left: 50%;
 }
 
+.before\:right-0::before {
+  content: var(--tw-content);
+  right: 0px;
+}
+
 .before\:top-0::before {
   content: var(--tw-content);
   top: 0px;
@@ -4561,6 +4588,11 @@ section.article-content .content h3 {
   z-index: -1;
 }
 
+.before\:z-\[2\]::before {
+  content: var(--tw-content);
+  z-index: 2;
+}
+
 .before\:block::before {
   content: var(--tw-content);
   display: block;
@@ -4569,6 +4601,11 @@ section.article-content .content h3 {
 .before\:h-\[120\%\]::before {
   content: var(--tw-content);
   height: 120%;
+}
+
+.before\:h-\[200px\]::before {
+  content: var(--tw-content);
+  height: 200px;
 }
 
 .before\:h-\[calc\(100\%-100px\)\]::before {
@@ -4653,14 +4690,29 @@ section.article-content .content h3 {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.before\:content-\[\'\'\]::before {
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
 .after\:absolute::after {
   content: var(--tw-content);
   position: absolute;
 }
 
+.after\:bottom-0::after {
+  content: var(--tw-content);
+  bottom: 0px;
+}
+
 .after\:left-0::after {
   content: var(--tw-content);
   left: 0px;
+}
+
+.after\:right-0::after {
+  content: var(--tw-content);
+  right: 0px;
 }
 
 .after\:top-\[calc\(100\%-100px\)\]::after {
@@ -4676,6 +4728,11 @@ section.article-content .content h3 {
 .after\:z-20::after {
   content: var(--tw-content);
   z-index: 20;
+}
+
+.after\:z-\[2\]::after {
+  content: var(--tw-content);
+  z-index: 2;
 }
 
 .after\:hidden::after {
@@ -4696,6 +4753,11 @@ section.article-content .content h3 {
 .after\:bg-\[linear-gradient\(0deg\2c _rgba\(129\2c 131\2c 20\2c 0\.00\)_0\%\2c _\#818314_50\%\)\]::after {
   content: var(--tw-content);
   background-image: linear-gradient(0deg, rgba(129,131,20,0.00) 0%, #818314 50%);
+}
+
+.after\:content-\[\'\'\]::after {
+  --tw-content: '';
+  content: var(--tw-content);
 }
 
 .last\:border-none:last-child {

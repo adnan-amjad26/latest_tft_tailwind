@@ -8,7 +8,7 @@
 <?php $media = $mediaData['media']; ?>
 <?php $img_day = $mediaData['img_day']; ?>
 <?php $img_night = $mediaData['img_night']; ?>
-<section class="media-boxes p-[100px_16px] md:p-[150px_40px] text-center bg-blue-dark" data-scroll-section>
+<section class="media-boxes p-[100px_16px] md:p-[150px_40px] !pb-[500px] text-center bg-blue-dark relative z-[2]" data-scroll-section>
     <div class="max-w-[1720px] w-full mx-auto relative z-10">
         <?php if ($title) : ?>
             <div class="flex">

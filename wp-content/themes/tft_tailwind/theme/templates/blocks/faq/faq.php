@@ -148,7 +148,7 @@
     <?php if($image || $image_2): ?>
         <figure class="bg absolute bottom-0 left-0 w-full z-0">
             <?php if($image): ?>
-                <img class="imgs-day" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
+                <img class="imgs-day object-contain !object-top opacity-1" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
             <?php endif; ?>
             <?php if($image_2): ?>
                 <img class="imgs-night" src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['title']; ?>">
