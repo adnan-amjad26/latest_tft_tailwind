@@ -24,7 +24,7 @@
 <?php $bg = ($bg) ? ' '.$bg : ''; ?>
 <section<?php if($id) echo ' id="'.$id.'"'; ?> class="video-text-content py-[60px] px-[16px] 2xl:px-[85px] content-image overflow-visible<?php echo $bg; ?> <?php echo $padding; ?> z-10" data-scroll-section>
     <div class="max-w-[1750px] w-full mx-auto py-[50px] relative z-[10]">
-        <div class="text-video-content flex flex-col-reverse xl:flex-row gap-[100px] sm:gap-[100px] lg:gap-[50px] lg:px-[50px] justify-between items-center <?php if($reverse) echo ' xl:flex-row-reverse'; ?>">
+        <div class="text-video-content flex flex-col-reverse xl:flex-row gap-[100px] sm:gap-[100px] lg:gap-[50px] xl:px-[50px] justify-between items-center <?php if($reverse) echo ' xl:flex-row-reverse'; ?>">
             <div class="max-w-[720px] xl:max-w-[450px] 2xl:max-w-[542px] w-full xl:w-1/2 video-col">
                 <?php if($video): ?>
                     <figure class="relative s-margin-mobile" data-scroll>

@@ -323,6 +323,26 @@ function register_acf_block_types() {
 		'icon'              => '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M3 18h8V6H3v12zM14 7.5V9h7V7.5h-7zm0 5.3h7v-1.5h-7v1.5zm0 3.7h7V15h-7v1.5z"></path></svg>',
 		'mode'              => 'edit',
 	));
+
+    // Team Card
+	acf_register_block_type(array(
+		'name'              => 'team-card',
+		'title'             => __('Team Element'),
+		'render_template'   => 'templates/blocks/team/new-team.php',
+		'category'          => 'custom-blocks',
+		'icon'              => '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M3 18h8V6H3v12zM14 7.5V9h7V7.5h-7zm0 5.3h7v-1.5h-7v1.5zm0 3.7h7V15h-7v1.5z"></path></svg>',
+		'mode'              => 'edit',
+	));
+    // Action Point
+	acf_register_block_type(array(
+		'name'              => 'Action-Point',
+		'title'             => __('Action Point Element'),
+		'render_template'   => 'templates/blocks/action-point/action-point.php',
+		'category'          => 'custom-blocks',
+		'icon'              => '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M3 18h8V6H3v12zM14 7.5V9h7V7.5h-7zm0 5.3h7v-1.5h-7v1.5zm0 3.7h7V15h-7v1.5z"></path></svg>',
+		'mode'              => 'edit',
+	));
+
     acf_register_block_type(array(
 		'name'              => 'challenge-type',
 		'title'             => __('Chalenge Type Blocks'),
