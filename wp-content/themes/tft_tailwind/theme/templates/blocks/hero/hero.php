@@ -31,50 +31,51 @@
 <?php $overflow = get_field('overflow'); ?>
 <?php $overflow = ($overflow) ? ' overflow-visible' : ''; ?>
 
-<section class="title-bar<?php echo $class.$bg.$overflow; ?> z-10" data-scroll-section>
-    <div class="container relative z-30">
-        <div class="row relative">
-            <div class="w-full<?php echo $width; ?> s-padding hero-col">
+<section class="title-bar<?php echo $class.$bg.$overflow; ?> z-10 pt-[192px]" data-scroll-section>
+    <div class="max-w-[1700px] mx-auto relative z-30 px-[16px] md:px-[40px] 2xl:px-[85px]">
+        <div class="flex relative">
+            <div class="w-full<?php echo $width; ?> hero-col">
             	<?php if(!$width) echo '<div class="text w-full lg:w-1/2 2xl:w-5/12">'; ?>
 	            	<?php if($title): ?>
-		                <div class="title">
-		                    <h1<?php if($type != 'large') echo ' class="h3"'; ?>><?php echo $title; ?></h1>
+		                <div class="max-w-[424px] mx-auto lg:mx-0">
+		                    <h1 class="text-center lg:text-left text-[48px] lg:text-[64px] mb-[20px]"><?php echo $title; ?></h1>
 		                </div>
 		            <?php endif; ?>
 		            <?php if($text): ?>
-		                <div class="subtitle font-headers mt-12">
+		                <div class="text-center lg:text-left text-[16px] lg:text-[18px] wadik mb-[20px]">
 		                    <?php echo $text; ?>
 		                </div>
 	                <?php endif; ?>
 	            <?php if(!$width) echo '</div>'; ?>
                 <?php if($link || $link_social || $buttons): ?>
-	                <div class="buttons row gap-8 sm:gap-16 lg:gap-24 mt-12 lg:mt-16">
-	                	<?php if($link): ?>
-		                	<a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-gold p-[.8rem_2rem_.7rem] rounded-[1rem] border-[.5rem] border-[#f7971e] border-t-[#f2af5d] border-b-[#c86e32] relative inline-flex items-center wadik text-[1.2rem]">
+	                <div class="buttons flex w-[270px] lg:w-auto mx-auto lg:mx-0 lg:inline-flex flex-wrap justify-center lg:justify-start mt-12 lg:gap-x-[70px] lg:gap-y-[15px]">
+						<?php if($link): ?>
+		                	<a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-gold p-[.8rem_2rem_.7rem] rounded-[1rem] border-[.5rem] border-[#f7971e] border-t-[#f2af5d] border-b-[#c86e32] relative inline-flex items-center wadik text-[1.2rem] mb-[30px] lg:mb-0">
 		                		<span class="z-[1] relative"><?php echo $link['title']; ?></span>
-		                		<img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
-		                		<img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
+		                		<img class="left-0 -translate-x-[58%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
+		                		<img class="right-0 translate-x-[58%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
 		                	</a>
 		                <?php endif; ?>
 		                <?php if($link_social): ?>
-		                	<a href="<?php echo $link_social['url']; ?>"<?php if($link_social['target']) echo ' target="'.$link_social['target'].'"'; ?> class="btn btn-blue p-[.8rem_2rem_.7rem] rounded-[1rem] border-[.5rem] border-[#f7971e] border-t-[#f2af5d] border-b-[#c86e32] relative inline-flex items-center wadik text-[1.2rem]">
-								<span class="relative z-[1]"><?php echo $link_social['title']; ?></span>
+		                	<a href="<?php echo $link_social['url']; ?>"<?php if($link_social['target']) echo ' target="'.$link_social['target'].'"'; ?> class="btn btn-blue p-[.8rem_2rem_.7rem] rounded-[1rem] border-[.5rem] border-[#f7971e] border-t-[#f2af5d] border-b-[#c86e32] relative inline-flex items-center wadik text-[1.2rem] mb-[30px] lg:mb-0">
+								<span class="relative z-[1] whitespace-nowrap"><?php echo $link_social['title']; ?></span>
 		                		<svg decoding="async"><use xlink:href="#discord"></use></svg>
-		                		<img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
-		                		<img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
+		                		<img class="left-0 -translate-x-[58%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
+		                		<img class="right-0 translate-x-[58%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
 		                	</a>
 		                <?php endif; ?>
-		                <?php if($buttons): ?>
+
+						<?php if($buttons): ?>
 		                	<?php $i = 0; foreach($buttons as $button): if ($i === 2): echo '<hr>'; endif; ?>
 		                		<?php $link = $button['button']; ?>
-		                		<a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-gold p-[.8rem_2rem_.7rem] rounded-[1rem] border-[.5rem] border-[#f7971e] border-t-[#f2af5d] border-b-[#c86e32] relative inline-flex items-center wadik text-[1.2rem]">
-		                			<span><?php echo $link['title']; ?></span>
-		                			<img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
-		                			<img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
+		                		<a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-gold p-[.8rem_2rem_.7rem] rounded-[1rem] border-[.5rem] border-[#f7971e] border-t-[#f2af5d] border-b-[#c86e32] relative inline-flex items-center wadik text-[1.2rem] mb-[30px] lg:mb-0">
+		                			<span class="relative z-[1] whitespace-nowrap"><?php echo $link['title']; ?></span>
+		                			<img class="left-0 -translate-x-[58%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-left.svg" alt="btn-gold-left">
+		                			<img class="right-0 translate-x-[58%]" decoding="async" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/img/btn-gold-right.svg" alt="btn-gold-right">
 		                		</a>
 		                	<?php $i++; endforeach; ?>
 		                <?php endif; ?>
-	                </div>
+						</div>
 	            <?php endif; ?>
             </div>
         </div>
@@ -85,16 +86,16 @@
 	        	<div class="imgs-day">
 	        		<?php if($img_d_1): ?>
 		        		<div class="overlay">
-		        			<img src="<?php echo $img_d_1['url']; ?>" alt="<?php echo $img_d_1['title']; ?>">
+		        			<img class="h-[800px] lg:h-auto object-center-top" src="<?php echo $img_d_1['url']; ?>" alt="<?php echo $img_d_1['title']; ?>">
 		        		</div>
 		        	<?php endif; ?>
 		        	<?php if($lottie): ?>
 		        		<div class="tower">
-		        			<img src="<?php echo $lottie['url']; ?>" alt="<?php echo $lottie['title']; ?>">
+		        			<img class="h-[800px] lg:h-auto object-center-top" src="<?php echo $lottie['url']; ?>" alt="<?php echo $lottie['title']; ?>">
 		        		</div>
 		        	<?php endif; ?>
 	        		<?php if($image): ?>
-	        			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
+	        			<img class="h-[800px] lg:h-auto object-center-top" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
 	        		<?php endif; ?>
 	        		<?php if($img_d_2): ?>
 		        		<div class="underlay">
@@ -107,14 +108,14 @@
 	        	<div class="imgs-night">
 	        		<?php if($img_n_1): ?>
 		        		<div class="moon absolute w-52" data-scroll>
-		        			<img src="<?php echo $img_n_1['url']; ?>" alt="<?php echo $img_n_1['title']; ?>">
+		        			<img class="h-[800px] lg:h-auto object-center-top" src="<?php echo $img_n_1['url']; ?>" alt="<?php echo $img_n_1['title']; ?>">
 		        		</div>
 		        	<?php endif; ?>
 	        		<?php if($img_n_2): ?>
-	        			<img src="<?php echo $img_n_2['url']; ?>" alt="<?php echo $img_n_2['title']; ?>">
+	        			<img  class="h-[800px] lg:h-auto object-center-top" src="<?php echo $img_n_2['url']; ?>" alt="<?php echo $img_n_2['title']; ?>">
 	        		<?php endif; ?>
 	        		<?php if($image_2): ?>
-	        			<img src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['title']; ?>">
+	        			<img  class="h-[800px] lg:h-auto object-center-top" src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['title']; ?>">
 	        			<?php if($type != 'large') echo '<div class="underlay"></div>'; ?>
 	        		<?php endif; ?>
 	        		<?php if($lottie_2): ?>

@@ -302,9 +302,6 @@ footer .tp+div {
 	.menu .mobile-only {
 		display: none;
 	}
-	.title-bar .buttons {
-		row-gap: 2rem;
-	}
 }
 
 @media (max-width: 960px) {

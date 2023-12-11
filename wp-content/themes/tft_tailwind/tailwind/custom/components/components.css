@@ -86,6 +86,12 @@
     @apply absolute;
 }
 
-[data-day] section:not(.hero) + .video-text-content {
+[data-day]  #footer-above-section.video-text-content {
 	@apply bg-[#11111b]
+}
+.theme-dark main.bg-lilac {
+	@apply bg-[#3b133c]
+}
+.text-video-content:not(.lg\:flex-row-reverse) {
+    @apply xl:pl-[115px]
 }

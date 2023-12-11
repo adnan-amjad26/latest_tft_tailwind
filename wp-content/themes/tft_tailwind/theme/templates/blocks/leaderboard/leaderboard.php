@@ -14,7 +14,7 @@
 ?>
 <?php $link = get_field('link'); ?>
 <?php $decor = get_field('decor'); ?>
-<section class="leaderboard pt-[100px] overflow-visible z-20 bricks-elem relative z-[2] px-[16px] md:px-[40px] 2xl:px-[85px]" data-scroll-section>
+<section class="leaderboard py-[100px] overflow-visible z-20 bricks-elem relative z-[2] px-[16px] md:px-[40px] 2xl:px-[85px]" data-scroll-section>
     <div class="max-w-[996px] w-full mx-auto relative z-10">
         <?php if(!$decor): ?>
             <div class="torch absolute top-0 right-0 hidden lg:block">
