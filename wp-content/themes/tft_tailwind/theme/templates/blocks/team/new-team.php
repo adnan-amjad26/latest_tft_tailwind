@@ -1,8 +1,8 @@
-<section class="w-full bg-[#000031] py-[300px] px-[16px] 2xl:px-[85px]">
+<section class="team-card-container bg-[#000031] relative w-full py-[150px] md:py-[300px] px-[16px] 2xl:px-[85px]">
     <div class="max-w-[1600px] w-full mx-auto">
         <div class="flex flex-col text-center gap-[30px]">
-            <h3 class="max-w-[352px] mx-auto md:mx-0 md:max-w-full w-full text-[36px] lg:text-[44px] 2xl:text-[50px] text-white">Meet The Leaders of The Funded Trader</h3>
-            <p class="max-w-[334px]  md:max-w-[1316px] w-full mx-auto text-[18px] font-[500]">At TFT, our leadership team is made up of dedicated, ambitious, and experienced individuals who bring a diverse set of experiences, expertise, and perspectives to the table. This unique advantage allows us to build the best product, experience, team, and community in the industry. We encourage our community members to get to know our leadership team, as their commitment to excellence ensures that they are in capable and trustworthy hands.</p>
+            <h3 class="max-w-[352px] mx-auto md:mx-0 sm:max-w-full w-full text-[36px] lg:text-[44px] 2xl:text-[50px] text-white">Meet The Leaders of The Funded Trader</h3>
+            <p class="max-w-[334px]  sm:max-w-[1316px] w-full mx-auto text-[18px] font-[500]">At TFT, our leadership team is made up of dedicated, ambitious, and experienced individuals who bring a diverse set of experiences, expertise, and perspectives to the table. This unique advantage allows us to build the best product, experience, team, and community in the industry. We encourage our community members to get to know our leadership team, as their commitment to excellence ensures that they are in capable and trustworthy hands.</p>
         </div>
 
         <div class="w-full flex flex-wrap items-center justify-center mt-[130px]">

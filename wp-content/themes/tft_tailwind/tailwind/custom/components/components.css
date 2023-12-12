@@ -95,3 +95,13 @@
 .text-video-content:not(.lg\:flex-row-reverse) {
     @apply xl:pl-[115px]
 }
+.theme-light .team-card-container {
+	@apply bg-[#333557] before:content-[''] before:absolute before:left-0 before:right-0 before:top-0 before:h-[250px] before:bg-gradient-to-b before:from-[#818313]
+}
+.theme-light .action-point-container {
+	@apply !bg-none !bg-[#14533e] before:from-[#333557] !pt-[460px] xl:!pt-[700px]
+}
+
+.theme-light .action-point-container .imgs-day {
+	@apply hidden lg:block
+}
