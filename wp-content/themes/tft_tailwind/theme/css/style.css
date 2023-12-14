@@ -4832,3 +4832,15 @@ body.theme-dark .custom-gradient {
 [data-day] .shadow-mixen:before {
     background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(5,5,5,1) 2%,rgba(255,255,255,0) 100%);
 }
+
+/* Timeline */
+.timeline-content-link .timeline-content {
+    transition: all 0.5s ease 0s;
+}
+.timeline-content-link:hover .timeline-content {
+    opacity: 1;
+    bottom: calc(100% - -150px);
+}
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }

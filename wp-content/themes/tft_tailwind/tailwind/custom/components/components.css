@@ -29,10 +29,10 @@
 	@apply cursor-pointer font-bold text-[#f7971e] p-[0_20px];
 }
 .newsletter-message {
-	@applay m-[0.5rem 0] text-center font-bold text-[1.2rem]
+	@apply m-[0.5rem_0] text-center font-bold text-[1.2rem]
 }
 .newsletter-error {
-	@applay text-[#c02b0a]
+	@apply text-[#c02b0a]
 }
 .page-title,
 .entry-title {

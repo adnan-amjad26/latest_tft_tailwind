@@ -50,7 +50,7 @@
 <?php $bg = get_field('bg'); ?>
 <?php $bg = ($bg) ? $bg : 'bg-red';
 if (is_singular('post')) $bg = 'bg-lilac-dark'; ?>
-<header class="fixed z-50 top-0 left-0 right-0 text-white p-[20px] xl:p-[35px_40px] 2xl:p-[35px_85px]">
+<header class="fixed z-[999] top-0 left-0 right-0 text-white p-[20px] xl:p-[35px_40px] 2xl:p-[35px_85px]">
 	<div class="max-w-[1750px] 2xl:max-w-full mx-auto relative z-10">
 			<div class="w-full flex justify-between gap-[25px] xl:gap-[50px] items-center">
 				<div class="flex gap-[25px] xl:gap-[50px] items-center">

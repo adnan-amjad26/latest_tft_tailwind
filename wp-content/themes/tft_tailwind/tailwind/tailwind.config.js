@@ -79,6 +79,10 @@ module.exports = {
 			'body': ['"Montserrat"', 'sans-serif'],
 			'wadik': ['"Wadik"', '"Open Sans"'],
 		},
+
+
+		
+
 	},
 	corePlugins: {
 		// Disable Preflight base styles in builds targeting the editor.

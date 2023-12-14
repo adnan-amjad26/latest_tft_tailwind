@@ -31,13 +31,13 @@
 <?php $overflow = get_field('overflow'); ?>
 <?php $overflow = ($overflow) ? ' overflow-visible' : ''; ?>
 
-<section class="title-bar<?php echo $class.$bg.$overflow; ?> z-10 pt-[192px]" data-scroll-section>
-    <div class="max-w-[1700px] mx-auto relative z-30 px-[16px] md:px-[40px] 2xl:px-[85px]">
+<section class="title-bar<?php echo $class.$bg.$overflow; ?> z-10" data-scroll-section>
+    <div class="max-w-[1750px] w-[calc(100%_-_100px)] mx-auto z-[99] absolute left-0 right-0 top-[250px]">
         <div class="flex relative">
             <div class="w-full<?php echo $width; ?> hero-col">
             	<?php if(!$width) echo '<div class="text w-full lg:w-1/2 2xl:w-5/12">'; ?>
 	            	<?php if($title): ?>
-		                <div class="max-w-[424px] mx-auto lg:mx-0">
+		                <div class="mx-auto lg:mx-0">
 		                    <h1 class="text-center lg:text-left text-[48px] lg:text-[64px] mb-[20px]"><?php echo $title; ?></h1>
 		                </div>
 		            <?php endif; ?>
@@ -81,7 +81,7 @@
         </div>
     </div>
     <?php if($image || $img_d_1 || $img_d_2 || $lottie || $image_2 || $img_n_1 || $img_n_2 || $lottie_2): ?>
-	    <figure class="bg absolute top-0 left-0 w-full z-0<?php echo $after; ?>">
+	    <figure class="bg w-full z-0 pointer-events-none relative <?php echo $after; ?>">
 	        <?php if($image || $img_d_1 || $img_d_2): ?>
 	        	<div class="imgs-day">
 	        		<?php if($img_d_1): ?>
