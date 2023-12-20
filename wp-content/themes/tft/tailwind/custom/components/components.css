@@ -1,0 +1,118 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `components` layer
+ *
+ * “Add more opinionated, complex classes like buttons, form controls, alerts,
+ * etc; the sort of pre-built components you often see in other frameworks that
+ * you might need to override with utility classes.”
+ *
+ * — from https://tailwindcss.com/docs/plugins#adding-components
+ */
+
+/**
+ * Post title styles
+ *
+ * These will be applied to all headings with a `page-title` or `entry-title`
+ * class on the frontend and to the post title in the block editor.
+ *
+ * The supplied styles are meant to match the default `h1` classes from
+ * Tailwind Typography.
+ */
+
+
+.newsletter-form{
+	@apply relative flex h-[44px] border border-white border-opacity-[0.3] rounded-[4px];
+}
+.newsletter-form input[type=email] {
+	@apply w-full p-[0_1.5rem] bg-transparent border-0 text-[1.4rem] text-white outline-0 placeholder:text-[#75756c];
+}
+.newsletter-form .btn {
+	@apply cursor-pointer font-bold text-[#f7971e] p-[0_20px];
+}
+.newsletter-message {
+	@apply m-[0.5rem_0] text-center font-bold text-[1.2rem]
+}
+.newsletter-error {
+	@apply text-[#c02b0a]
+}
+.page-title,
+.entry-title {
+	@apply max-w-content mx-auto mb-6 text-3xl font-extrabold text-neutral-900;
+}
+.bricks {
+	@apply relative bg-[#a49686];
+}
+.content-scrolls .toggles li {
+	@apply p-[2rem_2.5rem] bg-contain bg-center bg-no-repeat cursor-pointer;
+}
+
+/**
+ * Layout styles for centered content areas
+ *
+ * If you are controlling the width of your content area with styles applied
+ * to its container, you can delete the following styles whose selectors begin
+ * with `.page-content >` and `.entry-content >`. For more details, please see
+ * the following:
+ *
+ * https://make.wordpress.org/core/2021/06/29/on-layout-and-content-width-in-wordpress-5-8/
+ */
+.page-content > *,
+.entry-content > * {
+	/* Content width from the `theme.json` file */
+	@apply max-w-content mx-auto;
+}
+
+.entry-content > .alignwide {
+	/* Wide width from the `theme.json` file */
+	@apply max-w-wide;
+}
+
+.entry-content > .alignfull {
+	@apply max-w-none;
+}
+
+.entry-content > .alignleft {
+	@apply float-left mr-8;
+}
+
+.entry-content > .alignright {
+	@apply float-right ml-8;
+}
+
+.hero .animations .knight {
+	@apply w-[max(23rem,8vw)] lg:w-[max(12rem,8vw)] h-[fit-content] bottom-[8vh] right-[-28px] lg:right-[34%];
+}
+.hero .animations lottie-player {
+	@apply absolute;
+}
+
+[data-day]  #footer-above-section.video-text-content {
+	@apply bg-[#11111b]
+}
+.theme-dark main.bg-lilac {
+	@apply bg-[#3b133c]
+}
+.theme-light .team-card-container {
+	@apply bg-[#333557] before:content-[''] before:absolute before:left-0 before:right-0 before:top-0 before:h-[250px] before:bg-gradient-to-b before:from-[#818313]
+}
+.theme-light .action-point-container {
+	@apply !bg-none !bg-[#14533e] before:from-[#333557] !pt-[460px] xl:!pt-[700px]
+}
+
+.theme-light .action-point-container .imgs-day {
+	@apply hidden lg:block
+}
+.challenge-content-box ul {
+	@apply flex flex-col
+}
+.challenge-content-box ul li {
+	@apply py-[20px] border-b border-opacity-[0.3] text-center
+}
+.challenge-content-box ul li:first-child {
+	@apply pt-0
+}
+.text-video-content:not(.even-reverse) {
+	@apply lg:pl-[150px]
+}
+.text-video-content:not(.even-reverse) .table-tabs {
+	@apply hidden
+}
